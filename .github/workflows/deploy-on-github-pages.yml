@@ -51,6 +51,9 @@ jobs:
 
       - name: Setup pnpm cache
         uses: actions/cache@v4
+        # Solves the warning on the path (inside with)
+        env:
+          STORE_PATH: ${{ env.STORE_PATH }}
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -73,18 +76,12 @@ jobs:
         run: pnpm install
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
-      - name: Debug configure-pages
-        run: |
-          echo PAGES_BASE_URL:  ${{ steps.pages.outputs.base_url }}
-          echo PAGES_ORIGIN:    ${{ steps.pages.outputs.origin }}
-          echo PAGES_HOST:      ${{ steps.pages.outputs.host }}
-          echo PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        # with:
+        # Automatically inject basePath in your Next.js configuration file and disable
+        # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+        #
+        # You may remove this line if you want to manage the configuration yourself.
+        # static_site_generator: next
       - name: Build with Next.js
         run: pnpm run build
       - name: Upload artifact

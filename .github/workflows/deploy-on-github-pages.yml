@@ -79,6 +79,12 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+      - name: Debug configure-pages
+        run: |
+          echo PAGES_BASE_URL:  ${{ steps.pages.outputs.base_url }}
+          echo PAGES_ORIGIN:    ${{ steps.pages.outputs.origin }}
+          echo PAGES_HOST:      ${{ steps.pages.outputs.host }}
+          echo PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - name: Build with Next.js
         run: pnpm run build
       - name: Upload artifact

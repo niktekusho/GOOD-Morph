@@ -1,0 +1,27 @@
+name: Retrieve Latest Artifact on GitHub Pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  retrieve_artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Retrieve Latest Artifact
+        id: get_artifact
+        run: |
+          # Replace 'your-github-username' with your GitHub username and 'your-repo-name' with your repository name
+          latest_commit_hash=$(git rev-parse HEAD)
+          gh_pages_url="https://your-github-username.github.io/your-repo-name/"
+          latest_artifact=$(curl -s "${gh_pages_url}" | grep -oE 'href="[^"]+"' | grep -oE '[^"]+' | grep -v "\.\./" | grep -v "\./" | grep -v "favicon.ico" | head -1)
+          echo "::set-output name=artifact::$latest_artifact"
+          echo "::set-output name=commit_hash::$latest_commit_hash"
+
+      - name: Use the latest artifact
+        run: |
+          latest_artifact_path=$(echo "${{ steps.get_artifact.outputs.artifact }}")
+          echo "Latest Artifact: $latest_artifact_path"
+          # You can now use the latest artifact path in further steps

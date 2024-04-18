@@ -63,4 +63,6 @@ jobs:
       - name: Archive built project
         run: echo "test"
       - name: Create new release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: gh release create experiment-$(date -u "+%Y-%m-%d___%H-%M") ./package.json

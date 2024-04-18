@@ -63,4 +63,4 @@ jobs:
       - name: Archive built project
         run: echo "test"
       - name: Create new release
-        run: gh release create experiment-${{ date -u "+%Y-%m-%d___%H-%M" }} ./package.json
+        run: gh release create experiment-$(date -u "+%Y-%m-%d___%H-%M") ./package.json

@@ -62,7 +62,12 @@ jobs:
         run: pnpm run build
       - name: Archive built project
         run: echo "test"
+  create_release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
       - name: Create new release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create experiment-$(date -u "+%Y-%m-%d___%H-%M") ./package.json
+        run: gh release create delete-me-$(date -u "+%Y-%m-%d___%H-%M") ./package.json

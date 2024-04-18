@@ -7,21 +7,60 @@ jobs:
   retrieve_artifact:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        
-      - name: Retrieve Latest Artifact
-        id: get_artifact
-        run: |
-          # Replace 'your-github-username' with your GitHub username and 'your-repo-name' with your repository name
-          latest_commit_hash=$(git rev-parse HEAD)
-          gh_pages_url="https://your-github-username.github.io/your-repo-name/"
-          latest_artifact=$(curl -s "${gh_pages_url}" | grep -oE 'href="[^"]+"' | grep -oE '[^"]+' | grep -v "\.\./" | grep -v "\./" | grep -v "favicon.ico" | head -1)
-          echo "::set-output name=artifact::$latest_artifact"
-          echo "::set-output name=commit_hash::$latest_commit_hash"
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Use the latest artifact
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
         run: |
-          latest_artifact_path=$(echo "${{ steps.get_artifact.outputs.artifact }}")
-          echo "Latest Artifact: $latest_artifact_path"
-          # You can now use the latest artifact path in further steps
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        # Solves the warning on the path (inside with)
+        env:
+          STORE_PATH: ${{ env.STORE_PATH }}
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Setup Next.js cache
+        uses: actions/cache@v4
+        with:
+          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
+          path: |
+            ${{ github.workspace }}/.next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+
+      - name: Install dependencies
+        run: pnpm install
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
+      - name: Build with Next.js
+        run: pnpm run build
+      - name: Archive built project
+        run: echo "test"
+      - name: Create new release
+        run: gh release create experiment-${{ date -u "+%Y-%m-%d___%H-%M" }} ./package.json

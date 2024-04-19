@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/setup.yml
+      - uses: ./.github/actions/setup/action.yml
 
       - name: Setup Next.js cache
         uses: actions/cache@v4

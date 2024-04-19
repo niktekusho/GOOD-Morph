@@ -1,3 +1,11 @@
+## TODOs
+
+### CI/CD
+
+- [ ] refactor workflows to not copy paste jobs code
+- [ ] job that builds the app on PRs and deploys a preview on gh pages
+- [ ] job that cleans up the stuff created by the job before this (release?, deployment)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

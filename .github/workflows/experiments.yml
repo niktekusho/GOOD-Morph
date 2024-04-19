@@ -6,9 +6,29 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact_id: "TODO"
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJSON(job) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJSON(steps) }}
+        run: echo "$STEPS_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
@@ -50,6 +70,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -58,22 +79,33 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+
       - name: Build with Next.js
         run: pnpm run build
+
       - name: Archive artifact
         env:
-          NEXT_OUTPUT: "out"
+          NEXT_OUTPUT: out
         run: |
-          ls -la $NEXT_OUTPUT
           echo ::group::Archive artifact
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
+            -cvf "$RUNNER_TEMP/artifact-${{ github.run_number }}.tar" \
             --exclude=.git \
             --exclude=.github \
             .
           echo ::endgroup::
+          ls -la $RUNNER_TEMP
+
+      - name: Upload archive to GitHub for later retrieval
+        uses: actions/upload-artifact@v2
+        with:
+          name: good-morph-app
+          path: path/to/artifacts
+          retention-days: 1
+          if-no-files-found: error
+
   create_release:
     permissions:
       # This is needed to create a release...

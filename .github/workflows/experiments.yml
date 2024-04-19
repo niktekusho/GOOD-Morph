@@ -79,7 +79,6 @@ jobs:
           echo "artifact_id=$artifact_id" >> "$GITHUB_OUTPUT"
           artifact=$artifact_id.tar
           echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
-          echo $GITHUB_OUTPUT
           echo ::group::Archive artifact $artifact
           tar \
             --dereference --hard-dereference \
@@ -94,7 +93,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.create-artifact.outputs.artifact_id }}
-          path: $RUNNER_TEMP
+          path: $RUNNER_TEMP/*.tar
           retention-days: 1
           if-no-files-found: error
 

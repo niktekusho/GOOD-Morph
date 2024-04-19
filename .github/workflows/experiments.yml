@@ -75,7 +75,7 @@ jobs:
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \
-            -cvf "$RUNNER_TEMP/artifact-${{ github.run_id }}.tar" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
             --exclude=.git \
             --exclude=.github \
             .
@@ -107,5 +107,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          ls -la
-          gh release create delete-me-$(date -u "+%Y-%m-%d___%H-%M") ./package.json
+          gh release create good-morph-$(date -u "+%Y-%m-%d___%H-%M") ./artifact.tar

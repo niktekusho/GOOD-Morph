@@ -16,6 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: pwd && ls -la
+
       - uses: ./.github/actions/setup/action.yml
 
       - name: Setup Next.js cache

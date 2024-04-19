@@ -84,7 +84,7 @@ jobs:
           echo "artifact_id=good-morph-app-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
 
       - name: Upload archive to GitHub for later retrieval
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.create-artifact.outputs.artifact_id }}
           path: ${{ steps.create-artifact.outputs.artifact }}
@@ -102,6 +102,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.build.outputs.artifact_id }}
+
       - name: Create new release
         env:
           GH_TOKEN: ${{ github.token }}

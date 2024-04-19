@@ -54,4 +54,5 @@ runs:
           ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
     - name: Install dependencies
+      shell: bash
       run: pnpm install

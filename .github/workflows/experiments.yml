@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - run: pwd && ls -la
+      - run: ls -la ./.github/actions/setup
 
       - uses: ./.github/actions/setup/action.yml
 

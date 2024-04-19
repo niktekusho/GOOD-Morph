@@ -7,7 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      artifact: ${{ steps.create-artifact.outputs.artifact }}
       artifact_id: ${{ steps.create-artifact.outputs.artifact_id }}
     steps:
       - name: Checkout
@@ -82,12 +81,12 @@ jobs:
             .
           echo ::endgroup::
           echo "artifact=$RUNNER_TEMP/artifact-${{ github.run_id }}.tar" >> "$GITHUB_OUTPUT"
-          echo "artifact_id=${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+          echo "artifact_id=good-morph-app-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
 
       - name: Upload archive to GitHub for later retrieval
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: good-morph-app
+          name: ${{ steps.create-artifact.outputs.artifact_id }}
           path: ${{ steps.create-artifact.outputs.artifact }}
           retention-days: 1
           if-no-files-found: error
@@ -99,6 +98,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact_id }}
       - name: Create new release
         env:
           GH_TOKEN: ${{ github.token }}

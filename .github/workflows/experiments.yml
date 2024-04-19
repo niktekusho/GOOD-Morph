@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       artifact_id: ${{ steps.create-artifact.outputs.artifact_id }}
+      artifact: ${{ steps.create-artifact.outputs.artifact }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -76,14 +77,14 @@ jobs:
         run: |
           artifact_id=good-morph-app-${{ github.run_id }}
           echo "artifact_id=$artifact_id" >> "$GITHUB_OUTPUT"
-          artifact=$RUNNER_TEMP/$artifact_id.tar
+          artifact=$artifact_id.tar
           echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
           echo $GITHUB_OUTPUT
           echo ::group::Archive artifact $artifact
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \
-            -cvf "$artifact" \
+            -cvf $RUNNER_TEMP/$artifact \
             --exclude=.git \
             --exclude=.github \
             .
@@ -113,4 +114,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create good-morph-$(date -u "+%Y-%m-%d___%H-%M") ./artifact.tar
+          gh release create good-morph-$(date -u "+%Y-%m-%d___%H-%M") ./${{ needs.build.outputs.artifact }}

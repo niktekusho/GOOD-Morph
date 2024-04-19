@@ -61,13 +61,14 @@ jobs:
       - name: Build with Next.js
         run: pnpm run build
       - name: Archive artifact
+        env:
+          NEXT_OUTPUT: "out"
         run: |
-          ls -la
-          ls -la .out
+          ls -la $NEXT_OUTPUT
           echo ::group::Archive artifact
           tar \
             --dereference --hard-dereference \
-            --directory .out/ \
+            --directory $NEXT_OUTPUT \
             -cvf "$RUNNER_TEMP/artifact.tar" \
             --exclude=.git \
             --exclude=.github \

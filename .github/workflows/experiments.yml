@@ -76,7 +76,7 @@ jobs:
         run: |
           echo "artifact_id=good-morph-app-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
           echo "artifact=$RUNNER_TEMP/$artifact_id.tar" >> "$GITHUB_OUTPUT"
-          echo ::group::Archive artifact $artifact_id ($artifact)
+          echo ::group::Archive artifact $artifact
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \

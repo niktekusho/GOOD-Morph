@@ -7,25 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      artifact_id: "TODO"
+      artifact: ${{ steps.create-artifact.outputs.artifact }}
+      artifact_id: ${{ steps.create-artifact.outputs.artifact_id }}
     steps:
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
-      - name: Dump job context
-        env:
-          JOB_CONTEXT: ${{ toJSON(job) }}
-        run: echo "$JOB_CONTEXT"
-      - name: Dump steps context
-        env:
-          STEPS_CONTEXT: ${{ toJSON(steps) }}
-        run: echo "$STEPS_CONTEXT"
-      - name: Dump runner context
-        env:
-          RUNNER_CONTEXT: ${{ toJSON(runner) }}
-        run: echo "$RUNNER_CONTEXT"
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -83,7 +67,8 @@ jobs:
       - name: Build with Next.js
         run: pnpm run build
 
-      - name: Archive artifact
+      - name: Create artifact
+        id: create-artifact
         env:
           NEXT_OUTPUT: out
         run: |
@@ -91,18 +76,19 @@ jobs:
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \
-            -cvf "$RUNNER_TEMP/artifact-${{ github.run_number }}.tar" \
+            -cvf "$RUNNER_TEMP/artifact-${{ github.run_id }}.tar" \
             --exclude=.git \
             --exclude=.github \
             .
           echo ::endgroup::
-          ls -la $RUNNER_TEMP
+          echo "artifact=$RUNNER_TEMP/artifact-${{ github.run_id }}.tar" >> "$GITHUB_OUTPUT"
+          echo "artifact_id=${{ github.run_id }}" >> "$GITHUB_OUTPUT"
 
       - name: Upload archive to GitHub for later retrieval
         uses: actions/upload-artifact@v2
         with:
           name: good-morph-app
-          path: path/to/artifacts
+          path: ${{ steps.create-artifact.outputs.artifact }}
           retention-days: 1
           if-no-files-found: error
 

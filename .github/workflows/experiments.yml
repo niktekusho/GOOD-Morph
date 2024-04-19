@@ -73,16 +73,17 @@ jobs:
         id: create-artifact
         env:
           NEXT_OUTPUT: out
-          ARTIFACT_ID: good-morph-app-${{ github.run_id }}
-          ARTIFACT: $RUNNER_TEMP/${ARTIFACT_ID}.tar
         run: |
-          echo "artifact_id=$ARTIFACT_ID" >> "$GITHUB_OUTPUT"
-          echo "artifact=$ARTIFACT" >> "$GITHUB_OUTPUT"
-          echo ::group::Archive artifact $ARTIFACT
+          artifact_id=good-morph-app-${{ github.run_id }}
+          echo "artifact_id=$artifact_id" >> "$GITHUB_OUTPUT"
+          artifact=$RUNNER_TEMP/$artifact_id.tar
+          echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
+          echo $GITHUB_OUTPUT
+          echo ::group::Archive artifact $artifact
           tar \
             --dereference --hard-dereference \
             --directory $NEXT_OUTPUT \
-            -cvf "$ARTIFACT" \
+            -cvf "$artifact" \
             --exclude=.git \
             --exclude=.github \
             .

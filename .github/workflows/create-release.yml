@@ -1,0 +1,104 @@
+name: Create a release
+run-name: Create a release (TODO)
+
+# Create releases only on pushes on the main branch and on PRs
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact_id: ${{ steps.create-artifact.outputs.artifact_id }}
+      artifact: ${{ steps.create-artifact.outputs.artifact }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - name: Setup Next.js cache
+        uses: actions/cache@v4
+        with:
+          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
+          path: |
+            ${{ github.workspace }}/.next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
+
+      - name: Build with Next.js
+        run: pnpm run build
+
+      - name: Create artifact
+        id: create-artifact
+        env:
+          NEXT_OUTPUT: out
+        run: |
+          artifact_id=good-morph-app-${{ github.run_id }}
+          echo "artifact_id=$artifact_id" >> "$GITHUB_OUTPUT"
+          artifact=$artifact_id.tar
+          echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
+          echo ::group::Archive artifact $artifact
+          tar \
+            --dereference --hard-dereference \
+            --directory $NEXT_OUTPUT \
+            -cvf $RUNNER_TEMP/$artifact \
+            --exclude=.git \
+            --exclude=.github \
+            .
+          echo ::endgroup::
+          echo "artifact_path=$RUNNER_TEMP/$artifact" >> "$GITHUB_OUTPUT"
+
+      - name: Upload archive to GitHub for later retrieval
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.create-artifact.outputs.artifact_id }}
+          path: ${{ steps.create-artifact.outputs.artifact_path }}
+          retention-days: 1
+          if-no-files-found: error
+
+  create_release:
+    permissions:
+      # This is needed to create a release...
+      contents: write
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # TODO Ensure the job checks out the same repo as above
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact_id }}
+
+      - name: Create new release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RELEASE_ARGS='--generate-notes'
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            # TODO: use version
+            RELEASE_SUFFIX="main"
+          else
+            RELEASE_SUFFIX=${{ github.ref_name }}-$(date -u "+%Y-%m-%d___%H-%M")
+            RELEASE_ARGS="${RELEASE_ARGS} --draft"
+          fi
+
+          gh release create good-morph-$RELEASE_SUFFIX $RELEASE_ARGS ./${{ needs.build.outputs.artifact }}

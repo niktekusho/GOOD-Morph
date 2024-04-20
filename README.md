@@ -1,3 +1,11 @@
+## TODOs
+
+- [ ] job that builds the app on PRs and deploys a preview on gh pages
+- [ ] job that cleans up the stuff created by the job before this (release?, deployment)
+- [ ] Inject version and build info into an about page
+- [ ] find a way to pass a version on release (tagged commit?)
+- [ ] maybe run deployment on PRs comments instead of all? [Discussion about how to do it](https://github.com/orgs/community/discussions/25389)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

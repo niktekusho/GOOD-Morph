@@ -90,13 +90,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          RELEASE_ARGS='--generate-notes'
           if [[ "${{ github.ref_name }}" == "main" ]]; then
             # TODO: use version
             RELEASE_SUFFIX="main"
-            RELEASE_ARGS=
           else
             RELEASE_SUFFIX=${{ github.ref_name }}-$(date -u "+%Y-%m-%d___%H-%M")
-            RELEASE_ARGS='--draft'
+            RELEASE_ARGS="${RELEASE_ARGS} --draft"
           fi
 
           gh release create good-morph-$RELEASE_SUFFIX $RELEASE_ARGS ./${{ needs.build.outputs.artifact }}

@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   # Deployment job
-  deply:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages

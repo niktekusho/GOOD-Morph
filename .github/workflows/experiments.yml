@@ -90,4 +90,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create good-morph-$(date -u "+%Y-%m-%d___%H-%M") ./${{ needs.build.outputs.artifact }}
+          if [[ "${{ github.ref_name }}" == "main" ]]; then
+            # TODO: use version
+            RELEASE_SUFFIX="main"
+            RELEASE_ARGS=
+          else
+            RELEASE_SUFFIX=${{ github.ref_name }}-$(date -u "+%Y-%m-%d___%H-%M")
+            RELEASE_ARGS='--draft'
+
+          gh release create good-morph-$RELEASE_SUFFIX $RELEASE_ARGS ./${{ needs.build.outputs.artifact }}

@@ -95,7 +95,7 @@ jobs:
           RELEASE_ARGS='--generate-notes'
           if [[ "${{ github.ref_name }}" == "main" ]]; then
             # TODO: use version
-            RELEASE_SUFFIX="main"
+            RELEASE_SUFFIX="main-$(date -u "+%Y-%m-%dT%H:%M")"
           else
             RELEASE_SUFFIX=${{ github.ref_name }}-$(date -u "+%Y-%m-%d___%H-%M")
             RELEASE_ARGS="${RELEASE_ARGS} --draft"

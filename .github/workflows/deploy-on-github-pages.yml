@@ -45,9 +45,9 @@ jobs:
         run: |
           gh release list
           gh release list --limit 1
-          exit 2
-          gh release download --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
-          ls -la
+          # exit 2
+          # gh release download --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
+          # ls -la
 
       - name: Upload latest release as an artifact
         uses: actions/upload-artifact@v4

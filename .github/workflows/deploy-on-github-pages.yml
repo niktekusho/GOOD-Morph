@@ -35,6 +35,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download latest release
+        env:
+          # Necessary to allow the runner to access GitHub's APIs
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release download --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
           ls -la

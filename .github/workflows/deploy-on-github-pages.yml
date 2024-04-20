@@ -43,6 +43,7 @@ jobs:
           # Necessary to allow the runner to access GitHub's APIs
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh release view
           gh release download --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
           ls -la
 

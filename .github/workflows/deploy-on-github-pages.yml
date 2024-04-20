@@ -43,6 +43,7 @@ jobs:
           # Necessary to allow the runner to access GitHub's APIs
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh pr list | cat
           gh release list --limit 1 --json name --jq ".[0].name" | cat
           LATEST_RELEASE=$(gh release list --limit 1 --json name --jq ".[0].name" | cat)
           echo "Latest release: $LATEST_RELEASE"

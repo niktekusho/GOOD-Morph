@@ -2,8 +2,6 @@ name: Create a release
 run-name: Create a release (TODO)
 
 on:
-  # TODO: remove push
-  push:
   workflow_dispatch:
 
 jobs:

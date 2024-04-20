@@ -47,13 +47,11 @@ jobs:
           # Necessary to allow the runner to access GitHub's APIs
           GH_TOKEN: ${{ github.token }}
           # Enables extra debug
-          GH_DEBUG: api
+          # GH_DEBUG: api
         run: |
-          gh release list --limit 1 --json name --jq ".[0].name" | cat
           LATEST_RELEASE=$(gh release list --limit 1 --json name --jq ".[0].name" | cat)
           echo "Latest release: $LATEST_RELEASE"
           gh release download $LATEST_RELEASE --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
-          ls -la
 
       - name: Upload latest release as an artifact
         uses: actions/upload-artifact@v4

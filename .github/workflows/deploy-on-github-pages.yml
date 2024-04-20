@@ -34,6 +34,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # A repository is needed to let GitHub's CLI figure out from where to download the releases
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Download latest release
         env:
           # Necessary to allow the runner to access GitHub's APIs

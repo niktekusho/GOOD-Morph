@@ -16,9 +16,12 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  # TODO: try this
+  # Permission to read the releases
+  # TODO: this is not supposed to be write, I opened a ticket to GitHub to make sure it's a bug on their end
   contents: write
+  # Permission to write to the pages service
   pages: write
+  # TODO: Added automatically by the template workflow...
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -28,7 +31,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Deployment job
   deploy:
     runs-on: ubuntu-latest
     environment:

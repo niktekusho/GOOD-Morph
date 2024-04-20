@@ -43,7 +43,7 @@ jobs:
           # Necessary to allow the runner to access GitHub's APIs
           GH_TOKEN: ${{ github.token }}
         run: |
-          LATEST_RELEASE=$(gh release list --limit 1 --json name --jq ".[0].name")
+          LATEST_RELEASE=$(gh release list --limit 1 --json name --jq ".[0].name" | cat)
           echo "Latest release: $LATEST_RELEASE"
           gh release download $LATEST_RELEASE --pattern "good-morph-app-*.tar" --output "good-morph-app.tar"
           ls -la

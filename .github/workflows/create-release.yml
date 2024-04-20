@@ -97,5 +97,6 @@ jobs:
           else
             RELEASE_SUFFIX=${{ github.ref_name }}-$(date -u "+%Y-%m-%d___%H-%M")
             RELEASE_ARGS='--draft'
+          fi
 
           gh release create good-morph-$RELEASE_SUFFIX $RELEASE_ARGS ./${{ needs.build.outputs.artifact }}

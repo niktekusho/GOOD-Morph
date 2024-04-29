@@ -1,0 +1,21 @@
+{
+  "atk": "ATK",
+  "atk_": "ATK%",
+  "eleMas": "Elemental Mastery",
+  "hp": "HP",
+  "hp_": "HP%",
+  "critRate_": "Crit Rate",
+  "critDMG_": "Crit DMG",
+  "enerRech_": "Energy Recharge",
+  "def": "DEF",
+  "def_": "DEF%",
+  "geo_dmg_": "Geo DMG Bonus",
+  "hydro_dmg_": "Hydro DMG Bonus",
+  "pyro_dmg_": "Pyro DMG Bonus",
+  "dendro_dmg_": "Dendro DMG Bonus",
+  "cryo_dmg_": "Cryo DMG Bonus",
+  "physical_dmg_": "Physical DMG Bonus",
+  "electro_dmg_": "Electro DMG Bonus",
+  "anemo_dmg_": "Anemo DMG Bonus",
+  "heal_": "Healing Bonus"
+}

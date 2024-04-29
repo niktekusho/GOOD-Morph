@@ -1,0 +1,7015 @@
+{
+  "format": "GOOD",
+  "dbVersion": 25,
+  "source": "Genshin Optimizer",
+  "version": 1,
+  "characters": [
+    {
+      "key": "YaeMiko",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 7, "skill": 8, "burst": 9 },
+      "constellation": 0,
+      "id": "YaeMiko"
+    },
+    {
+      "key": "Faruzan",
+      "level": 80,
+      "ascension": 5,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 6,
+      "id": "Faruzan"
+    },
+    {
+      "key": "Yaoyao",
+      "level": 70,
+      "ascension": 5,
+      "talent": { "auto": 1, "skill": 2, "burst": 1 },
+      "constellation": 3,
+      "id": "Yaoyao"
+    },
+    {
+      "key": "Ganyu",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 10, "skill": 6, "burst": 8 },
+      "constellation": 0,
+      "id": "Ganyu"
+    },
+    {
+      "key": "Jean",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 7, "burst": 8 },
+      "constellation": 4,
+      "id": "Jean"
+    },
+    {
+      "key": "Thoma",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 6, "burst": 6 },
+      "constellation": 6,
+      "id": "Thoma"
+    },
+    {
+      "key": "KukiShinobu",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 1, "burst": 1 },
+      "constellation": 0,
+      "id": "KukiShinobu"
+    },
+    {
+      "key": "Xiao",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 9, "skill": 9, "burst": 9 },
+      "constellation": 0,
+      "id": "Xiao"
+    },
+    {
+      "key": "Sucrose",
+      "level": 80,
+      "ascension": 6,
+      "talent": { "auto": 4, "skill": 8, "burst": 8 },
+      "constellation": 6,
+      "id": "Sucrose"
+    },
+    {
+      "key": "Bennett",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 7, "skill": 9, "burst": 9 },
+      "constellation": 6,
+      "id": "Bennett"
+    },
+    {
+      "key": "Neuvillette",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 8, "skill": 1, "burst": 2 },
+      "constellation": 0,
+      "id": "Neuvillette"
+    },
+    {
+      "key": "Zhongli",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 3, "skill": 9, "burst": 8 },
+      "constellation": 0,
+      "id": "Zhongli"
+    },
+    {
+      "key": "Xiangling",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 6, "skill": 9, "burst": 9 },
+      "constellation": 6,
+      "id": "Xiangling"
+    },
+    {
+      "key": "Xingqiu",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 9, "burst": 9 },
+      "constellation": 6,
+      "id": "Xingqiu"
+    },
+    {
+      "key": "SangonomiyaKokomi",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "SangonomiyaKokomi"
+    },
+    {
+      "key": "AratakiItto",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 8, "skill": 8, "burst": 9 },
+      "constellation": 0,
+      "id": "AratakiItto"
+    },
+    {
+      "key": "KujouSara",
+      "level": 80,
+      "ascension": 5,
+      "talent": { "auto": 2, "skill": 5, "burst": 5 },
+      "constellation": 6,
+      "id": "KujouSara"
+    },
+    {
+      "key": "Kaeya",
+      "level": 70,
+      "ascension": 5,
+      "talent": { "auto": 1, "skill": 7, "burst": 7 },
+      "constellation": 1,
+      "id": "Kaeya"
+    },
+    {
+      "key": "Shenhe",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "Shenhe"
+    },
+    {
+      "key": "Lyney",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 9, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "Lyney"
+    },
+    {
+      "key": "Eula",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 9, "skill": 8, "burst": 9 },
+      "constellation": 0,
+      "id": "Eula"
+    },
+    {
+      "key": "KamisatoAyato",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "KamisatoAyato"
+    },
+    {
+      "key": "HuTao",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 10, "skill": 10, "burst": 10 },
+      "constellation": 0,
+      "id": "HuTao"
+    },
+    {
+      "key": "KamisatoAyaka",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 9, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "KamisatoAyaka"
+    },
+    {
+      "key": "TravelerDendro",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 4 },
+      "constellation": 6,
+      "id": "TravelerDendro"
+    },
+    {
+      "key": "Mona",
+      "level": 80,
+      "ascension": 6,
+      "talent": { "auto": 6, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "Mona"
+    },
+    {
+      "key": "KaedeharaKazuha",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 8, "skill": 10, "burst": 10 },
+      "constellation": 0,
+      "id": "KaedeharaKazuha"
+    },
+    {
+      "key": "Gorou",
+      "level": 80,
+      "ascension": 5,
+      "talent": { "auto": 1, "skill": 1, "burst": 1 },
+      "constellation": 2,
+      "id": "Gorou"
+    },
+    {
+      "key": "Yelan",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "Yelan"
+    },
+    {
+      "key": "RaidenShogun",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "RaidenShogun"
+    },
+    {
+      "key": "Fischl",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 8, "skill": 8, "burst": 7 },
+      "constellation": 6,
+      "id": "Fischl"
+    },
+    {
+      "key": "Layla",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 1 },
+      "constellation": 6,
+      "id": "Layla"
+    },
+    {
+      "key": "Albedo",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 8, "burst": 8 },
+      "constellation": 0,
+      "id": "Albedo"
+    },
+    {
+      "key": "Tighnari",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 8, "skill": 8, "burst": 9 },
+      "constellation": 3,
+      "id": "Tighnari"
+    },
+    {
+      "key": "Furina",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 1, "skill": 10, "burst": 10 },
+      "constellation": 0,
+      "id": "Furina"
+    },
+    {
+      "key": "Venti",
+      "level": 90,
+      "ascension": 6,
+      "talent": { "auto": 4, "skill": 9, "burst": 9 },
+      "constellation": 0,
+      "id": "Venti"
+    }
+  ],
+  "weapons": [
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_156"
+    },
+    {
+      "key": "RavenBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_76"
+    },
+    {
+      "key": "FavoniusWarbow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Yelan",
+      "lock": false,
+      "id": "weapon_10"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_141"
+    },
+    {
+      "key": "WindblumeOde",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_5"
+    },
+    {
+      "key": "ThunderingPulse",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Tighnari",
+      "lock": false,
+      "id": "weapon_140"
+    },
+    {
+      "key": "RecurveBow",
+      "level": 40,
+      "ascension": 1,
+      "refinement": 2,
+      "location": "",
+      "lock": true,
+      "id": "weapon_68"
+    },
+    {
+      "key": "AmenomaKageuchi",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 3,
+      "location": "KamisatoAyaka",
+      "lock": true,
+      "id": "weapon_21"
+    },
+    {
+      "key": "TheWidsith",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_51"
+    },
+    {
+      "key": "BlackTassel",
+      "level": 80,
+      "ascension": 5,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_66"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_148"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_122"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_153"
+    },
+    {
+      "key": "TheWidsith",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "YaeMiko",
+      "lock": true,
+      "id": "weapon_13"
+    },
+    {
+      "key": "FerrousShadow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_103"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_157"
+    },
+    {
+      "key": "FavoniusGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_58"
+    },
+    {
+      "key": "TheStringless",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Venti",
+      "lock": true,
+      "id": "weapon_9"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_134"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_146"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_119"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_47"
+    },
+    {
+      "key": "TheCatch",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Xiangling",
+      "lock": true,
+      "id": "weapon_15"
+    },
+    {
+      "key": "BloodtaintedGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_98"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_49"
+    },
+    {
+      "key": "Whiteblind",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 3,
+      "location": "AratakiItto",
+      "lock": true,
+      "id": "weapon_18"
+    },
+    {
+      "key": "FerrousShadow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_100"
+    },
+    {
+      "key": "RavenBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_74"
+    },
+    {
+      "key": "SacrificialSword",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_137"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_144"
+    },
+    {
+      "key": "PrototypeStarglitter",
+      "level": 70,
+      "ascension": 4,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_30"
+    },
+    {
+      "key": "KitainCrossSpear",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_53"
+    },
+    {
+      "key": "FavoniusSword",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "KaedeharaKazuha",
+      "lock": true,
+      "id": "weapon_25"
+    },
+    {
+      "key": "Rust",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_41"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_151"
+    },
+    {
+      "key": "WineAndSong",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_43"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_45"
+    },
+    {
+      "key": "SharpshootersOath",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_71"
+    },
+    {
+      "key": "SnowTombedStarsilver",
+      "level": 40,
+      "ascension": 1,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_35"
+    },
+    {
+      "key": "SkyriderSword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_104"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_126"
+    },
+    {
+      "key": "FleuveCendreFerryman",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Furina",
+      "lock": true,
+      "id": "weapon_164"
+    },
+    {
+      "key": "Rust",
+      "level": 80,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_26"
+    },
+    {
+      "key": "IronSting",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 2,
+      "location": "KukiShinobu",
+      "lock": true,
+      "id": "weapon_22"
+    },
+    {
+      "key": "RavenBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_75"
+    },
+    {
+      "key": "FavoniusWarbow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Gorou",
+      "lock": false,
+      "id": "weapon_136"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_145"
+    },
+    {
+      "key": "FavoniusWarbow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 2,
+      "location": "Faruzan",
+      "lock": false,
+      "id": "weapon_139"
+    },
+    {
+      "key": "DarkIronSword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_106"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_132"
+    },
+    {
+      "key": "HarbingerOfDawn",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_64"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_118"
+    },
+    {
+      "key": "Slingshot",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_70"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_111"
+    },
+    {
+      "key": "FavoniusGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_59"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_150"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_48"
+    },
+    {
+      "key": "PrimordialJadeWingedSpear",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Xiao",
+      "lock": true,
+      "id": "weapon_1"
+    },
+    {
+      "key": "LuxuriousSeaLord",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Eula",
+      "lock": true,
+      "id": "weapon_31"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_125"
+    },
+    {
+      "key": "SongOfStillness",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Lyney",
+      "lock": false,
+      "id": "weapon_170"
+    },
+    {
+      "key": "FilletBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 2,
+      "location": "",
+      "lock": false,
+      "id": "weapon_105"
+    },
+    {
+      "key": "DragonsBane",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "HuTao",
+      "lock": true,
+      "id": "weapon_17"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_123"
+    },
+    {
+      "key": "BlackTassel",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_88"
+    },
+    {
+      "key": "TheBell",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_57"
+    },
+    {
+      "key": "FavoniusLance",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Zhongli",
+      "lock": true,
+      "id": "weapon_129"
+    },
+    {
+      "key": "MagicGuide",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_87"
+    },
+    {
+      "key": "RavenBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_73"
+    },
+    {
+      "key": "WasterGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_143"
+    },
+    {
+      "key": "FerrousShadow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_101"
+    },
+    {
+      "key": "Halberd",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_90"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_115"
+    },
+    {
+      "key": "FavoniusLance",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Thoma",
+      "lock": true,
+      "id": "weapon_16"
+    },
+    {
+      "key": "EmeraldOrb",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_80"
+    },
+    {
+      "key": "LionsRoar",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_61"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_166"
+    },
+    {
+      "key": "ThrillingTalesOfDragonSlayers",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_84"
+    },
+    {
+      "key": "CinnabarSpindle",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Albedo",
+      "lock": true,
+      "id": "weapon_20"
+    },
+    {
+      "key": "TheBell",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 4,
+      "location": "",
+      "lock": true,
+      "id": "weapon_56"
+    },
+    {
+      "key": "BloodtaintedGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_94"
+    },
+    {
+      "key": "AmosBow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Ganyu",
+      "lock": true,
+      "id": "weapon_0"
+    },
+    {
+      "key": "ThrillingTalesOfDragonSlayers",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "SangonomiyaKokomi",
+      "lock": true,
+      "id": "weapon_65"
+    },
+    {
+      "key": "CompoundBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_39"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_154"
+    },
+    {
+      "key": "PrototypeArchaic",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 3,
+      "location": "",
+      "lock": true,
+      "id": "weapon_19"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_46"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_169"
+    },
+    {
+      "key": "CrescentPike",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 3,
+      "location": "",
+      "lock": true,
+      "id": "weapon_55"
+    },
+    {
+      "key": "FerrousShadow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 2,
+      "location": "",
+      "lock": false,
+      "id": "weapon_99"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_163"
+    },
+    {
+      "key": "EmeraldOrb",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_79"
+    },
+    {
+      "key": "Rust",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 2,
+      "location": "",
+      "lock": true,
+      "id": "weapon_40"
+    },
+    {
+      "key": "BloodtaintedGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_96"
+    },
+    {
+      "key": "Messenger",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_69"
+    },
+    {
+      "key": "DodocoTales",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_12"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_116"
+    },
+    {
+      "key": "PrototypeCrescent",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 4,
+      "location": "",
+      "lock": true,
+      "id": "weapon_7"
+    },
+    {
+      "key": "SkywardBlade",
+      "level": 60,
+      "ascension": 3,
+      "refinement": 1,
+      "location": "Jean",
+      "lock": true,
+      "id": "weapon_161"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_120"
+    },
+    {
+      "key": "ThrillingTalesOfDragonSlayers",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_82"
+    },
+    {
+      "key": "EngulfingLightning",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "RaidenShogun",
+      "lock": false,
+      "id": "weapon_152"
+    },
+    {
+      "key": "TwinNephrite",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_77"
+    },
+    {
+      "key": "TheWidsith",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_50"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_113"
+    },
+    {
+      "key": "SharpshootersOath",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_72"
+    },
+    {
+      "key": "DebateClub",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_91"
+    },
+    {
+      "key": "TravelersHandySword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_107"
+    },
+    {
+      "key": "DebateClub",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_92"
+    },
+    {
+      "key": "WasterGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_130"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_167"
+    },
+    {
+      "key": "SwordOfDescension",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_60"
+    },
+    {
+      "key": "HarbingerOfDawn",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_109"
+    },
+    {
+      "key": "MissiveWindspear",
+      "level": 20,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_37"
+    },
+    {
+      "key": "ThrillingTalesOfDragonSlayers",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_81"
+    },
+    {
+      "key": "TheFlute",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_63"
+    },
+    {
+      "key": "DebateClub",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_93"
+    },
+    {
+      "key": "SkywardPride",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_2"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_142"
+    },
+    {
+      "key": "FavoniusLance",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Shenhe",
+      "lock": false,
+      "id": "weapon_131"
+    },
+    {
+      "key": "TheFlute",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_62"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_112"
+    },
+    {
+      "key": "MagicGuide",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_85"
+    },
+    {
+      "key": "CoolSteel",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_110"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_171"
+    },
+    {
+      "key": "MappaMare",
+      "level": 80,
+      "ascension": 5,
+      "refinement": 3,
+      "location": "Sucrose",
+      "lock": true,
+      "id": "weapon_27"
+    },
+    {
+      "key": "SacrificialSword",
+      "level": 80,
+      "ascension": 5,
+      "refinement": 4,
+      "location": "Traveler",
+      "lock": true,
+      "id": "weapon_29"
+    },
+    {
+      "key": "MagicGuide",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_86"
+    },
+    {
+      "key": "SacrificialGreatsword",
+      "level": 70,
+      "ascension": 4,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_32"
+    },
+    {
+      "key": "BeginnersProtector",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_117"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_149"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_165"
+    },
+    {
+      "key": "EyeOfPerception",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_44"
+    },
+    {
+      "key": "SacrificialBow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_8"
+    },
+    {
+      "key": "DragonsBane",
+      "level": 68,
+      "ascension": 4,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_33"
+    },
+    {
+      "key": "BloodtaintedGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_95"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_147"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_124"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_155"
+    },
+    {
+      "key": "SkywardBlade",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Bennett",
+      "lock": true,
+      "id": "weapon_3"
+    },
+    {
+      "key": "Rainslasher",
+      "level": 40,
+      "ascension": 1,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_36"
+    },
+    {
+      "key": "SacrificialSword",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Xingqiu",
+      "lock": true,
+      "id": "weapon_24"
+    },
+    {
+      "key": "WhiteTassel",
+      "level": 80,
+      "ascension": 5,
+      "refinement": 3,
+      "location": "",
+      "lock": true,
+      "id": "weapon_67"
+    },
+    {
+      "key": "DragonspineSpear",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_54"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_128"
+    },
+    {
+      "key": "MouunsMoon",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 2,
+      "location": "",
+      "lock": true,
+      "id": "weapon_38"
+    },
+    {
+      "key": "SkywardBlade",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_4"
+    },
+    {
+      "key": "WavebreakersFin",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 3,
+      "location": "",
+      "lock": true,
+      "id": "weapon_52"
+    },
+    {
+      "key": "TheStringless",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 3,
+      "location": "Fischl",
+      "lock": false,
+      "id": "weapon_42"
+    },
+    {
+      "key": "WasterGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_127"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_138"
+    },
+    {
+      "key": "KagotsurubeIsshin",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "KamisatoAyato",
+      "lock": true,
+      "id": "weapon_34"
+    },
+    {
+      "key": "FavoniusWarbow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_168"
+    },
+    {
+      "key": "ThrillingTalesOfDragonSlayers",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": true,
+      "id": "weapon_83"
+    },
+    {
+      "key": "OathswornEye",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "",
+      "lock": false,
+      "id": "weapon_11"
+    },
+    {
+      "key": "ToukabouShigure",
+      "level": 80,
+      "ascension": 5,
+      "refinement": 5,
+      "location": "Kaeya",
+      "lock": true,
+      "id": "weapon_28"
+    },
+    {
+      "key": "BlackTassel",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_89"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_114"
+    },
+    {
+      "key": "FavoniusCodex",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Mona",
+      "lock": true,
+      "id": "weapon_14"
+    },
+    {
+      "key": "PrototypeRancour",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 2,
+      "location": "",
+      "lock": true,
+      "id": "weapon_23"
+    },
+    {
+      "key": "FerrousShadow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_102"
+    },
+    {
+      "key": "HuntersBow",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_162"
+    },
+    {
+      "key": "ApprenticesNotes",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_133"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_158"
+    },
+    {
+      "key": "HarbingerOfDawn",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_108"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_135"
+    },
+    {
+      "key": "BloodtaintedGreatsword",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_97"
+    },
+    {
+      "key": "EmeraldOrb",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 5,
+      "location": "",
+      "lock": true,
+      "id": "weapon_78"
+    },
+    {
+      "key": "FadingTwilight",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "KujouSara",
+      "lock": true,
+      "id": "weapon_6"
+    },
+    {
+      "key": "DullBlade",
+      "level": 1,
+      "ascension": 0,
+      "refinement": 1,
+      "location": "",
+      "lock": false,
+      "id": "weapon_121"
+    },
+    {
+      "key": "TomeOfTheEternalFlow",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Neuvillette",
+      "lock": false,
+      "id": "weapon_159"
+    },
+    {
+      "key": "FavoniusSword",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 1,
+      "location": "Layla",
+      "lock": false,
+      "id": "weapon_172"
+    },
+    {
+      "key": "DialoguesOfTheDesertSages",
+      "level": 90,
+      "ascension": 6,
+      "refinement": 5,
+      "location": "Yaoyao",
+      "lock": false,
+      "id": "weapon_173"
+    }
+  ],
+  "artifacts": [
+    {
+      "setKey": "HeartOfDepth",
+      "rarity": 5,
+      "level": 20,
+      "slotKey": "goblet",
+      "mainStatKey": "hydro_dmg_",
+      "substats": [
+        { "key": "hp_", "value": 4.7 },
+        { "key": "critDMG_", "value": 14.8 },
+        { "key": "hp", "value": 538 },
+        { "key": "critRate_", "value": 14.4 }
+      ],
+      "location": "Yelan",
+      "lock": true,
+      "id": "artifact_299"
+    },
+    {
+      "setKey": "EmblemOfSeveredFate",
+      "rarity": 5,
+      "level": 20,
+      "slotKey": "sands",
+      "mainStatKey": "hp_",
+      "substats": [
+        { "key": "enerRech_", "value": 16.8 },
+        { "key": "atk", "value": 16 },
+        { "key": "eleMas", "value": 42 },
+        { "key": "critRate_", "value": 8.9 }
+      ],
+      "location": "Yelan",
+      "lock": true,
+      "id": "artifact_598"
+    },
+    {
+      "setKey": "EmblemOfSeveredFate",
+      "rarity": 5,
+      "level": 20,
+      "slotKey": "circlet",
+      "mainStatKey": "critRate_",
+      "substats": [
+        { "key": "hp_", "value": 15.7 },
+        { "key": "atk_", "value": 10.5 },
+        { "key": "def_", "value": 5.1 },
+        { "key": "critDMG_", "value": 18.7 }
+      ],
+      "location": "Yelan",
+      "lock": true,
+      "id": "artifact_805"
+    },
+    {
+      "setKey": "EmblemOfSeveredFate",
+      "rarity": 5,
+      "level": 20,
+      "slotKey": "plume",
+      "mainStatKey": "atk",
+      "substats": [
+        { "key": "enerRech_", "value": 11.7 },
+        { "key": "critDMG_", "value": 28.8 },
+        { "key": "hp_", "value": 4.1 },
+        { "key": "hp", "value": 448 }
+      ],
+      "location": "Yelan",
+      "lock": true,
+      "id": "artifact_606"
+    },
+    {
+      "setKey": "EmblemOfSeveredFate",
+      "rarity": 5,
+      "level": 20,
+      "slotKey": "flower",
+      "mainStatKey": "hp",
+      "substats": [
+        { "key": "eleMas", "value": 37 },
+        { "key": "critRate_", "value": 3.1 },
+        { "key": "enerRech_", "value": 21.4 },
+        { "key": "critDMG_", "value": 7.8 }
+      ],
+      "location": "Yelan",
+      "lock": true,
+      "id": "artifact_292"
+    }
+  ],
+  "optConfigs": [
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [4, 2]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 0, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["enerRech_"],
+        "goblet": ["atk_", "dendro_dmg_"],
+        "circlet": ["critRate_"]
+      },
+      "optimizationTarget": ["basic", "enerRech_"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_9",
+            "plume": "artifact_211",
+            "sands": "artifact_763",
+            "goblet": "artifact_14",
+            "circlet": "artifact_219"
+          },
+          "weaponId": "weapon_29"
+        }
+      ],
+      "buildDate": 1713617220236,
+      "useTeammateBuild": false,
+      "id": "optConfig_75"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["eleMas", "atk_"],
+        "goblet": ["dendro_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["HuTao"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_119",
+            "plume": "artifact_612",
+            "sands": "artifact_124",
+            "goblet": "artifact_433",
+            "circlet": "artifact_128"
+          },
+          "weaponId": "weapon_140"
+        }
+      ],
+      "buildDate": 1713617076957,
+      "useTeammateBuild": false,
+      "id": "optConfig_36"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"critRate_\"]": [{ "value": 50, "disabled": false }],
+        "[\"basic\",\"enerRech_\"]": [{ "value": 200, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["hp_"],
+        "circlet": ["hp_", "critRate_"]
+      },
+      "optimizationTarget": ["skill", "maxShield"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_79",
+            "plume": "artifact_575",
+            "sands": "artifact_745",
+            "goblet": "artifact_296",
+            "circlet": "artifact_68"
+          },
+          "weaponId": "weapon_16"
+        }
+      ],
+      "buildDate": 1713621081619,
+      "useTeammateBuild": false,
+      "id": "optConfig_51"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 120, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_"],
+        "goblet": ["hp_", "hydro_dmg_"],
+        "circlet": ["critRate_", "critDMG_", "hp_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Fischl", "Yelan", "HuTao"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "critRate_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_529",
+            "plume": "artifact_830",
+            "sands": "artifact_149",
+            "goblet": "artifact_904",
+            "circlet": "artifact_611"
+          },
+          "weaponId": "weapon_159"
+        }
+      ],
+      "buildDate": 1713623443764,
+      "useTeammateBuild": false,
+      "id": "optConfig_12"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_", "enerRech_", "eleMas"],
+        "goblet": ["atk_", "cryo_dmg_"],
+        "circlet": ["atk_", "critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_120",
+            "plume": "artifact_81",
+            "sands": "artifact_123",
+            "goblet": "artifact_742",
+            "circlet": "artifact_158"
+          },
+          "weaponId": "weapon_28"
+        }
+      ],
+      "buildDate": 1713625559126,
+      "useTeammateBuild": false,
+      "id": "optConfig_18"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 180, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["atk_", "enerRech_"],
+        "goblet": ["hydro_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Fischl", "RaidenShogun", "Yelan"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_70",
+            "plume": "artifact_71",
+            "sands": "artifact_630",
+            "goblet": "artifact_89",
+            "circlet": "artifact_446"
+          },
+          "weaponId": "weapon_24"
+        }
+      ],
+      "buildDate": 1713618151393,
+      "useTeammateBuild": false,
+      "id": "optConfig_15"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": ["artifact_595"],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"critRate_\"]": [{ "value": 0, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_", "eleMas"],
+        "goblet": ["hp_", "eleMas", "pyro_dmg_"],
+        "circlet": ["eleMas", "critRate_", "critDMG_", "hp_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "critRate_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_803",
+            "plume": "artifact_854",
+            "sands": "artifact_577",
+            "goblet": "artifact_605",
+            "circlet": "artifact_582"
+          },
+          "weaponId": "weapon_17"
+        }
+      ],
+      "buildDate": 1713616115397,
+      "useTeammateBuild": false,
+      "id": "optConfig_83"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 250, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["enerRech_"],
+        "goblet": ["atk_", "anemo_dmg_"],
+        "circlet": ["critRate_", "atk_", "critDMG_"]
+      },
+      "optimizationTarget": ["passive2", "anemo_dmgInc"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_2"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [4],
+        "GoldenTroupe": [4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": ["artifact_595"],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_"],
+        "goblet": ["pyro_dmg_", "atk_"],
+        "circlet": ["critRate_", "critDMG_", "atk_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "HuTao",
+        "Neuvillette",
+        "Fischl",
+        "Tighnari",
+        "Furina",
+        "Xingqiu",
+        "YaeMiko",
+        "RaidenShogun",
+        "Xiao",
+        "Albedo",
+        "Ganyu",
+        "KamisatoAyato"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_0",
+            "plume": "artifact_300",
+            "sands": "artifact_97",
+            "goblet": "artifact_170",
+            "circlet": "artifact_173"
+          },
+          "weaponId": "weapon_170"
+        }
+      ],
+      "buildDate": 1713623474028,
+      "useTeammateBuild": false,
+      "id": "optConfig_47"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_", "enerRech_"],
+        "goblet": ["hydro_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "1"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Layla",
+        "RaidenShogun",
+        "Yelan",
+        "Neuvillette",
+        "Xingqiu",
+        "Fischl",
+        "Xiao"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_22"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_49"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": true,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 200, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": ["hydro_dmg_"],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "optimizationTarget": ["burst", "dmg"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_28"
+    },
+    {
+      "artSetExclusion": { "rainbow": [4, 2] },
+      "artExclusion": ["artifact_31", "artifact_128", "artifact_800"],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 129.7, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["def_"],
+        "goblet": ["geo_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["charged", "akFinal"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "all",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_17"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2],
+        "BlizzardStrayer": [4, 2],
+        "BloodstainedChivalry": [4, 2],
+        "CrimsonWitchOfFlames": [4, 2],
+        "DeepwoodMemories": [4, 2],
+        "DesertPavilionChronicle": [4, 2],
+        "EchoesOfAnOffering": [4, 2],
+        "EmblemOfSeveredFate": [4, 2],
+        "FlowerOfParadiseLost": [4, 2],
+        "GildedDreams": [4, 2],
+        "GladiatorsFinale": [4, 2],
+        "GoldenTroupe": [4, 2],
+        "HeartOfDepth": [4, 2],
+        "HuskOfOpulentDreams": [4, 2],
+        "Lavawalker": [4, 2],
+        "MaidenBeloved": [4, 2],
+        "MarechausseeHunter": [4, 2],
+        "NighttimeWhispersInTheEchoingWoods": [4, 2],
+        "NoblesseOblige": [4, 2],
+        "NymphsDream": [4, 2],
+        "OceanHuedClam": [4, 2],
+        "PaleFlame": [4, 2],
+        "RetracingBolide": [4, 2],
+        "ShimenawasReminiscence": [4, 2],
+        "SongOfDaysPast": [4, 2],
+        "TenacityOfTheMillelith": [4, 2],
+        "ThunderingFury": [4, 2],
+        "Thundersoother": [4, 2],
+        "VermillionHereafter": [4, 2],
+        "ViridescentVenerer": [4, 2],
+        "VourukashasGlow": [4, 2],
+        "WanderersTroupe": [4, 2],
+        "Berserker": [4, 2],
+        "BraveHeart": [4, 2],
+        "DefendersWill": [4, 2],
+        "Gambler": [4, 2],
+        "Instructor": [4, 2],
+        "MartialArtist": [4, 2],
+        "ResolutionOfSojourner": [4, 2],
+        "Scholar": [4, 2],
+        "TheExile": [4, 2],
+        "TinyMiracle": [4, 2],
+        "Adventurer": [4, 2],
+        "LuckyDog": [4, 2],
+        "TravelingDoctor": [4, 2],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["geo_dmg_", "hp_"],
+        "circlet": ["critRate_", "critDMG_", "hp_"]
+      },
+      "optimizationTarget": ["skill", "shield"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_13"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_55"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["hp_"],
+        "circlet": ["hp_", "heal_", "critRate_"]
+      },
+      "optimizationTarget": ["skill", "heal"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 1713626092693,
+      "useTeammateBuild": false,
+      "id": "optConfig_3"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [4, 2]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["enerRech_", "eleMas"],
+        "goblet": ["anemo_dmg_", "eleMas"],
+        "circlet": ["critRate_", "critDMG_", "eleMas"]
+      },
+      "optimizationTarget": ["passive2", "asc4OptNode"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_10"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2, 4],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 200, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["enerRech_"],
+        "goblet": ["hp_", "hydro_dmg_"],
+        "circlet": ["heal_", "hp_"]
+      },
+      "optimizationTarget": ["skill", "heal"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_16"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_63"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": ["artifact_815"],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["def_"],
+        "goblet": ["geo_dmg_", "def_"],
+        "circlet": ["def_", "critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["skill", "blossom"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Furina"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_566",
+            "plume": "artifact_616",
+            "sands": "artifact_52",
+            "goblet": "artifact_783",
+            "circlet": "artifact_617"
+          },
+          "weaponId": "weapon_20"
+        }
+      ],
+      "buildDate": 1713616499577,
+      "useTeammateBuild": false,
+      "id": "optConfig_54"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": ["artifact_559"],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_", "eleMas"],
+        "goblet": ["electro_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "all",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_800",
+            "plume": "artifact_571",
+            "sands": "artifact_357",
+            "goblet": "artifact_572",
+            "circlet": "artifact_903"
+          },
+          "weaponId": "weapon_42"
+        }
+      ],
+      "buildDate": 1713617995364,
+      "useTeammateBuild": false,
+      "id": "optConfig_33"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_56"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [
+        "artifact_436",
+        "artifact_24",
+        "artifact_81",
+        "artifact_20"
+      ],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 200, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["atk_", "enerRech_"],
+        "goblet": ["electro_dmg_"],
+        "circlet": ["critDMG_", "critRate_", "atk_"]
+      },
+      "optimizationTarget": ["burst", "titanbreaker"],
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [
+        "Yelan",
+        "RaidenShogun",
+        "Layla",
+        "Tighnari",
+        "Ganyu",
+        "Shenhe",
+        "Fischl",
+        "Thoma"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_38"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": ["artifact_777"],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"critRate_\"]": [{ "value": 50, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["enerRech_", "atk_"],
+        "goblet": ["electro_dmg_", "atk_"],
+        "circlet": ["critRate_", "critDMG_", "atk_"]
+      },
+      "optimizationTarget": ["burst", "dmg"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Yelan"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_596",
+            "plume": "artifact_804",
+            "sands": "artifact_601",
+            "goblet": "artifact_447",
+            "circlet": "artifact_857"
+          },
+          "weaponId": "weapon_152"
+        }
+      ],
+      "buildDate": 1713616987165,
+      "useTeammateBuild": false,
+      "id": "optConfig_32"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 120, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["atk_"],
+        "goblet": ["atk_", "anemo_dmg_"],
+        "circlet": ["atk_", "critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["RaidenShogun", "Fischl", "Tighnari"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_732",
+            "plume": "artifact_469",
+            "sands": "artifact_201",
+            "goblet": "artifact_185",
+            "circlet": "artifact_17"
+          },
+          "weaponId": "weapon_1"
+        }
+      ],
+      "buildDate": 1713618782331,
+      "useTeammateBuild": false,
+      "id": "optConfig_39"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["eleMas"],
+        "goblet": ["eleMas"],
+        "circlet": ["eleMas"]
+      },
+      "optimizationTarget": ["reaction", "hyperbloom"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_0",
+            "plume": "artifact_227",
+            "sands": "artifact_920",
+            "goblet": "artifact_921",
+            "circlet": "artifact_7"
+          },
+          "weaponId": "weapon_28"
+        }
+      ],
+      "buildDate": 1713619450864,
+      "useTeammateBuild": false,
+      "id": "optConfig_66"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [4, 2],
+        "BlizzardStrayer": [4, 2],
+        "BloodstainedChivalry": [4, 2],
+        "CrimsonWitchOfFlames": [4, 2],
+        "DeepwoodMemories": [4, 2],
+        "DesertPavilionChronicle": [4, 2],
+        "EchoesOfAnOffering": [4, 2],
+        "EmblemOfSeveredFate": [2],
+        "FlowerOfParadiseLost": [4, 2],
+        "GildedDreams": [4, 2],
+        "GladiatorsFinale": [4, 2],
+        "GoldenTroupe": [4, 2],
+        "HeartOfDepth": [4, 2],
+        "HuskOfOpulentDreams": [4, 2],
+        "Lavawalker": [4, 2],
+        "MaidenBeloved": [4, 2],
+        "MarechausseeHunter": [4, 2],
+        "NighttimeWhispersInTheEchoingWoods": [4, 2],
+        "NoblesseOblige": [4, 2],
+        "NymphsDream": [4, 2],
+        "OceanHuedClam": [4, 2],
+        "PaleFlame": [4, 2],
+        "RetracingBolide": [4, 2],
+        "ShimenawasReminiscence": [4, 2],
+        "SongOfDaysPast": [4, 2],
+        "TenacityOfTheMillelith": [4, 2],
+        "ThunderingFury": [4, 2],
+        "Thundersoother": [4, 2],
+        "VermillionHereafter": [4, 2],
+        "ViridescentVenerer": [4, 2],
+        "VourukashasGlow": [4, 2],
+        "WanderersTroupe": [4, 2],
+        "Berserker": [4, 2],
+        "BraveHeart": [4, 2],
+        "DefendersWill": [4, 2],
+        "Gambler": [4, 2],
+        "Instructor": [4, 2],
+        "MartialArtist": [4, 2],
+        "ResolutionOfSojourner": [4, 2],
+        "Scholar": [4, 2],
+        "TheExile": [4, 2],
+        "TinyMiracle": [4, 2],
+        "Adventurer": [4, 2],
+        "LuckyDog": [4, 2],
+        "TravelingDoctor": [4, 2],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["hp_", "hydro_dmg_"],
+        "circlet": ["hp_", "critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["RaidenShogun"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_292",
+            "plume": "artifact_606",
+            "sands": "artifact_598",
+            "goblet": "artifact_299",
+            "circlet": "artifact_56"
+          },
+          "weaponId": "weapon_10"
+        }
+      ],
+      "buildDate": 1713617608255,
+      "useTeammateBuild": false,
+      "id": "optConfig_68"
+    },
+    {
+      "artSetExclusion": {
+        "rainbow": [4, 2],
+        "ArchaicPetra": [4, 2],
+        "BlizzardStrayer": [4, 2],
+        "BloodstainedChivalry": [4, 2],
+        "CrimsonWitchOfFlames": [4, 2],
+        "DeepwoodMemories": [4, 2],
+        "DesertPavilionChronicle": [4, 2],
+        "EchoesOfAnOffering": [4, 2],
+        "EmblemOfSeveredFate": [4, 2],
+        "FlowerOfParadiseLost": [4, 2],
+        "GildedDreams": [4, 2],
+        "GladiatorsFinale": [4, 2],
+        "GoldenTroupe": [4, 2],
+        "HeartOfDepth": [4, 2],
+        "HuskOfOpulentDreams": [4, 2],
+        "Lavawalker": [4, 2],
+        "MaidenBeloved": [4, 2],
+        "MarechausseeHunter": [4, 2],
+        "NighttimeWhispersInTheEchoingWoods": [4, 2],
+        "NoblesseOblige": [2],
+        "NymphsDream": [4, 2],
+        "OceanHuedClam": [4, 2],
+        "PaleFlame": [4, 2],
+        "RetracingBolide": [4, 2],
+        "ShimenawasReminiscence": [4, 2],
+        "SongOfDaysPast": [4, 2],
+        "TenacityOfTheMillelith": [4, 2],
+        "ThunderingFury": [4, 2],
+        "Thundersoother": [4, 2],
+        "VermillionHereafter": [4, 2],
+        "ViridescentVenerer": [4, 2],
+        "VourukashasGlow": [4, 2],
+        "WanderersTroupe": [4, 2],
+        "Berserker": [4, 2],
+        "BraveHeart": [4, 2],
+        "DefendersWill": [4, 2],
+        "Gambler": [4, 2],
+        "Instructor": [4, 2],
+        "MartialArtist": [4, 2],
+        "ResolutionOfSojourner": [4, 2],
+        "Scholar": [4, 2],
+        "TheExile": [4, 2],
+        "TinyMiracle": [4, 2],
+        "Adventurer": [4, 2],
+        "LuckyDog": [4, 2],
+        "TravelingDoctor": [4, 2]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 180, "disabled": false }],
+        "[\"basic\",\"critRate_\"]": [{ "value": 50, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["atk_"],
+        "goblet": ["atk_"],
+        "circlet": ["atk_"]
+      },
+      "optimizationTarget": ["skill", "quillDmg"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_239",
+            "plume": "artifact_443",
+            "sands": "artifact_741",
+            "goblet": "artifact_746",
+            "circlet": "artifact_29"
+          },
+          "weaponId": "weapon_131"
+        }
+      ],
+      "buildDate": 1713615254452,
+      "useTeammateBuild": false,
+      "id": "optConfig_19"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 220, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["eleMas", "atk_", "enerRech_"],
+        "goblet": ["pyro_dmg_", "atk_", "eleMas"],
+        "circlet": ["critRate_", "critDMG_", "atk_", "eleMas"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Yelan", "RaidenShogun"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_290",
+            "plume": "artifact_776",
+            "sands": "artifact_100",
+            "goblet": "artifact_595",
+            "circlet": "artifact_777"
+          },
+          "weaponId": "weapon_15"
+        }
+      ],
+      "buildDate": 1713614520706,
+      "useTeammateBuild": false,
+      "id": "optConfig_14"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [4, 2],
+        "BlizzardStrayer": [4, 2],
+        "BloodstainedChivalry": [4, 2],
+        "CrimsonWitchOfFlames": [4, 2],
+        "DeepwoodMemories": [4, 2],
+        "DesertPavilionChronicle": [4, 2],
+        "EchoesOfAnOffering": [4, 2],
+        "EmblemOfSeveredFate": [4, 2],
+        "FlowerOfParadiseLost": [4, 2],
+        "GildedDreams": [4, 2],
+        "GladiatorsFinale": [4, 2],
+        "HeartOfDepth": [4, 2],
+        "HuskOfOpulentDreams": [4, 2],
+        "Lavawalker": [4, 2],
+        "MaidenBeloved": [4, 2],
+        "NoblesseOblige": [2],
+        "OceanHuedClam": [4, 2],
+        "PaleFlame": [4, 2],
+        "RetracingBolide": [4, 2],
+        "ShimenawasReminiscence": [4, 2],
+        "TenacityOfTheMillelith": [4, 2],
+        "ThunderingFury": [4, 2],
+        "Thundersoother": [4, 2],
+        "VermillionHereafter": [4, 2],
+        "ViridescentVenerer": [4, 2],
+        "WanderersTroupe": [4, 2],
+        "Berserker": [4, 2],
+        "BraveHeart": [4, 2],
+        "DefendersWill": [4, 2],
+        "Gambler": [4, 2],
+        "Instructor": [4, 2],
+        "MartialArtist": [4, 2],
+        "ResolutionOfSojourner": [4, 2],
+        "Scholar": [4, 2],
+        "TheExile": [4, 2],
+        "TinyMiracle": [4, 2],
+        "Adventurer": [4, 2],
+        "LuckyDog": [4, 2],
+        "TravelingDoctor": [4, 2],
+        "rainbow": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NymphsDream": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "VourukashasGlow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 210, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["enerRech_", "atk_", "hp_"],
+        "goblet": ["pyro_dmg_", "hp_"],
+        "circlet": ["heal_", "critDMG_", "critRate_"]
+      },
+      "optimizationTarget": ["burst", "dmg"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Albedo",
+        "HuTao",
+        "KamisatoAyaka",
+        "KamisatoAyato",
+        "Venti",
+        "Xiangling",
+        "Xiao",
+        "Xingqiu",
+        "Shenhe"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_79",
+            "plume": "artifact_84",
+            "sands": "artifact_725",
+            "goblet": "artifact_722",
+            "circlet": "artifact_446"
+          },
+          "weaponId": "weapon_3"
+        }
+      ],
+      "buildDate": 1711293004498,
+      "useTeammateBuild": false,
+      "id": "optConfig_11"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 120, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["atk_"],
+        "goblet": ["cryo_dmg_"],
+        "circlet": ["critRate_", "critDMG_", "atk_"]
+      },
+      "optimizationTarget": ["burst", "cutting"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Albedo",
+        "Bennett",
+        "HuTao",
+        "KamisatoAyato",
+        "Venti",
+        "Xiangling",
+        "Xiao",
+        "Xingqiu",
+        "Fischl"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_25"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 210, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["hp_"],
+        "circlet": ["heal_"]
+      },
+      "optimizationTarget": ["burst", "regen"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["Zhongli"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_625",
+            "plume": "artifact_177",
+            "sands": "artifact_66",
+            "goblet": "artifact_637",
+            "circlet": "artifact_401"
+          },
+          "weaponId": "weapon_3"
+        }
+      ],
+      "buildDate": 1713615129098,
+      "useTeammateBuild": false,
+      "id": "optConfig_41"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_"],
+        "goblet": ["physical_dmg_", "atk_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["burst", "lightFallSwordNew"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Shenhe",
+        "Xiao",
+        "Bennett",
+        "Xingqiu",
+        "Layla",
+        "KamisatoAyato",
+        "Fischl"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_21"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "GoldenTroupe": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "NymphsDream": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2],
+        "VourukashasGlow": [2, 4],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"critRate_\"]": [{ "value": 33, "disabled": false }],
+        "[\"basic\",\"enerRech_\"]": [{ "value": 180, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["eleMas"],
+        "goblet": ["eleMas"],
+        "circlet": ["eleMas"]
+      },
+      "optimizationTarget": ["passive2", "hydro_dmg_"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_682",
+            "plume": "artifact_51",
+            "sands": "artifact_713",
+            "goblet": "artifact_307",
+            "circlet": "artifact_156"
+          },
+          "weaponId": "weapon_25"
+        }
+      ],
+      "buildDate": 1713614213226,
+      "useTeammateBuild": false,
+      "id": "optConfig_80"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["eleMas", "atk_"],
+        "goblet": ["electro_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Sucrose",
+        "Fischl",
+        "Albedo",
+        "Bennett",
+        "HuTao",
+        "KamisatoAyaka",
+        "KamisatoAyato",
+        "Venti",
+        "Xiangling",
+        "Xiao",
+        "Xingqiu",
+        "RaidenShogun",
+        "Layla"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_0"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_72"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["hp_", "def_", "atk_", "eleMas", "enerRech_"],
+        "goblet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "physical_dmg_",
+          "anemo_dmg_",
+          "geo_dmg_",
+          "electro_dmg_",
+          "hydro_dmg_",
+          "pyro_dmg_",
+          "cryo_dmg_",
+          "dendro_dmg_"
+        ],
+        "circlet": [
+          "hp_",
+          "def_",
+          "atk_",
+          "eleMas",
+          "critRate_",
+          "critDMG_",
+          "heal_"
+        ]
+      },
+      "mainStatAssumptionLevel": 0,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 5,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [],
+      "buildDate": 0,
+      "useTeammateBuild": false,
+      "id": "optConfig_42"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"critRate_\"]": [{ "value": 40, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_"],
+        "goblet": ["hp_"],
+        "circlet": ["hp_", "critRate_"]
+      },
+      "optimizationTarget": ["skill", "skillShield"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "unequippedOnly",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "critRate_"],
+      "compareBuild": false,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_349",
+            "plume": "artifact_65",
+            "sands": "artifact_66",
+            "goblet": "artifact_153",
+            "circlet": "artifact_639"
+          },
+          "weaponId": "weapon_172"
+        }
+      ],
+      "buildDate": 1713625771821,
+      "useTeammateBuild": false,
+      "id": "optConfig_34"
+    },
+    {
+      "artSetExclusion": {
+        "ArchaicPetra": [2, 4],
+        "BlizzardStrayer": [2, 4],
+        "BloodstainedChivalry": [2, 4],
+        "CrimsonWitchOfFlames": [2, 4],
+        "DeepwoodMemories": [2, 4],
+        "DesertPavilionChronicle": [2, 4],
+        "EchoesOfAnOffering": [2, 4],
+        "EmblemOfSeveredFate": [2, 4],
+        "FlowerOfParadiseLost": [2, 4],
+        "GildedDreams": [2, 4],
+        "GladiatorsFinale": [2, 4],
+        "HeartOfDepth": [2, 4],
+        "HuskOfOpulentDreams": [2, 4],
+        "Lavawalker": [2, 4],
+        "MaidenBeloved": [2, 4],
+        "NoblesseOblige": [2, 4],
+        "OceanHuedClam": [2, 4],
+        "PaleFlame": [2, 4],
+        "RetracingBolide": [2, 4],
+        "ShimenawasReminiscence": [2, 4],
+        "TenacityOfTheMillelith": [2, 4],
+        "ThunderingFury": [2, 4],
+        "Thundersoother": [2, 4],
+        "VermillionHereafter": [2, 4],
+        "ViridescentVenerer": [2],
+        "WanderersTroupe": [2, 4],
+        "Berserker": [2, 4],
+        "BraveHeart": [2, 4],
+        "DefendersWill": [2, 4],
+        "Gambler": [2, 4],
+        "Instructor": [2, 4],
+        "MartialArtist": [2, 4],
+        "ResolutionOfSojourner": [2, 4],
+        "Scholar": [2, 4],
+        "TheExile": [2, 4],
+        "TinyMiracle": [2, 4],
+        "Adventurer": [2, 4],
+        "LuckyDog": [2, 4],
+        "TravelingDoctor": [2, 4],
+        "rainbow": [4, 2],
+        "GoldenTroupe": [2, 4],
+        "MarechausseeHunter": [2, 4],
+        "NighttimeWhispersInTheEchoingWoods": [2, 4],
+        "NymphsDream": [2, 4],
+        "SongOfDaysPast": [2, 4],
+        "VourukashasGlow": [2, 4]
+      },
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 190, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["eleMas", "enerRech_"],
+        "goblet": ["anemo_dmg_", "eleMas"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["reaction", "cryoSwirl"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [
+        "Albedo",
+        "Bennett",
+        "HuTao",
+        "KamisatoAyaka",
+        "KamisatoAyato",
+        "Xiangling",
+        "Xiao",
+        "Xingqiu",
+        "KaedeharaKazuha"
+      ],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_659",
+            "plume": "artifact_689",
+            "sands": "artifact_152",
+            "goblet": "artifact_921",
+            "circlet": "artifact_159"
+          },
+          "weaponId": "weapon_9"
+        }
+      ],
+      "buildDate": 1713618667308,
+      "useTeammateBuild": false,
+      "id": "optConfig_37"
+    },
+    {
+      "artSetExclusion": {},
+      "artExclusion": [],
+      "useExcludedArts": false,
+      "statFilters": {},
+      "mainStatKeys": {
+        "sands": ["atk_", "eleMas"],
+        "goblet": ["cryo_dmg_"],
+        "circlet": ["critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["charged", "frostflakeBloom"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": ["HuTao"],
+      "allowLocationsState": "customList",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_0",
+            "plume": "artifact_612",
+            "sands": "artifact_123",
+            "goblet": "artifact_726",
+            "circlet": "artifact_6"
+          },
+          "weaponId": "weapon_0"
+        }
+      ],
+      "buildDate": 1711293376836,
+      "useTeammateBuild": false,
+      "id": "optConfig_4"
+    },
+    {
+      "artSetExclusion": { "rainbow": [4, 2] },
+      "artExclusion": ["artifact_577"],
+      "useExcludedArts": false,
+      "statFilters": {
+        "[\"basic\",\"enerRech_\"]": [{ "value": 177, "disabled": false }]
+      },
+      "mainStatKeys": {
+        "sands": ["hp_", "enerRech_"],
+        "goblet": ["hp_", "hydro_dmg_"],
+        "circlet": ["hp_", "critRate_", "critDMG_"]
+      },
+      "optimizationTarget": ["custom", "0"],
+      "mainStatAssumptionLevel": 20,
+      "excludedLocations": [],
+      "allowLocationsState": "all",
+      "allowPartial": false,
+      "maxBuildsToShow": 1,
+      "plotBase": ["basic", "enerRech_"],
+      "compareBuild": true,
+      "levelLow": 0,
+      "levelHigh": 20,
+      "builds": [
+        {
+          "artifactIds": {
+            "flower": "artifact_834",
+            "plume": "artifact_559",
+            "sands": "artifact_528",
+            "goblet": "artifact_108",
+            "circlet": "artifact_567"
+          },
+          "weaponId": "weapon_164"
+        }
+      ],
+      "buildDate": 1713613884760,
+      "useTeammateBuild": false,
+      "id": "optConfig_82"
+    }
+  ],
+  "buildTcs": [],
+  "charMetas": [
+    { "favorite": true, "id": "Bennett" },
+    { "favorite": true, "id": "Thoma" },
+    { "favorite": true, "id": "Fischl" },
+    { "favorite": true, "id": "Neuvillette" },
+    { "favorite": true, "id": "KaedeharaKazuha" },
+    { "favorite": true, "id": "RaidenShogun" },
+    { "favorite": true, "id": "Zhongli" },
+    { "favorite": true, "id": "Venti" },
+    { "favorite": true, "id": "TravelerDendro" },
+    { "favorite": true, "id": "Shenhe" },
+    { "favorite": true, "id": "Eula" },
+    { "favorite": true, "id": "Xiao" },
+    { "favorite": true, "id": "Xiangling" },
+    { "favorite": true, "id": "Xingqiu" },
+    { "favorite": true, "id": "HuTao" },
+    { "favorite": true, "id": "Yelan" },
+    { "favorite": true, "id": "Faruzan" },
+    { "favorite": true, "id": "KamisatoAyato" },
+    { "favorite": true, "id": "YaeMiko" },
+    { "favorite": true, "id": "SangonomiyaKokomi" },
+    { "favorite": true, "id": "KamisatoAyaka" },
+    { "favorite": true, "id": "Sucrose" },
+    { "favorite": true, "id": "Albedo" },
+    { "favorite": true, "id": "Ganyu" },
+    { "favorite": true, "id": "Beidou" },
+    { "favorite": true, "id": "Tighnari" }
+  ],
+  "builds": [
+    {
+      "name": "210 % er",
+      "description": "",
+      "weaponId": "weapon_3",
+      "artifactIds": {
+        "flower": "artifact_78",
+        "plume": "artifact_241",
+        "sands": "artifact_725",
+        "goblet": "artifact_722",
+        "circlet": "artifact_734"
+      },
+      "id": "build_0"
+    },
+    {
+      "name": "200% ER",
+      "description": "",
+      "weaponId": "weapon_16",
+      "artifactIds": {
+        "flower": "artifact_79",
+        "plume": "artifact_575",
+        "sands": "artifact_745",
+        "goblet": "artifact_296",
+        "circlet": "artifact_68"
+      },
+      "id": "build_2"
+    },
+    {
+      "name": "210 % er",
+      "description": "",
+      "weaponId": "weapon_3",
+      "artifactIds": {
+        "flower": "artifact_22",
+        "plume": "artifact_177",
+        "sands": "artifact_104",
+        "goblet": "artifact_181",
+        "circlet": "artifact_226"
+      },
+      "id": "build_1"
+    }
+  ],
+  "teamchars": [
+    {
+      "key": "AratakiItto",
+      "name": "AratakiItto Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "AratakiItto": { "burst": "on" },
+        "HuskOfOpulentDreams": { "stack": "4" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_17",
+      "id": "teamchar_32"
+    },
+    {
+      "key": "Sucrose",
+      "name": "Sucrose Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {},
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_10",
+      "id": "teamchar_23"
+    },
+    {
+      "key": "KamisatoAyato",
+      "name": "Kamisato Ayato DPS",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "2 Skill and burst every rotation",
+          "targets": [
+            {
+              "weight": 10,
+              "path": ["skill", "dmg0"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 10,
+              "path": ["skill", "dmg1"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 9.9,
+              "path": ["skill", "dmg2"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1.8,
+              "path": ["skill", "illusionDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 18,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        },
+        {
+          "name": "2 Skill and burst every other rotation",
+          "targets": [
+            {
+              "weight": 10,
+              "path": ["skill", "dmg0"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 10,
+              "path": ["skill", "dmg1"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 9.9,
+              "path": ["skill", "dmg2"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1.8,
+              "path": ["skill", "illusionDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 9,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "SkywardBlade": {},
+        "KamisatoAyato": { "inSkill": "on", "skillStacks": "3" },
+        "KagotsurubeIsshin": { "passive": "on" },
+        "NymphsDream": { "set4": "3" },
+        "HeartOfDepth": { "skill": "cast" },
+        "EchoesOfAnOffering": { "mode": "on" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_22",
+      "id": "teamchar_42"
+    },
+    {
+      "key": "Ganyu",
+      "name": "Ganyu Burst bot",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {},
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_63",
+      "id": "teamchar_50"
+    },
+    {
+      "key": "HuTao",
+      "name": "HuTao Furina",
+      "description": "",
+      "customMultiTargets": [
+        {
+          "name": "11(N1C)D + 1/3 Q",
+          "description": "From https://www.youtube.com/watch?v=PAPQ2SypIRI it seems like every 3rd N1 can be vaped? 4 N1 vaped\nAkasha: https://akasha.cv/leaderboards/1000004608/",
+          "targets": [
+            {
+              "weight": 4,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 7,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 11,
+              "path": ["charged", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 0.3,
+              "path": ["burst", "lowHpDmg"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            }
+          ]
+        },
+        {
+          "name": "Tao vape (6N1C Q)",
+          "targets": [
+            {
+              "weight": 6,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["charged", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "HuTao": {
+          "GuideToAfterlifeVoyage": "on",
+          "SanguineRouge": "on",
+          "FlutterBy": "on"
+        },
+        "MarechausseeHunter": { "set4": "3" },
+        "CrimsonWitchOfFlames": { "stack": "1" },
+        "GildedDreams": { "passive": "on" },
+        "ShimenawasReminiscence": { "usedEnergy": "used" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_83",
+      "id": "teamchar_83"
+    },
+    {
+      "key": "Jean",
+      "name": "Jean VV dmg",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Jean": { "c2": "on", "c4": "on" },
+        "ViridescentVenerer": { "swirlpyro": "pyro" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_49",
+      "id": "teamchar_19"
+    },
+    {
+      "key": "KamisatoAyaka",
+      "name": "Ayaka",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "BlizzardStrayer": { "state": "frozen" },
+        "KamisatoAyaka": {
+          "afterSkillA1": "afterSkill",
+          "afterSprint": "afterSprint",
+          "afterApplySprint": "afterApplySprint"
+        }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_25",
+      "id": "teamchar_48"
+    },
+    {
+      "key": "KujouSara",
+      "name": "KujouSara",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "KujouSara": { "TenguJuuraiAmbush": "TenguJuuraiAmbush", "c6": "c6" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_38",
+      "id": "teamchar_78"
+    },
+    {
+      "key": "Ganyu",
+      "name": "Ganyu Melt",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "AmosBow": { "StrongWilled": "3" },
+        "Ganyu": { "A4": "on" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "reaction": "melt",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_4",
+      "id": "teamchar_6"
+    },
+    {
+      "key": "KukiShinobu",
+      "name": "Kuki Hyperbloom",
+      "description": "",
+      "customMultiTargets": [],
+      "conditional": {
+        "GildedDreams": {
+          "passive": "on",
+          "overrideSame": "1",
+          "overrideOther": "2"
+        }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_66",
+      "id": "teamchar_67"
+    },
+    {
+      "key": "Yaoyao",
+      "name": "Yaoyao Deepwood",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "DeepwoodMemories": { "set4": "on" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_3",
+      "id": "teamchar_5"
+    },
+    {
+      "key": "Lyney",
+      "name": "Lyney Loadout",
+      "description": "",
+      "customMultiTargets": [
+        {
+          "name": "3CA Q E (Hunter)",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 3,
+              "path": ["charged", "prop"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 4,
+              "path": ["charged", "pyrotechnic"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["charged", "spiritbreath"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "fireworkDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "SongOfStillness": { "afterHeal": "on" },
+        "MarechausseeHunter": { "set4": "3" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_47",
+      "id": "teamchar_47"
+    },
+    {
+      "key": "Xiangling",
+      "name": "Xiangling Mono Pyro",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Xiangling": {
+          "afterGuobaHit": "afterGuobaHit",
+          "afterPyronado": "duringPyronado"
+        }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_42",
+      "id": "teamchar_8"
+    },
+    {
+      "key": "Yelan",
+      "name": "Yelan ",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "2x E + Q (10 burst waves) + 2x CA",
+          "targets": [
+            {
+              "weight": 2,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "pressDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 30,
+              "path": ["burst", "throwDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["charged", "barb"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": { "Yelan": { "a4Stacks": "5" } },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_68",
+      "id": "teamchar_62"
+    },
+    {
+      "key": "Xiangling",
+      "name": "Xiangling Vape",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "Buffed 8/11 Pyronado, 2/4 Guoba | 1 Unbuffed Guoba",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["burst", "dmg1"],
+              "hitMode": "avgHit",
+              "bonusStats": { "pyro_enemyRes_": 15 }
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg2"],
+              "hitMode": "avgHit",
+              "bonusStats": { "pyro_enemyRes_": 15 }
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg3"],
+              "hitMode": "avgHit",
+              "bonusStats": { "pyro_enemyRes_": 15 }
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmgNado"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 5,
+              "path": ["burst", "dmgNado"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 3,
+              "path": ["burst", "dmgNado"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": { "pyro_enemyRes_": 40 }
+            },
+            {
+              "weight": 2,
+              "path": ["burst", "dmgNado"],
+              "hitMode": "avgHit",
+              "bonusStats": { "pyro_enemyRes_": 40 }
+            },
+            {
+              "weight": 2,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "reaction": "vaporize",
+              "bonusStats": { "pyro_enemyRes_": 40 }
+            },
+            {
+              "weight": 4,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "bonusStats": { "pyro_enemyRes_": 40, "atk_": -40, "atk": -1203 }
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "Xiangling": {
+          "afterPyronado": "duringPyronado",
+          "afterGuobaHit": "afterGuobaHit"
+        }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "reaction": "vaporize",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_14",
+      "id": "teamchar_28"
+    },
+    {
+      "key": "SangonomiyaKokomi",
+      "name": "SangonomiyaKokomi Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "TenacityOfTheMillelith": { "skill": "cast" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_16",
+      "id": "teamchar_31"
+    },
+    {
+      "key": "Thoma",
+      "name": "Thoma shield bot",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Thoma": { "c6AfterBarrier": "on" },
+        "TenacityOfTheMillelith": { "skill": "cast" },
+        "NoblesseOblige": {}
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": ["build_2"],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_51",
+      "id": "teamchar_21"
+    },
+    {
+      "key": "Gorou",
+      "name": "Gorou Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "Gorou": { "inField": "inField" } },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_55",
+      "id": "teamchar_34"
+    },
+    {
+      "key": "Neuvillette",
+      "name": "Neuvillette double hydro",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "2CA 2E Q",
+          "targets": [
+            {
+              "weight": 2,
+              "path": ["skill", "skillDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "thornDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "skillDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["burst", "waterfallDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 16,
+              "path": ["charged", "judgmentDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "TomeOfTheEternalFlow": { "hpChanges": "3" },
+        "MarechausseeHunter": { "set4": "3" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_12",
+      "id": "teamchar_25"
+    },
+    {
+      "key": "Fischl",
+      "name": "Fischl Aggravate",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "[non-C6] 20 Oz hits + 10 A4 hits aggravate",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["skill", "summonDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "additionalDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 14,
+              "path": ["skill", "ozDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["skill", "ozDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 10,
+              "path": ["passive2", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["weapon:SkywardHarp", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        },
+        {
+          "name": "Fischl Aggravate",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "summonDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 18,
+              "path": ["skill", "ozDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["skill", "ozDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 20,
+              "path": ["passive2", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": { "GoldenTroupe": { "set4": "on" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "reaction": "aggravate",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_33",
+      "id": "teamchar_65"
+    },
+    {
+      "key": "Zhongli",
+      "name": "Zhongli Loadout 2",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "Zhongli": { "skill": "on" } },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_56",
+      "id": "teamchar_35"
+    },
+    {
+      "key": "Eula",
+      "name": "Eula Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Eula": {
+          "Grimheart": "stack1",
+          "grimheartConsumed": "on",
+          "LightfallSword": "15"
+        },
+        "PaleFlame": { "stacks": "2" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_21",
+      "id": "teamchar_41"
+    },
+    {
+      "key": "Zhongli",
+      "name": "Zhongli Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Zhongli": { "skill": "on", "p1": "3" },
+        "ArchaicPetra": { "element": "hydro" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_13",
+      "id": "teamchar_27"
+    },
+    {
+      "key": "Bennett",
+      "name": "Bennett noblesse dmg",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Bennett": { "activeInArea": "activeInArea" },
+        "NoblesseOblige": { "set4": "on" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "reaction": "vaporize",
+      "buildIds": ["build_0"],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_11",
+      "id": "teamchar_24"
+    },
+    {
+      "key": "Xingqiu",
+      "name": "Xingqiu",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "40 Swords",
+          "targets": [
+            {
+              "weight": 40,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 0 }
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "press1"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "press2"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": { "Xingqiu": { "burst": "on", "skill": "on" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_15",
+      "id": "teamchar_30"
+    },
+    {
+      "key": "Venti",
+      "name": "Venti VV",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "ViridescentVenerer": { "swirlcryo": "cryo" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_37",
+      "id": "teamchar_74"
+    },
+    {
+      "key": "Tighnari",
+      "name": "Tighnari Spread",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "2E + 6CA + 1Q",
+          "description": "2 rotations, burst only once",
+          "targets": [
+            {
+              "weight": 2,
+              "path": ["burst", "primaryDmg"],
+              "hitMode": "avgHit",
+              "reaction": "spread",
+              "bonusStats": {}
+            },
+            {
+              "weight": 4,
+              "path": ["burst", "primaryDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["burst", "secondaryDmg"],
+              "hitMode": "avgHit",
+              "reaction": "spread",
+              "bonusStats": {}
+            },
+            {
+              "weight": 4,
+              "path": ["burst", "secondaryDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["charged", "wreath"],
+              "hitMode": "avgHit",
+              "reaction": "spread",
+              "bonusStats": {}
+            },
+            {
+              "weight": 18,
+              "path": ["charged", "cluster"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["charged", "cluster"],
+              "hitMode": "avgHit",
+              "reaction": "spread",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "spread",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "ThunderingPulse": {},
+        "Tighnari": { "p1AfterWreath": "on", "c2EnemyField": "on" },
+        "GildedDreams": { "passive": "on" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_36",
+      "id": "teamchar_70"
+    },
+    {
+      "key": "Mona",
+      "name": "Mona Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {},
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_28",
+      "id": "teamchar_57"
+    },
+    {
+      "key": "RaidenShogun",
+      "name": "Raiden National",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "RaidenShogun": {
+          "skillEye": "skillEye",
+          "InBurst": "on",
+          "burstResolve": "40",
+          "skillEyeTeam": "90"
+        },
+        "EngulfingLightning": { "TimelessDream": "on" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_32",
+      "id": "teamchar_61"
+    },
+    {
+      "key": "KaedeharaKazuha",
+      "name": "Kazuha VV",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "KaedeharaKazuha": {
+          "swirlcryo": "cryo",
+          "swirlpyro": "pyro",
+          "swirlhydro": "hydro",
+          "swirlelectro": "electro"
+        },
+        "ViridescentVenerer": {
+          "swirlelectro": "electro",
+          "swirlpyro": "pyro",
+          "swirlhydro": "hydro",
+          "swirlcryo": "cryo"
+        }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_80",
+      "id": "teamchar_80"
+    },
+    {
+      "key": "YaeMiko",
+      "name": "YaeMiko Aggravate",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "Aggravate | 1Q 2 Rotation",
+          "targets": [
+            {
+              "weight": 22,
+              "path": ["skill", "dmg3"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 3,
+              "path": ["burst", "tenkoDmg"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            },
+            {
+              "weight": 11,
+              "path": ["skill", "dmg3"],
+              "hitMode": "avgHit",
+              "reaction": "aggravate",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": { "GoldenTroupe": { "set4": "on" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_0",
+      "id": "teamchar_0"
+    },
+    {
+      "key": "Shenhe",
+      "name": "Shenhe",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "NoblesseOblige": { "set4": "on" },
+        "Shenhe": {
+          "asc1": "field",
+          "quill": "quill",
+          "asc4Hold": "hold",
+          "asc4": "press",
+          "burst": "burst"
+        }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_19",
+      "id": "teamchar_37"
+    },
+    {
+      "key": "Furina",
+      "name": "Furina Loadout",
+      "description": "",
+      "customMultiTargets": [
+        {
+          "name": "21 sec rotation",
+          "description": "7 hits from Octopus\n14 hits from Seahorse\n5 hits from Crab\nBurst",
+          "targets": [
+            {
+              "weight": 7,
+              "path": ["skill", "usherDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 14,
+              "path": ["skill", "chevalDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 5,
+              "path": ["skill", "crabDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 1,
+              "path": ["burst", "skillDmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "Furina": { "burstFanfare": "150", "skillHpConsumeStacks": "4" },
+        "FleuveCendreFerryman": {},
+        "GoldenTroupe": { "set4": "on" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_82",
+      "id": "teamchar_82"
+    },
+    {
+      "key": "Bennett",
+      "name": "Bennett Loadout healing",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "NoblesseOblige": { "set4": "on" },
+        "Bennett": { "activeInArea": "activeInArea" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": ["build_1"],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_41",
+      "id": "teamchar_7"
+    },
+    {
+      "key": "Faruzan",
+      "name": "Faruzan VV",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Faruzan": { "burstBenefit": "on", "burstHit": "on", "a4Active": "on" },
+        "TenacityOfTheMillelith": { "skill": "cast" }
+      },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_2",
+      "id": "teamchar_2"
+    },
+    {
+      "key": "Layla",
+      "name": "Layla shield",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": { "TenacityOfTheMillelith": { "skill": "cast" } },
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_34",
+      "id": "teamchar_66"
+    },
+    {
+      "key": "AratakiItto",
+      "name": "AratakiItto Loadout 2",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {},
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_72",
+      "id": "teamchar_69"
+    },
+    {
+      "key": "Kaeya",
+      "name": "Kaeya Rev Melt",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "E Q 2E | Melt",
+          "description": "From: https://keqingmains.com/misc/multi-optimization/#64-reverse-melt\n\nAdjust the debuffs on the last 2 skills with Bennett's gear: \n1. if Bennett is NOT on Noblesse, remove the ATK% debuff;\n2. set the ATK debuff according to Bennett's ATK transfer (you can see it in the team!) .",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "melt",
+              "bonusStats": {}
+            },
+            {
+              "weight": 6,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "melt",
+              "bonusStats": {}
+            },
+            {
+              "weight": 9,
+              "path": ["burst", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": {}
+            },
+            {
+              "weight": 2,
+              "path": ["skill", "dmg"],
+              "hitMode": "avgHit",
+              "reaction": "melt",
+              "bonusStats": { "atk_": -20, "atk": -1100 }
+            }
+          ]
+        }
+      ],
+      "conditional": {},
+      "bonusStats": {},
+      "infusionAura": "",
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_18",
+      "id": "teamchar_36"
+    },
+    {
+      "key": "Xiao",
+      "name": "Xiao Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [
+        {
+          "name": "PJWS ONLY | 12 N1-1 LP 50% Coll w NO",
+          "description": "From sheet: https://docs.google.com/spreadsheets/d/1C7m8_L7c4789a2EhT-f1ndmTRKDYx_8VpI-wY02XTE8",
+          "targets": [
+            {
+              "weight": 1,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 20, "anemo_dmgInc": 356 }
+            },
+            {
+              "weight": 1,
+              "path": ["skill", "press"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 15, "atk_": 23.2 }
+            },
+            {
+              "weight": 1,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 26.4, "anemo_dmgInc": 355 }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 29.6 }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 29.6 }
+            },
+            {
+              "weight": 1,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 32.8, "anemo_dmgInc": 356 }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 36 }
+            },
+            {
+              "weight": 1,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "atk_": 39.2,
+                "anemo_dmg_": 5,
+                "anemo_dmgInc": 356
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 17, "atk_": 42.4 }
+            },
+            {
+              "weight": 1,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "atk_": 42.4,
+                "anemo_dmg_": 17,
+                "anemo_dmgInc": 356
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 17, "atk_": 42.4 }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "atk_": 42.4, "anemo_dmg_": 17 }
+            },
+            {
+              "weight": 2,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "atk_": 42.4,
+                "anemo_dmg_": 22,
+                "anemo_dmgInc": 356
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 22, "atk_": 42.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "anemo_dmg_": 22,
+                "atk_": 42.4,
+                "anemo_dmgInc": 356
+              }
+            },
+            {
+              "weight": 2,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "anemo_dmg_": 27,
+                "anemo_dmgInc": 356,
+                "atk_": 22.4
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 27, "atk_": 22.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 27, "atk_": 22.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "anemo_dmg_": 32,
+                "anemo_dmgInc": 356,
+                "atk_": 22.4
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 32, "atk_": 22.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 32, "atk_": 22.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["normal", "0"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "anemo_dmg_": 37,
+                "anemo_dmgInc": 356,
+                "atk_": 22.4
+              }
+            },
+            {
+              "weight": 1,
+              "path": ["plunging", "dmg"],
+              "hitMode": "avgHit",
+              "bonusStats": { "anemo_dmg_": 37, "atk_": 22.4 }
+            },
+            {
+              "weight": 2,
+              "path": ["plunging", "low"],
+              "hitMode": "avgHit",
+              "bonusStats": {
+                "anemo_dmg_": 37,
+                "atk_": 22.4,
+                "anemo_dmgInc": 356
+              }
+            }
+          ]
+        }
+      ],
+      "conditional": {
+        "MarechausseeHunter": { "set4": "3" },
+        "VermillionHereafter": { "afterBurst": "on", "stacks": "2" },
+        "Xiao": { "a4SkillStack": "2", "inBurst": "inBurst" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_39",
+      "id": "teamchar_3"
+    },
+    {
+      "key": "TravelerDendro",
+      "name": "DMC",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "DeepwoodMemories": { "set4": "on" },
+        "TravelerDendro": {
+          "c6BurstEffect": "on",
+          "a1Stacks": "5",
+          "c6BurstEle": "electro"
+        }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_75",
+      "id": "teamchar_73"
+    },
+    {
+      "key": "Albedo",
+      "name": "Albedo Loadout",
+      "description": "Loadout Description",
+      "customMultiTargets": [],
+      "conditional": {
+        "Albedo": { "burstUsed": "burstUsed" },
+        "CinnabarSpindle": { "SpotlessHeart": "on" },
+        "GoldenTroupe": { "set4": "on" },
+        "HuskOfOpulentDreams": { "stack": "2" }
+      },
+      "bonusStats": {},
+      "hitMode": "avgHit",
+      "buildIds": [],
+      "buildTcIds": [],
+      "optConfigId": "optConfig_54",
+      "id": "teamchar_33"
+    }
+  ],
+  "teams": [
+    {
+      "name": "YaeMiko Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_0",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713619181129,
+      "id": "team_0"
+    },
+    {
+      "name": "Yaoyao Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_5",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713626057177,
+      "id": "team_3"
+    },
+    {
+      "name": "Fischl Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_65",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_33"
+    },
+    {
+      "name": "Xiangling Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_28",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null
+      ],
+      "lastEdit": 1713614872626,
+      "id": "team_14"
+    },
+    {
+      "name": "Shenhe Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_37",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_48",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_80",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null
+      ],
+      "lastEdit": 1713615229695,
+      "id": "team_19"
+    },
+    {
+      "name": "Ganyu Melt",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_6",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_8",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null
+      ],
+      "lastEdit": 1713621194551,
+      "id": "team_4"
+    },
+    {
+      "name": "RaidenShogun Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_61",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_62",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_28",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713621175542,
+      "id": "team_32"
+    },
+    {
+      "name": "Bennett Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1711292869252,
+      "id": "team_11"
+    },
+    {
+      "name": "Team Name 40",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_82",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1711291512151,
+      "id": "team_39"
+    },
+    {
+      "name": "Zhongli Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_27",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_13"
+    },
+    {
+      "name": "AratakiItto Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_32",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_33",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_34",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_27",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713619028185,
+      "id": "team_17"
+    },
+    {
+      "name": "Tighnari Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": { "SprawlingCanopy3ele": "on" } },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_70",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_65",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_0",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_73",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713619156945,
+      "id": "team_36"
+    },
+    {
+      "name": "Layla Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_66",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713625730507,
+      "id": "team_34"
+    },
+    {
+      "name": "Raiden Hyper ",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_61",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_78",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_80",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713619295307,
+      "id": "team_37"
+    },
+    {
+      "name": "Eula Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_41",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_21"
+    },
+    {
+      "name": "Xiao Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_3",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_19",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_21",
+          "buildType": "real",
+          "buildId": "build_2",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713620961916,
+      "id": "team_8"
+    },
+    {
+      "name": "Mona Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_57",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_28"
+    },
+    {
+      "name": "KamisatoAyaka Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_48",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_42",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_50",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_74",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713619576550,
+      "id": "team_25"
+    },
+    {
+      "name": "Kuki",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_67",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713619393702,
+      "id": "team_38"
+    },
+    {
+      "name": "Hu Tao - Furina - Yelan - Bennett",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_83",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_82",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_62",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_7",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713620253188,
+      "id": "team_40"
+    },
+    {
+      "name": "KamisatoAyato Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_42",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_22"
+    },
+    {
+      "name": "Lyney Mono Pyro",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_47",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null
+      ],
+      "lastEdit": 1713623464850,
+      "id": "team_41"
+    },
+    {
+      "name": "Xingqiu Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_30",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713618170367,
+      "id": "team_15"
+    },
+    {
+      "name": "SangonomiyaKokomi Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_31",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_16"
+    },
+    {
+      "name": "Sucrose Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_23",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 0,
+      "id": "team_10"
+    },
+    {
+      "name": "Yelan Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_62",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        null,
+        null,
+        null
+      ],
+      "lastEdit": 1713619958454,
+      "id": "team_31"
+    },
+    {
+      "name": "Neuvillette Team",
+      "description": "Generated team due to database migration for GO version 10",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_25",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_82",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_27",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_80",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": true,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713623404339,
+      "id": "team_12"
+    },
+    {
+      "name": "Better Xiao",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_3",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_2",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_21",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713620205913,
+      "id": "team_35"
+    },
+    {
+      "name": "Kaeya Rev Melt",
+      "description": "",
+      "enemyOverride": {
+        "enemyLevel": 100,
+        "enemyDefRed_": 0,
+        "enemyDefIgn_": 0,
+        "physical_enemyRes_": 10,
+        "anemo_enemyRes_": 10,
+        "geo_enemyRes_": 10,
+        "electro_enemyRes_": 10,
+        "hydro_enemyRes_": 10,
+        "pyro_enemyRes_": 10,
+        "cryo_enemyRes_": 10,
+        "dendro_enemyRes_": 10
+      },
+      "conditional": { "resonance": {} },
+      "loadoutData": [
+        {
+          "teamCharId": "teamchar_36",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_80",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_24",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        },
+        {
+          "teamCharId": "teamchar_8",
+          "buildType": "equipped",
+          "buildId": "",
+          "buildTcId": "",
+          "compare": false,
+          "compareType": "equipped",
+          "compareBuildId": "",
+          "compareBuildTcId": ""
+        }
+      ],
+      "lastEdit": 1713625530251,
+      "id": "team_42"
+    }
+  ],
+  "dbMeta": { "name": "gabmiaoo", "lastEdit": 1713626044238, "gender": "M" },
+  "display_weapon": {
+    "editWeaponId": "",
+    "sortType": "level",
+    "ascending": false,
+    "rarity": [5, 4, 3, 2, 1],
+    "weaponType": ["sword", "claymore", "polearm", "bow", "catalyst"]
+  },
+  "display_artifact": {
+    "filterOption": {
+      "artSetKeys": ["CrimsonWitchOfFlames"],
+      "rarity": [5],
+      "levelLow": 0,
+      "levelHigh": 20,
+      "slotKeys": ["sands"],
+      "mainStatKeys": ["hp_"],
+      "substats": [],
+      "locations": [],
+      "showEquipped": true,
+      "showInventory": true,
+      "locked": ["locked", "unlocked"],
+      "rvLow": 0,
+      "rvHigh": 900,
+      "useMaxRV": false,
+      "lines": [1, 2, 3, 4]
+    },
+    "ascending": false,
+    "sortType": "artsetkey",
+    "effFilter": [
+      "hp",
+      "hp_",
+      "atk",
+      "atk_",
+      "def",
+      "def_",
+      "eleMas",
+      "enerRech_",
+      "critRate_",
+      "critDMG_"
+    ],
+    "probabilityFilter": {}
+  },
+  "display_character": {
+    "sortType": "level",
+    "ascending": false,
+    "weaponType": ["sword", "claymore", "polearm", "bow", "catalyst"],
+    "element": ["dendro"],
+    "rarity": [5, 4]
+  },
+  "display_tool": {
+    "timeZoneKey": "America",
+    "resin": 160,
+    "resinDate": 1665207395185
+  },
+  "display_team": {
+    "ascending": false,
+    "sortType": "name",
+    "charKeys": [],
+    "searchTerm": ""
+  }
+}

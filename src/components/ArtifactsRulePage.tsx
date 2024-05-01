@@ -60,7 +60,7 @@ export function ArtifactsRulePage({
     updateRuleInCurrentRuleset,
   } = useRulesets();
 
-  const artifacts = good.artifacts || [];
+  // const artifacts = good.artifacts || [];
   const foundCharacters = getCharactersWithEquippedArtifactsFromGOOD(good);
 
   useRenderCount("ArtifactsRulePage");
@@ -125,7 +125,7 @@ export function ArtifactsRulePage({
       </AlertDialog>
       <div className="w-full flex flex-col">
         <header className="flex justify-between items-center p-4 pt-2 border-b">
-          <h2 className="font-semibold text-">Working on {file.name}</h2>
+          <h2 className="font-semibold text-xl">Working on {file.name}</h2>
           <div className="flex gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -150,15 +150,13 @@ export function ArtifactsRulePage({
           </div>
         </header>
         {/* 2 pane layout */}
-        <div
-          className="grid grid-cols-auto gap-8 p-4"
-          style={{ "--_min-col-w": "400px" } as CSSProperties}
-        >
+        <div className="grid gap-8 p-4">
           {/* form */}
-          <div className="bg-orange-200 p-2">
+          {/* TODO: bg-orange is only for debugging purposes only */}
+          <div className="bg-orange-100 p-4 space-y-4 rounded">
             {/* toolbar */}
             <div className="flex items-center justify-between ">
-              <span>{currentRuleset.name}</span>
+              <span className="font-semibold">{currentRuleset.name}</span>
               <Button
                 size="sm"
                 onClick={() =>
@@ -180,15 +178,15 @@ export function ArtifactsRulePage({
             />
           </div>
           {/* preview */}
-          <div className="bg-blue-200 w-full h-full">
-            {/* <ul className="list-none">
+          {/* <div className="bg-blue-200 w-full h-full">
+            <ul className="list-none">
             {artifacts.map((artifact, index) => (
               <li key={index} className="my-2">
                 <ArtifactCard artifact={artifact} />
               </li>
             ))}
-          </ul> */}
-          </div>
+          </ul>
+          </div> */}
         </div>
       </div>
     </>

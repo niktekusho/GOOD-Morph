@@ -82,9 +82,12 @@ export function Rules({
     );
 
   return (
-    <ol className="mt-4 space-y-4">
+    <ol
+      className="grid grid-cols-auto gap-8"
+      style={{ "--_min-col-w": "450px" } as CSSProperties}
+    >
       {rules.map((rule, index) => (
-        <li key={index}>
+        <li key={index} className="block">
           <RuleCard
             foundCharacters={foundCharacters}
             existingRule={rule}
@@ -123,7 +126,7 @@ function RuleCard({
     : undefined;
 
   return (
-    <div className="flex flex-col gap-2 border border-slate-500 rounded p-2">
+    <div className="flex flex-col gap-6 border border-slate-500 rounded p-4">
       <Label className="grid w-full items-center gap-2">
         Rule name
         <Input
@@ -146,9 +149,12 @@ function RuleCard({
       {/* filter */}
       <fieldset
         style={{ "--_min-col-w": MIN_WIDTH } as CSSProperties}
-        className={`grid md:grid-cols-2 items-center justify-stretch gap-2 border border-black`}
+        className={`grid gap-2 rounded`}
       >
-        <legend className="">Filter</legend>
+        <Label asChild>
+          {/* TODO: this feels like a hack... grid and gap-2 SHOULD take care of this space */}
+          <legend className="mb-2">Filter</legend>
+        </Label>
         <div className="flex gap-2 items-center">
           {/* TODO: remove checkbox in Combobox to have behaviour similar to normal select element */}
           <Combobox
@@ -208,9 +214,12 @@ function RuleCard({
       {/* action */}
       <fieldset
         style={{ "--_min-col-w": MIN_WIDTH } as CSSProperties}
-        className={`grid md:grid-cols-2 items-center justify-stretch gap-2 border border-black`}
+        className={`grid gap-2 rounded`}
       >
-        <legend className="">Action</legend>
+        <Label asChild>
+          {/* TODO: this feels like a hack... grid and gap-2 SHOULD take care of this space */}
+          <legend className="mb-2">Action</legend>
+        </Label>
         <div className="flex gap-2 items-center">
           <Combobox
             emptyResultText="No actions matching."

@@ -5,7 +5,7 @@ import { Rule } from "../rule";
 export function useRulesets() {
   // A default ruleset is present if user has not defined one yet
   const [rulesets, setRulesets] = useState<Ruleset[]>([
-    { name: "Default", rules: [] },
+    { name: "Default ruleset", rules: [] },
   ]);
 
   const maxId =

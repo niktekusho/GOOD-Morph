@@ -1,6 +1,5 @@
 "use client";
 
-import { MouseEventHandler, useEffect, useRef, useState } from "react";
 import { InitialPage } from "../components/InitialPage";
 import { ArtifactsRulePage } from "@/components/ArtifactsRulePage";
 import {
@@ -13,54 +12,25 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-
-export type UploadedFile = {
-  name: string;
-  content: string;
-};
+import { useMorphFlow } from "@/lib/useMorphFlow";
 
 export default function Component() {
-  const [file, setFile] = useState<UploadedFile>();
-
-  const [showModal, setShowModal] = useState(false);
-
-  const loadFileFromSessionStorage = () => {
-    const maybeFileName = sessionStorage.getItem("fileName");
-    if (maybeFileName) {
-      const fileContent = sessionStorage.getItem("fileContent")!;
-      setFile({
-        content: fileContent,
-        name: maybeFileName,
-      });
-    }
-  };
-
-  useEffect(() => {
-    const maybeFileName = sessionStorage.getItem("fileName");
-    if (maybeFileName) {
-      // In dev we want to be faster, so we skip the modal
-      if (process.env.NODE_ENV === "development") {
-        loadFileFromSessionStorage();
-      } else {
-        setShowModal(true);
-      }
-    }
-  }, []);
-
-  const handleStartNewSessionBtn: MouseEventHandler = (_) => {
-    console.log("Clearing sessionStorage");
-    setShowModal(false);
-    sessionStorage.clear();
-  };
-
-  const handleContinuePreviousSessionBtn: MouseEventHandler = (_) => {
-    setShowModal(false);
-    loadFileFromSessionStorage();
-  };
+  const {
+    appState,
+    showModal,
+    loadedFile,
+    morphedGOODFile,
+    onStartNewSession,
+    onFilePicked,
+    onContinueCurrentSession,
+    onFileDownloadInitiated,
+    onMorphCompleted,
+    onMorphStarted,
+  } = useMorphFlow();
 
   return (
     <>
-      <AlertDialog open={showModal}>
+      <AlertDialog open={appState === "PromptPreviousSession"}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Welcome Back!</AlertDialogTitle>
@@ -71,20 +41,30 @@ export default function Component() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel onClick={handleStartNewSessionBtn}>
+            <AlertDialogCancel onClick={onStartNewSession}>
               Start New Session
             </AlertDialogCancel>
-            <AlertDialogAction onClick={handleContinuePreviousSessionBtn}>
+            <AlertDialogAction onClick={onContinueCurrentSession}>
               Continue Previous Session
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
       <main className="min-h-[100dvh] grid p-2">
-        {file ? (
-          <ArtifactsRulePage file={file} />
+        {loadedFile ? (
+          <ArtifactsRulePage
+            file={loadedFile}
+            appState={appState}
+            morphedGOODFile={morphedGOODFile}
+            onContinueCurrentSession={onContinueCurrentSession}
+            onFileDownloadInitiated={onFileDownloadInitiated}
+            onMorphCompleted={onMorphCompleted}
+            onMorphStarted={onMorphStarted}
+            onStartNewSession={onStartNewSession}
+            showModal={showModal}
+          />
         ) : (
-          <InitialPage setFile={setFile} />
+          <InitialPage onFilePicked={onFilePicked} />
         )}
       </main>
     </>

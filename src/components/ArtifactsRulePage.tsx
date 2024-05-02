@@ -58,6 +58,7 @@ export function ArtifactsRulePage({
     currentRuleset,
     addRuleToCurrentRuleset,
     updateRuleInCurrentRuleset,
+    deleteRuleInCurrentRuleset,
   } = useRulesets();
 
   // const artifacts = good.artifacts || [];
@@ -175,6 +176,7 @@ export function ArtifactsRulePage({
               rules={currentRuleset.rules}
               addRuleToCurrentRuleset={addRuleToCurrentRuleset}
               updateRuleInCurrentRuleset={updateRuleInCurrentRuleset}
+              deleteRuleInCurrentRuleset={deleteRuleInCurrentRuleset}
             />
           </div>
           {/* preview */}

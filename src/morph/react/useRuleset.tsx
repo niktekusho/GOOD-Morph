@@ -73,6 +73,17 @@ export function useRulesets() {
     });
   };
 
+  const deleteRuleInCurrentRuleset = (deletedRule: Rule) => {
+    const updatedRules = currentRuleset.rules.filter(
+      (rule) => rule.id !== deletedRule.id
+    );
+
+    updateCurrentRuleset({
+      ...currentRuleset,
+      rules: updatedRules,
+    });
+  };
+
   return {
     rulesets,
     currentRuleset,
@@ -80,13 +91,8 @@ export function useRulesets() {
     updateCurrentRuleset,
     addRuleToCurrentRuleset,
     updateRuleInCurrentRuleset,
+    deleteRuleInCurrentRuleset,
   };
 }
 
-export type AddRuleToCurrentRuleset = ReturnType<
-  typeof useRulesets
->["addRuleToCurrentRuleset"];
-
-export type UpdateRuleInCurrentRuleset = ReturnType<
-  typeof useRulesets
->["updateRuleInCurrentRuleset"];
+export type UseRulesetAPI = ReturnType<typeof useRulesets>;

@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from "react";
+import { CSSProperties } from "react";
 import { Button } from "./ui/button";
 import { Combobox, MIN_WIDTH } from "./ui/combobox";
 import { Input } from "./ui/input";
@@ -13,7 +13,8 @@ import {
   filterDefByName as filterDefsByName,
 } from "@/morph/filters";
 import { Rule } from "@/morph/rule";
-import { AddRuleToCurrentRuleset } from "@/morph/react/useRuleset";
+import { X } from "lucide-react";
+import { UseRulesetAPI } from "@/morph/react/useRuleset";
 
 // type FilterCriteria<Type extends string, Params extends Parameter[]> = {
 //   type: Type;
@@ -46,8 +47,9 @@ import { AddRuleToCurrentRuleset } from "@/morph/react/useRuleset";
 
 export type RulesProp = {
   rules: Rule[];
-  addRuleToCurrentRuleset: AddRuleToCurrentRuleset;
-  updateRuleInCurrentRuleset: (updatedRule: Rule) => void;
+  addRuleToCurrentRuleset: UseRulesetAPI["addRuleToCurrentRuleset"];
+  updateRuleInCurrentRuleset: UseRulesetAPI["updateRuleInCurrentRuleset"];
+  deleteRuleInCurrentRuleset: UseRulesetAPI["deleteRuleInCurrentRuleset"];
   foundCharacters: Set<LocationCharacterKey>;
 };
 
@@ -55,6 +57,7 @@ export function Rules({
   rules,
   addRuleToCurrentRuleset,
   updateRuleInCurrentRuleset,
+  deleteRuleInCurrentRuleset,
   foundCharacters,
 }: RulesProp) {
   // Select artifacts by character equipped -> name
@@ -89,6 +92,7 @@ export function Rules({
             foundCharacters={foundCharacters}
             existingRule={rule}
             updateRule={updateRuleInCurrentRuleset}
+            onDeleteRule={deleteRuleInCurrentRuleset}
           />
         </li>
       ))}
@@ -98,7 +102,8 @@ export function Rules({
 
 type RuleCardProps = {
   existingRule?: Rule;
-  updateRule: (updatedRule: Rule) => void;
+  updateRule: UseRulesetAPI["updateRuleInCurrentRuleset"];
+  onDeleteRule: UseRulesetAPI["deleteRuleInCurrentRuleset"];
   foundCharacters: Set<LocationCharacterKey>;
 };
 
@@ -111,6 +116,7 @@ function RuleCard({
   existingRule,
   foundCharacters,
   updateRule,
+  onDeleteRule,
 }: RuleCardProps) {
   console.log("rule", existingRule);
 
@@ -123,25 +129,37 @@ function RuleCard({
     : undefined;
 
   return (
-    <div className="flex flex-col gap-6 border border-slate-500 rounded p-4">
-      <Label className="grid w-full items-center gap-2">
-        Rule name
-        <Input
-          type="ruleName"
-          placeholder="My rule..."
-          value={existingRule?.name}
-          onChange={(e) => {
-            const updatedRule = {
-              ...existingRule,
-              name: e.target.value,
-            } as Rule;
-            console.log("updatedRule", updatedRule);
+    <div className="flex flex-col gap-6 border border-slate-500 rounded p-4 pt-4 relative">
+      <header className="flex justify-between items-center gap-4">
+        <Label className="flex w-full items-center gap-4">
+          <span className="shrink-0">Rule name</span>
+          <Input
+            type="ruleName"
+            placeholder="My rule..."
+            value={existingRule?.name}
+            onChange={(e) => {
+              const updatedRule = {
+                ...existingRule,
+                name: e.target.value,
+              } as Rule;
+              console.log("updatedRule", updatedRule);
 
-            updateRule(updatedRule);
-          }}
-          minLength={1}
-        />
-      </Label>
+              updateRule(updatedRule);
+            }}
+            minLength={1}
+          />
+        </Label>
+        <Button
+          aria-label={`Delete rule ${existingRule?.name}`}
+          title={`Delete rule ${existingRule?.name}`}
+          variant="ghost"
+          size="icon"
+          className="rounded-full shrink-0 hover:bg-destructive hover:text-destructive-foreground"
+          onClick={() => onDeleteRule(existingRule!)}
+        >
+          <X />
+        </Button>
+      </header>
 
       {/* filter */}
       <fieldset

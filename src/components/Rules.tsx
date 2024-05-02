@@ -82,12 +82,9 @@ export function Rules({
     );
 
   return (
-    <ol
-      className="grid grid-cols-auto gap-8"
-      style={{ "--_min-col-w": "450px" } as CSSProperties}
-    >
+    <ol className="flex flex-wrap gap-8">
       {rules.map((rule, index) => (
-        <li key={index} className="block">
+        <li key={index} className="min-w-[450px] flex-grow">
           <RuleCard
             foundCharacters={foundCharacters}
             existingRule={rule}

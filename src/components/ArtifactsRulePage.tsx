@@ -27,6 +27,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { CircularProgressIndicator } from "./CircularProgress";
 
 type ArtifactsRulePageProps = {
   file: NonNullable<UseMorphFlow["loadedFile"]>;
@@ -199,9 +200,12 @@ function MorphInProgressAlertDialogContent() {
   return (
     <AlertDialogContent>
       <AlertDialogHeader>
-        <AlertDialogTitle>Morph in progress...</AlertDialogTitle>
-        <AlertDialogDescription>
-          Morphing your GOOD file...
+        <AlertDialogTitle>Morph in progress</AlertDialogTitle>
+        <AlertDialogDescription asChild>
+          <div className="grid place-items-center gap-4">
+            Morphing your GOOD file...
+            <CircularProgressIndicator twSize="size-10" />
+          </div>
         </AlertDialogDescription>
       </AlertDialogHeader>
     </AlertDialogContent>

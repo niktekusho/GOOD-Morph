@@ -1,32 +1,62 @@
-import { ActionTypes } from "./actions";
+import { validateActionInstance } from "./actions";
+import { validateFilterInstance } from "./filters";
+import {
+  ValidationErrorDetail,
+  ValidationResult,
+  ValidationSuccess,
+  error,
+  isRecord,
+  success,
+} from "./validation";
 
-import { Type, type Static } from "@sinclair/typebox";
+export function validateRule(rule: unknown): ValidationResult {
+  if (rule === undefined) throw new TypeError("Rule can't be undefined.");
 
-export const Rule = Type.Object({
-  id: Type.Integer(),
-  name: Type.String({ minLength: 1 }),
-  filter: Type.Object({
-    type: Type.String({ minLength: 1 }),
-    parameters: Type.Any(),
-  }),
-  action: Type.Object({
-    type: Type.String({ minLength: 1 }),
-    parameters: Type.Any(),
-  }),
-});
+  if (rule === null) throw new TypeError("Rule can't be null.");
 
-export type Rule = Static<typeof Rule>;
+  if (!isRecord(rule)) {
+    return error([
+      {
+        cause: "notAnObject",
+      },
+    ]);
+  }
 
-// export type Rule = {
-//   name: string;
-//   // TODO: use a "derived" type using TS magic
-//   filter?: {
-//     type: string;
-//     [k: string]: string | number;
-//   };
-//   // TODO: use a "derived" type using TS magic
-//   action?: {
-//     type: ActionTypes;
-//     [k: string]: string | number;
-//   };
-// };
+  let ruleValidationErrorDetails: ValidationErrorDetail[] = [];
+
+  const actionInstanceValidation = validateActionInstance(rule["action"]);
+
+  if (actionInstanceValidation.failed) {
+    ruleValidationErrorDetails = ruleValidationErrorDetails.concat(
+      actionInstanceValidation.errors
+    );
+  }
+
+  const filterInstanceValidation = validateFilterInstance(rule["filter"]);
+
+  if (filterInstanceValidation.failed) {
+    ruleValidationErrorDetails = ruleValidationErrorDetails.concat(
+      filterInstanceValidation.errors
+    );
+  }
+
+  if (ruleValidationErrorDetails.length > 0) {
+    return error(ruleValidationErrorDetails);
+  }
+
+  const sanitizedRule: Record<string, unknown> = {
+    action: (actionInstanceValidation as ValidationSuccess).sanitized,
+    filter: (filterInstanceValidation as ValidationSuccess).sanitized,
+  };
+
+  // The name of a rule is not mandatory:
+  // we want to allow for "one time" use of the tool when you just define
+  // which artifacts to target and what to do with them without additional overhead.
+  // IMPORTANT: if a name is present, it should be maintained in the sanitized version.
+  const name = rule["name"];
+  if (name) {
+    sanitizedRule.name = name;
+  }
+
+  return success(sanitizedRule);
+}

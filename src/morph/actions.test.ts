@@ -90,24 +90,38 @@ test("unequipActionDef mutation factory returns function that unequips an artifa
   assert.deepEqual(newArtifact, expectedArtifact);
 });
 
-test("validateActionInstance with null should throw error", () => {
+test("validateActionInstance with null should return expected validation error", () => {
   // Arrange
   // Act
+  const result = validateActionInstance(null);
+
   // Assert
-  assert.throws(
-    () => validateActionInstance(null),
-    "Action instance can't be null."
-  );
+  assert.deepEqual(result, {
+    failed: true,
+    valid: false,
+    errors: [
+      {
+        cause: "missingAction",
+      },
+    ],
+  });
 });
 
-test("validateActionInstance with undefined should throw error", () => {
+test("validateActionInstance with undefined should return expected validation error", () => {
   // Arrange
   // Act
+  const result = validateActionInstance(undefined);
+
   // Assert
-  assert.throws(
-    () => validateActionInstance(undefined),
-    "Action instance can't be undefined."
-  );
+  assert.deepEqual(result, {
+    failed: true,
+    valid: false,
+    errors: [
+      {
+        cause: "missingAction",
+      },
+    ],
+  });
 });
 
 test("validateActionInstance with a non object value should return expected validation error", () => {

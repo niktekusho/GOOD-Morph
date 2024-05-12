@@ -3,7 +3,7 @@ import {
   ValidationResult,
   isNotBlankString,
   success,
-  isObject,
+  isRecord,
   error,
 } from "./validation";
 
@@ -17,7 +17,7 @@ type MutationParamUtil<Params extends Record<string, unknown>> = {
 /**
  * TypeScript type inferred from the related Typebox type.
  */
-type ActionType = "equip" | "unequip";
+export type ActionType = "equip" | "unequip";
 
 /**
  * ActionDefinition type.
@@ -130,22 +130,19 @@ export type Actions = typeof actionDefinitionsByType;
 export function validateActionInstance(
   actionInstance: unknown
 ): ValidationResult {
-  if (actionInstance === null)
-    throw new TypeError("Action instance can't be null.");
+  if (actionInstance === null || actionInstance === undefined)
+    return error([
+      {
+        cause: "missingAction",
+      },
+    ]);
 
-  if (actionInstance === undefined)
-    throw new TypeError("Action instance can't be undefined.");
-
-  if (!isObject(actionInstance))
-    return {
-      errors: [
-        {
-          cause: "notAnObject",
-        },
-      ],
-      failed: true,
-      valid: false,
-    };
+  if (!isRecord(actionInstance))
+    return error([
+      {
+        cause: "notAnObject",
+      },
+    ]);
 
   // Let's override TypeScript here...
   // We don't really care if the value of the action instance is *really* a string or not.

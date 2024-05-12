@@ -3,7 +3,7 @@ import {
   ValidationResult,
   error,
   isNotBlankString,
-  isObject,
+  isRecord,
   success,
 } from "./validation";
 
@@ -53,13 +53,14 @@ export const filterDefinitions = Object.values(filterDefinitionsByType);
 export function validateFilterInstance(
   filterInstance: unknown
 ): ValidationResult {
-  if (filterInstance === null)
-    throw new TypeError("Filter instance can't be null.");
+  if (filterInstance === null || filterInstance === undefined)
+    return error([
+      {
+        cause: "missingFilter",
+      },
+    ]);
 
-  if (filterInstance === undefined)
-    throw new TypeError("Filter instance can't be undefined.");
-
-  if (!isObject(filterInstance))
+  if (!isRecord(filterInstance))
     return {
       errors: [
         {

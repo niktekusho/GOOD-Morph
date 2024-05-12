@@ -58,24 +58,38 @@ test("equippingCharacter predicateFactory returns a function that returns false 
   assert.equal(artifactMatched, false);
 });
 
-test("validateFilterInstance with null should throw error", () => {
+test("validateFilterInstance with null should return expected validation error", () => {
   // Arrange
   // Act
+  const result = validateFilterInstance(null);
+
   // Assert
-  assert.throws(
-    () => validateFilterInstance(null),
-    "Filter instance can't be null."
-  );
+  assert.deepEqual(result, {
+    failed: true,
+    valid: false,
+    errors: [
+      {
+        cause: "missingFilter",
+      },
+    ],
+  });
 });
 
-test("validateFilterInstance with undefined should throw error", () => {
+test("validateFilterInstance with undefined should return expected validation error", () => {
   // Arrange
   // Act
+  const result = validateFilterInstance(null);
+
   // Assert
-  assert.throws(
-    () => validateFilterInstance(undefined),
-    "Filter instance can't be undefined."
-  );
+  assert.deepEqual(result, {
+    failed: true,
+    valid: false,
+    errors: [
+      {
+        cause: "missingFilter",
+      },
+    ],
+  });
 });
 
 test("validateFilterInstance with a non object value should return expected validation error", () => {

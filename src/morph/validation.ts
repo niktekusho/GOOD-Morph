@@ -32,7 +32,7 @@ export type ValidationErrorDetail = {
   cause: string;
 };
 
-export function isObject(arg: unknown): arg is Record<string, unknown> {
+export function isRecord(arg: unknown): arg is Record<string, unknown> {
   return arg != null && typeof arg === "object" && !Array.isArray(arg);
 }
 

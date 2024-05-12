@@ -1,41 +1,88 @@
 import { Artifact, LocationCharacterKey } from "@/good/good_spec";
 
+/**
+ * Utility type that takes each key in an ActionDefinition parameters and assign that key to a new broader value type.
+ */
 type MutationParamUtil<Params extends Record<string, unknown>> = {
   [K in keyof Params]: string | number;
 };
 
-// TODO: find a way to make Params never/undefined in the generic type
-type ActionDefinition<Type, Params extends Record<string, unknown>> = {
-  type: Type;
+/**
+ * TypeScript type inferred from the related Typebox type.
+ */
+type ActionType = "equip" | "unequip";
+
+/**
+ * ActionDefinition type.
+ *
+ * Both generics are used to narrow down the "type" of the action and it's parameters.
+ *
+ * Since ActionDefinitions are provided by core there's no need for runtime validation,
+ * which means we can only create TypeScript types (for intellisense purposes).
+ */
+type ActionDefinition<Params extends Record<string, unknown> | undefined> = {
+  type: ActionType;
   parameters?: Params;
-  mutationFactory: (
-    param: MutationParamUtil<Params>
-  ) => (artifact: Artifact) => Artifact;
+  mutationFactory: Params extends Record<string, unknown>
+    ? (param: MutationParamUtil<Params>) => (artifact: Artifact) => Artifact
+    : () => (artifact: Artifact) => Artifact;
+  validateActionInstance: (
+    actionInstance: Record<string, unknown>
+  ) => ValidationResult;
 };
 
 /**
- * Helper function that allows creating actions with strict TypeScript types inferred without becoming mad...
+ * Helper function that allows the creation of an ActionDefinition with strict TypeScript inference.
  *
  * @param type Type of the action.
  * @param parameters Optional parameters that the action requires.
+ * @param mutationFactory Function that returns the mutation function. The mutation function can potentially run on every artifact found in the GOOD file.
+ * @param validateActionInstance Function that returns a validation result.
  * @returns Action definition.
  */
 function createAction<
-  Type extends string,
-  Params extends Record<string, unknown>
+  Params extends Record<string, unknown> | undefined = undefined
 >(
-  type: Type,
-  mutationFactory: ActionDefinition<Type, Params>["mutationFactory"],
+  type: ActionType,
+  mutationFactory: ActionDefinition<Params>["mutationFactory"],
+  validateActionInstance: ActionDefinition<Params>["validateActionInstance"],
   parameters?: Params
-): ActionDefinition<Type, Params> {
-  return { type, parameters, mutationFactory };
+): ActionDefinition<Params> {
+  return { type, parameters, mutationFactory, validateActionInstance };
 }
 
-const unequipArtifactAction = createAction("unequip", () => (artifact) => {
-  artifact.location = "";
-  return artifact;
-});
+/**
+ * ActionDefinition that allows the user to unequip an artifact.
+ */
+const unequipArtifactAction = createAction(
+  "unequip",
+  () => (artifact) => {
+    artifact.location = "";
+    return artifact;
+  },
+  (actionInstance) =>
+    actionInstance["type"] === "unequip"
+      ? {
+          failed: false,
+          valid: true,
+          sanitized: {
+            type: "unequip",
+          },
+        }
+      : {
+          failed: true,
+          valid: false,
+          errors: [
+            {
+              cause: "notUnequipAction",
+            },
+          ],
+        }
+);
 
+/**
+ * ActionDefinition that allows the user to equip an artifact to any character in Genshin.
+ */
 const equipArtifactAction = createAction(
   "equip",
   ({ to }) =>
@@ -44,20 +91,116 @@ const equipArtifactAction = createAction(
       artifact.location = to as LocationCharacterKey;
       return artifact;
     },
+  (actionInstance) => {
+    const to = actionInstance["to"];
+    return actionInstance["type"] === "equip" &&
+      typeof to === "string" &&
+      isNotBlankString(to)
+      ? success({ type: "equip", to: to.trim() })
+      : error([
+          {
+            cause: "missingToProperty",
+          },
+        ]);
+  },
   {
     to: "all_characters",
-  }
+  } as const
 );
-const availableActions = [unequipArtifactAction, equipArtifactAction] as const;
 
-export type ActionTypes = (typeof availableActions)[number]["type"];
+export const actionDefinitionsByType = {
+  equip: equipArtifactAction,
+  unequip: unequipArtifactAction,
+} as const;
 
-export const actions = availableActions.reduce((prev, curr) => {
-  prev[curr.type as ActionTypes] = curr;
-  return prev;
-}, {} as Record<string, (typeof availableActions)[number]>);
+/**
+ * List of available ActionDefinitions.
+ */
+export const actionDefinitions = Object.values(actionDefinitionsByType);
 
-export type Actions = typeof actions;
+export type Actions = typeof actionDefinitionsByType;
 
-// TODO: Action defs are provided by core -> no runtime validation required
-// TODO: Action "instances" come from user input/some kind of storage -> runtime validation required
+type ValidationSuccess = {
+  failed: false;
+  valid: true;
+  sanitized: unknown;
+};
+
+function success(sanitized: unknown): ValidationSuccess {
+  return {
+    failed: false,
+    sanitized,
+    valid: true,
+  };
+}
+
+function error(errors: ValidationErrorDetail[]): ValidationError {
+  return {
+    failed: true,
+    valid: false,
+    errors,
+  };
+}
+
+type ValidationError = {
+  failed: true;
+  valid: false;
+  errors: ValidationErrorDetail[];
+};
+
+type ValidationResult = ValidationError | ValidationSuccess;
+
+type ValidationErrorDetail = {
+  cause: string;
+};
+
+function isObject(arg: unknown): arg is Record<string, unknown> {
+  return arg != null && typeof arg === "object" && !Array.isArray(arg);
+}
+
+function isNotBlankString(str: string) {
+  return str.trim().length > 0;
+}
+
+export function validateActionInstance(
+  actionInstance: unknown
+): ValidationResult {
+  if (actionInstance === null)
+    throw new TypeError("Action instance can't be null.");
+
+  if (actionInstance === undefined)
+    throw new TypeError("Action instance can't be undefined.");
+
+  if (!isObject(actionInstance))
+    return {
+      errors: [
+        {
+          cause: "notAnObject",
+        },
+      ],
+      failed: true,
+      valid: false,
+    };
+
+  // Let's override TypeScript here...
+  // We don't really care if the value of the action instance is *really* a string or not.
+  // What matters is that the value of it can be found in our action definitions.
+  const actionInstanceType = actionInstance["type"] as string | undefined;
+
+  if (actionInstanceType === undefined) {
+    return error([{ cause: "missingActionType" }]);
+  }
+
+  const actionDef = (
+    actionDefinitionsByType as Record<
+      string,
+      Actions[keyof Actions] | undefined
+    >
+  )[actionInstanceType];
+
+  if (actionDef === undefined) {
+    return error([{ cause: "unrecognizedActionType" }]);
+  }
+
+  return actionDef.validateActionInstance(actionInstance);
+}

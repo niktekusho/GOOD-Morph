@@ -1,4 +1,11 @@
 import { Artifact, LocationCharacterKey } from "@/good/good_spec";
+import {
+  ValidationResult,
+  isNotBlankString,
+  success,
+  isObject,
+  error,
+} from "./validation";
 
 /**
  * Utility type that takes each key in an ActionDefinition parameters and assign that key to a new broader value type.
@@ -119,48 +126,6 @@ export const actionDefinitionsByType = {
 export const actionDefinitions = Object.values(actionDefinitionsByType);
 
 export type Actions = typeof actionDefinitionsByType;
-
-type ValidationSuccess = {
-  failed: false;
-  valid: true;
-  sanitized: unknown;
-};
-
-function success(sanitized: unknown): ValidationSuccess {
-  return {
-    failed: false,
-    sanitized,
-    valid: true,
-  };
-}
-
-function error(errors: ValidationErrorDetail[]): ValidationError {
-  return {
-    failed: true,
-    valid: false,
-    errors,
-  };
-}
-
-type ValidationError = {
-  failed: true;
-  valid: false;
-  errors: ValidationErrorDetail[];
-};
-
-type ValidationResult = ValidationError | ValidationSuccess;
-
-type ValidationErrorDetail = {
-  cause: string;
-};
-
-function isObject(arg: unknown): arg is Record<string, unknown> {
-  return arg != null && typeof arg === "object" && !Array.isArray(arg);
-}
-
-function isNotBlankString(str: string) {
-  return str.trim().length > 0;
-}
 
 export function validateActionInstance(
   actionInstance: unknown

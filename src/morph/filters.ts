@@ -1,10 +1,10 @@
 import { Artifact } from "@/good/good_spec";
 import {
   ValidationResult,
-  error,
+  createError,
   isNotBlankString,
   isRecord,
-  success,
+  createSuccess,
 } from "./validation";
 
 /**
@@ -26,11 +26,11 @@ export const equippingCharacterFilterDef = {
     return instance["type"] === equippingCharacterFilterDef.type &&
       typeof characterName === "string" &&
       isNotBlankString(characterName)
-      ? success({
+      ? createSuccess({
           type: equippingCharacterFilterDef.type,
           characterName: characterName.trim(),
         })
-      : error([
+      : createError([
           {
             cause: "missingCharacterNameProperty",
           },
@@ -54,7 +54,7 @@ export function validateFilterInstance(
   filterInstance: unknown
 ): ValidationResult {
   if (filterInstance === null || filterInstance === undefined)
-    return error([
+    return createError([
       {
         cause: "missingFilter",
       },
@@ -77,7 +77,7 @@ export function validateFilterInstance(
   const filterInstanceType = filterInstance["type"] as string | undefined;
 
   if (filterInstanceType === undefined) {
-    return error([{ cause: "missingFilterType" }]);
+    return createError([{ cause: "missingFilterType" }]);
   }
 
   const filterDef = (
@@ -89,7 +89,7 @@ export function validateFilterInstance(
   )[filterInstanceType];
 
   if (filterDef === undefined) {
-    return error([{ cause: "unrecognizedFilterType" }]);
+    return createError([{ cause: "unrecognizedFilterType" }]);
   }
 
   return filterDef.validateFilterInstance(filterInstance);

@@ -4,7 +4,7 @@ export type ValidationSuccess = {
   sanitized: unknown;
 };
 
-export function success(sanitized: unknown): ValidationSuccess {
+export function createSuccess(sanitized: unknown): ValidationSuccess {
   return {
     failed: false,
     sanitized,
@@ -12,7 +12,7 @@ export function success(sanitized: unknown): ValidationSuccess {
   };
 }
 
-export function error(errors: ValidationErrorDetail[]): ValidationError {
+export function createError(errors: ValidationErrorDetail[]): ValidationError {
   return {
     failed: true,
     valid: false,

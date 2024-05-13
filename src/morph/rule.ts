@@ -4,9 +4,9 @@ import {
   ValidationErrorDetail,
   ValidationResult,
   ValidationSuccess,
-  error,
+  createError,
   isRecord,
-  success,
+  createSuccess,
 } from "./validation";
 
 export function validateRule(rule: unknown): ValidationResult {
@@ -15,7 +15,7 @@ export function validateRule(rule: unknown): ValidationResult {
   if (rule === null) throw new TypeError("Rule can't be null.");
 
   if (!isRecord(rule)) {
-    return error([
+    return createError([
       {
         cause: "notAnObject",
       },
@@ -41,7 +41,7 @@ export function validateRule(rule: unknown): ValidationResult {
   }
 
   if (ruleValidationErrorDetails.length > 0) {
-    return error(ruleValidationErrorDetails);
+    return createError(ruleValidationErrorDetails);
   }
 
   const sanitizedRule: Record<string, unknown> = {
@@ -58,5 +58,5 @@ export function validateRule(rule: unknown): ValidationResult {
     sanitizedRule.name = name;
   }
 
-  return success(sanitizedRule);
+  return createSuccess(sanitizedRule);
 }

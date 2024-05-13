@@ -2,9 +2,9 @@ import { Artifact, LocationCharacterKey } from "@/good/good_spec";
 import {
   ValidationResult,
   isNotBlankString,
-  success,
+  createSuccess,
   isRecord,
-  error,
+  createError,
 } from "./validation";
 
 /**
@@ -103,8 +103,8 @@ const equipArtifactAction = createAction(
     return actionInstance["type"] === "equip" &&
       typeof to === "string" &&
       isNotBlankString(to)
-      ? success({ type: "equip", to: to.trim() })
-      : error([
+      ? createSuccess({ type: "equip", to: to.trim() })
+      : createError([
           {
             cause: "missingToProperty",
           },
@@ -131,14 +131,14 @@ export function validateActionInstance(
   actionInstance: unknown
 ): ValidationResult {
   if (actionInstance === null || actionInstance === undefined)
-    return error([
+    return createError([
       {
         cause: "missingAction",
       },
     ]);
 
   if (!isRecord(actionInstance))
-    return error([
+    return createError([
       {
         cause: "notAnObject",
       },
@@ -150,7 +150,7 @@ export function validateActionInstance(
   const actionInstanceType = actionInstance["type"] as string | undefined;
 
   if (actionInstanceType === undefined) {
-    return error([{ cause: "missingActionType" }]);
+    return createError([{ cause: "missingActionType" }]);
   }
 
   const actionDef = (
@@ -161,7 +161,7 @@ export function validateActionInstance(
   )[actionInstanceType];
 
   if (actionDef === undefined) {
-    return error([{ cause: "unrecognizedActionType" }]);
+    return createError([{ cause: "unrecognizedActionType" }]);
   }
 
   return actionDef.validateActionInstance(actionInstance);

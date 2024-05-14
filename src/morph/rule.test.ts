@@ -1,7 +1,5 @@
-import { test, assert } from "vitest";
+import { assert, test } from "vitest";
 import { validateRule } from "./rule";
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 
 test("validateRule with undefined should return expected validation error", () => {
   // Arrange
@@ -177,27 +175,4 @@ test("validateRule with an object with name, action and filter properties should
       action: { type: "unequip" },
     },
   });
-});
-
-test("validation benchmark", () => {
-  const jsonFile = readFileSync(
-    join(import.meta.dirname, "benchmark", "rule-validation-bench-data.json"),
-    "utf8"
-  );
-  const json = JSON.parse(jsonFile) as unknown[];
-
-  let foundErrs = 0;
-
-  console.time("validation of 10.000 rules");
-  foundErrs = 0;
-
-  for (const obj of json) {
-    const res = validateRule(obj);
-    if (res?.failed) {
-      foundErrs++;
-    }
-  }
-
-  console.timeEnd("validation of 10.000 rules");
-  console.log(`Found ${foundErrs} errors`);
 });

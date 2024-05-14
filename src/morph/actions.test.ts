@@ -1,8 +1,6 @@
-import { test, assert } from "vitest";
-import { actionDefinitionsByType, validateActionInstance } from "./actions";
 import type { Artifact, LocationCharacterKey } from "@/good/good_spec";
-import { readFileSync } from "fs";
-import { join } from "node:path";
+import { assert, test } from "vitest";
+import { actionDefinitionsByType, validateActionInstance } from "./actions";
 
 test("equipActionDef mutation factory returns function that equips an artifact to someone", () => {
   // Arrange
@@ -266,27 +264,4 @@ test("validateActionInstance with an unimplemented action type should return exp
       },
     ],
   });
-});
-
-test("benchmarks", () => {
-  const jsonFile = readFileSync(
-    join(import.meta.dirname, "benchmark-input.json"),
-    "utf8"
-  );
-  const json = JSON.parse(jsonFile) as unknown[];
-
-  let foundErrs = 0;
-
-  console.time("manual");
-  foundErrs = 0;
-
-  for (const obj of json) {
-    const res = validateActionInstance(obj);
-    if (res?.failed) {
-      foundErrs++;
-    }
-  }
-
-  console.timeEnd("manual");
-  console.log(`Found ${foundErrs} errors`);
 });

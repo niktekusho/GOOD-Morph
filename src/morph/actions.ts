@@ -15,9 +15,9 @@ type MutationParamUtil<Params extends Record<string, unknown>> = {
 };
 
 /**
- * TypeScript type inferred from the related Typebox type.
+ * Action Definition type.
  */
-export type ActionType = "equip" | "unequip";
+export type ActionDefinitionType = "equip" | "unequip";
 
 /**
  * ActionDefinition type.
@@ -27,8 +27,11 @@ export type ActionType = "equip" | "unequip";
  * Since ActionDefinitions are provided by core there's no need for runtime validation,
  * which means we can only create TypeScript types (for intellisense purposes).
  */
-type ActionDefinition<Params extends Record<string, unknown> | undefined> = {
-  type: ActionType;
+type ActionDefinition<
+  Type extends ActionDefinitionType,
+  Params extends Record<string, unknown> | undefined
+> = {
+  type: Type;
   parameters?: Params;
   mutationFactory: Params extends Record<string, unknown>
     ? (param: MutationParamUtil<Params>) => (artifact: Artifact) => Artifact
@@ -48,14 +51,23 @@ type ActionDefinition<Params extends Record<string, unknown> | undefined> = {
  * @returns Action definition.
  */
 function createAction<
+  Type extends ActionDefinitionType,
   Params extends Record<string, unknown> | undefined = undefined
 >(
-  type: ActionType,
-  mutationFactory: ActionDefinition<Params>["mutationFactory"],
-  validateActionInstance: ActionDefinition<Params>["validateActionInstance"],
+  type: Type,
+  mutationFactory: ActionDefinition<Type, Params>["mutationFactory"],
+  validateActionInstance: ActionDefinition<
+    Type,
+    Params
+  >["validateActionInstance"],
   parameters?: Params
-): ActionDefinition<Params> {
-  return { type, parameters, mutationFactory, validateActionInstance };
+): Readonly<ActionDefinition<Type, Params>> {
+  return Object.freeze({
+    type,
+    parameters,
+    mutationFactory,
+    validateActionInstance,
+  });
 }
 
 /**
@@ -115,26 +127,47 @@ const equipArtifactAction = createAction(
   } as const
 );
 
-export const actionDefinitionsByType = {
+/**
+ * Immutable object where the keys are the types of the available
+ * Action Definitions and the values are the corresponding Action Definition themselves.
+ */
+export const actionDefinitionsByType = Object.freeze({
   equip: equipArtifactAction,
   unequip: unequipArtifactAction,
-} as const;
+});
 
 /**
- * List of available ActionDefinitions.
+ * List of available Action Definitions.
  */
-export const actionDefinitions = Object.values(actionDefinitionsByType);
+export const actionDefinitions = Object.freeze(
+  Object.values(actionDefinitionsByType)
+);
 
-export type Actions = typeof actionDefinitionsByType;
+/**
+ * Available Action Definitions
+ */
+export type ActionDefinitions = typeof actionDefinitionsByType;
 
 /**
  * Instance of an Action
  */
 export type ActionInstance = {
-  type: ActionType;
+  type: ActionDefinitionType;
   [key: string]: unknown;
 };
 
+/**
+ * Check if the passed object conforms to an Action Instance "shape".
+ *
+ * An Action Instance has the following characteristics:
+ *
+ * - it's an object
+ * - must have a type property with a supported value {@link ActionDefinitionType}
+ * - must conform the specific Action Definition shape {@link ActionDefinition.validateActionInstance}
+ *
+ * @param actionInstance Object to check.
+ * @returns Validation result of the check.
+ */
 export function validateActionInstance(
   actionInstance: unknown
 ): ValidationResult<ActionInstance> {
@@ -164,7 +197,7 @@ export function validateActionInstance(
   const actionDef = (
     actionDefinitionsByType as Record<
       string,
-      Actions[keyof Actions] | undefined
+      ActionDefinitions[keyof ActionDefinitions] | undefined
     >
   )[actionInstanceType];
 

@@ -18,7 +18,7 @@ export type FilterInstance = {
 /**
  *
  */
-export const equippingCharacterFilterDef = {
+export const equippingCharacterFilterDef = Object.freeze({
   type: "equippingCharacter",
   parameters: {
     characterName: "characters_in_GOOD",
@@ -44,20 +44,43 @@ export const equippingCharacterFilterDef = {
           },
         ]);
   },
-} as const;
+});
 
-export const filterDefinitionsByType = {
+/**
+ * Immutable object where the keys are the types of the available
+ * Filter Definitions and the values are the corresponding Filter Definition themselves.
+ */
+export const filterDefinitionsByType = Object.freeze({
   equippingCharacter: equippingCharacterFilterDef,
-} as const;
+});
+
+/**
+ * Type of Filter Definition.
+ */
+export type FilterDefinitionType = keyof typeof filterDefinitionsByType;
 
 /**
  * List of available FilterDefinitions.
  */
-export const filterDefinitions = Object.values(filterDefinitionsByType);
+export const filterDefinitions = Object.freeze(
+  Object.values(filterDefinitionsByType)
+);
 
 // TODO: Filter defs are provided by core -> no runtime validation required
 // TODO: Filter "instances" come from user input/some kind of storage -> runtime validation required
 
+/**
+ * Check if the passed object conforms to a Filter Instance "shape".
+ *
+ * A Filter Instance has the following characteristics:
+ *
+ * - it's an object
+ * - must have a type property with a supported value {@link FilterDefinitionType}
+ * - must conform the specific Filter Definition shape (For now only {@link equippingCharacterFilterDef.validateFilterInstance})
+ *
+ * @param filterInstance Object to check.
+ * @returns Validation result of the check.
+ */
 export function validateFilterInstance(
   filterInstance: unknown
 ): ValidationResult<FilterInstance> {

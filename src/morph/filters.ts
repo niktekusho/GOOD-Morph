@@ -8,6 +8,14 @@ import {
 } from "./validation";
 
 /**
+ * Instance of a Filter
+ */
+export type FilterInstance = {
+  type: string;
+  [key: string]: unknown;
+};
+
+/**
  *
  */
 export const equippingCharacterFilterDef = {
@@ -21,7 +29,7 @@ export const equippingCharacterFilterDef = {
       artifact.location === values.characterName,
   validateFilterInstance: (
     instance: Record<string, unknown>
-  ): ValidationResult => {
+  ): ValidationResult<FilterInstance> => {
     const characterName = instance["characterName"];
     return instance["type"] === equippingCharacterFilterDef.type &&
       typeof characterName === "string" &&
@@ -52,7 +60,7 @@ export const filterDefinitions = Object.values(filterDefinitionsByType);
 
 export function validateFilterInstance(
   filterInstance: unknown
-): ValidationResult {
+): ValidationResult<FilterInstance> {
   if (filterInstance === null || filterInstance === undefined)
     return createError([
       {

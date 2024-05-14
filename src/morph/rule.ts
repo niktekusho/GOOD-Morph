@@ -1,5 +1,5 @@
-import { validateActionInstance } from "./actions";
-import { validateFilterInstance } from "./filters";
+import { ActionInstance, validateActionInstance } from "./actions";
+import { FilterInstance, validateFilterInstance } from "./filters";
 import {
   ValidationErrorDetail,
   ValidationResult,
@@ -9,7 +9,14 @@ import {
   createSuccess,
 } from "./validation";
 
-export function validateRule(rule: unknown): ValidationResult {
+export type Rule = {
+  id: number;
+  name?: string;
+  action: ActionInstance;
+  filter: FilterInstance;
+};
+
+export function validateRule(rule: unknown): ValidationResult<Rule> {
   if (rule === undefined) throw new TypeError("Rule can't be undefined.");
 
   if (rule === null) throw new TypeError("Rule can't be null.");
@@ -23,6 +30,12 @@ export function validateRule(rule: unknown): ValidationResult {
   }
 
   let ruleValidationErrorDetails: ValidationErrorDetail[] = [];
+
+  const id = rule["id"];
+
+  if (typeof id !== "number") {
+    ruleValidationErrorDetails.push({ cause: "invalidOrMissingId" });
+  }
 
   const actionInstanceValidation = validateActionInstance(rule["action"]);
 
@@ -40,22 +53,34 @@ export function validateRule(rule: unknown): ValidationResult {
     );
   }
 
+  // The name of a rule is not mandatory, but if it's present it must be a string or a number.
+  // We want to allow for "one time" use of the tool when you just define
+  // which artifacts to target and what to do with them without additional overhead.
+  // IMPORTANT: if a name is present, it should be maintained in the sanitized version.
+  const name = rule["name"];
+
+  if (
+    name != undefined &&
+    typeof name !== "string" &&
+    typeof name !== "number"
+  ) {
+    ruleValidationErrorDetails.push({ cause: "invalidRuleName" });
+  }
+
   if (ruleValidationErrorDetails.length > 0) {
     return createError(ruleValidationErrorDetails);
   }
 
-  const sanitizedRule: Record<string, unknown> = {
-    action: (actionInstanceValidation as ValidationSuccess).sanitized,
-    filter: (filterInstanceValidation as ValidationSuccess).sanitized,
+  const sanitizedRule: Rule = {
+    id: id as number,
+    action: (actionInstanceValidation as ValidationSuccess<ActionInstance>)
+      .sanitized,
+    filter: (filterInstanceValidation as ValidationSuccess<FilterInstance>)
+      .sanitized,
   };
 
-  // The name of a rule is not mandatory:
-  // we want to allow for "one time" use of the tool when you just define
-  // which artifacts to target and what to do with them without additional overhead.
-  // IMPORTANT: if a name is present, it should be maintained in the sanitized version.
-  const name = rule["name"];
   if (name) {
-    sanitizedRule.name = name;
+    sanitizedRule.name = "" + name;
   }
 
   return createSuccess(sanitizedRule);

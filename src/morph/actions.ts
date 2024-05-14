@@ -35,7 +35,7 @@ type ActionDefinition<Params extends Record<string, unknown> | undefined> = {
     : () => (artifact: Artifact) => Artifact;
   validateActionInstance: (
     actionInstance: Record<string, unknown>
-  ) => ValidationResult;
+  ) => ValidationResult<ActionInstance>;
 };
 
 /**
@@ -127,9 +127,17 @@ export const actionDefinitions = Object.values(actionDefinitionsByType);
 
 export type Actions = typeof actionDefinitionsByType;
 
+/**
+ * Instance of an Action
+ */
+export type ActionInstance = {
+  type: ActionType;
+  [key: string]: unknown;
+};
+
 export function validateActionInstance(
   actionInstance: unknown
-): ValidationResult {
+): ValidationResult<ActionInstance> {
   if (actionInstance === null || actionInstance === undefined)
     return createError([
       {

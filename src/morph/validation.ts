@@ -1,10 +1,10 @@
-export type ValidationSuccess = {
+export type ValidationSuccess<T> = {
   failed: false;
   valid: true;
-  sanitized: unknown;
+  sanitized: T;
 };
 
-export function createSuccess(sanitized: unknown): ValidationSuccess {
+export function createSuccess<T>(sanitized: T): ValidationSuccess<T> {
   return {
     failed: false,
     sanitized,
@@ -26,7 +26,7 @@ export type ValidationError = {
   errors: ValidationErrorDetail[];
 };
 
-export type ValidationResult = ValidationError | ValidationSuccess;
+export type ValidationResult<T> = ValidationError | ValidationSuccess<T>;
 
 export type ValidationErrorDetail = {
   cause: string;

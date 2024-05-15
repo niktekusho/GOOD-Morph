@@ -5,6 +5,7 @@ import { filterDefinitionsByType, validateFilterInstance } from "./filters";
 test("equippingCharacter predicateFactory returns a function that returns true if the artifact is equipped to the specified character", () => {
   // Arrange
   const filter = filterDefinitionsByType.equippingCharacter.predicateFactory({
+    type: "equippingCharacter",
     characterName: "Yelan",
   });
   const artifact: Artifact = {
@@ -33,6 +34,7 @@ test("equippingCharacter predicateFactory returns a function that returns true i
 test("equippingCharacter predicateFactory returns a function that returns false if the artifact is NOT equipped to the specified character", () => {
   // Arrange
   const filter = filterDefinitionsByType.equippingCharacter.predicateFactory({
+    type: "equippingCharacter",
     characterName: "bozo",
   });
   const artifact: Artifact = {

@@ -8,13 +8,6 @@ import {
 } from "./validation";
 
 /**
- * Utility type that takes each key in an ActionDefinition parameters and assign that key to a new broader value type.
- */
-type MutationParamUtil<Params extends Record<string, unknown>> = {
-  [K in keyof Params]: string | number;
-};
-
-/**
  * Action Definition type.
  */
 export type ActionDefinitionType = "equip" | "unequip";
@@ -33,9 +26,9 @@ type ActionDefinition<
 > = {
   type: Type;
   parameters?: Params;
-  mutationFactory: Params extends Record<string, unknown>
-    ? (param: MutationParamUtil<Params>) => (artifact: Artifact) => Artifact
-    : () => (artifact: Artifact) => Artifact;
+  mutationFactory: (
+    actionInstance?: ActionInstance
+  ) => (artifact: Artifact) => Artifact;
   validateActionInstance: (
     actionInstance: Record<string, unknown>
   ) => ValidationResult<ActionInstance>;
@@ -104,12 +97,12 @@ const unequipArtifactAction = createAction(
  */
 const equipArtifactAction = createAction(
   "equip",
-  ({ to }) =>
-    (artifact) => {
-      // TODO: would be very very nice if we could not cast the key like this...
-      artifact.location = to as LocationCharacterKey;
-      return artifact;
-    },
+  (actionInstance) => (artifact) => {
+    // actionInstance here should be a valid object
+    // TODO: would be very very nice if we could not cast the key like this...
+    artifact.location = actionInstance!.to as LocationCharacterKey;
+    return artifact;
+  },
   (actionInstance) => {
     const to = actionInstance["to"];
     return actionInstance["type"] === "equip" &&

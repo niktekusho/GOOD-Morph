@@ -2,9 +2,9 @@ import { Artifact } from "@/good/good_spec";
 import {
   ValidationResult,
   createError,
+  createSuccess,
   isNotBlankString,
   isRecord,
-  createSuccess,
 } from "./validation";
 
 /**
@@ -16,7 +16,7 @@ export type FilterInstance = {
 };
 
 /**
- *
+ * Filter Definition that targets an artifact equipped to a specific character.
  */
 export const equippingCharacterFilterDef = Object.freeze({
   type: "equippingCharacter",
@@ -24,9 +24,8 @@ export const equippingCharacterFilterDef = Object.freeze({
     characterName: "characters_in_GOOD",
   },
   // TODO: TS magic that allows to take the parameters array and turn into an object like this
-  predicateFactory:
-    (values: { characterName: string }) => (artifact: Artifact) =>
-      artifact.location === values.characterName,
+  predicateFactory: (values: FilterInstance) => (artifact: Artifact) =>
+    artifact.location === values.characterName,
   validateFilterInstance: (
     instance: Record<string, unknown>
   ): ValidationResult<FilterInstance> => {

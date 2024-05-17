@@ -1,10 +1,21 @@
 import { type HTMLProps } from "react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Props to pass to the {@link CircularProgressIndicator} component.
+ */
 export type CircularProgressProps = {
+  /**
+   * Tailwind size of the component
+   */
   twSize?: `size-${string}`;
 };
 
+/**
+ * Component that displays a spinner.
+ * @param param0 Props to the component
+ * @returns Component that displays a spinner.
+ */
 export function CircularProgressIndicator({ twSize }: CircularProgressProps) {
   return (
     <div className="relative" role="status">

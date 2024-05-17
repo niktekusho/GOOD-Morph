@@ -13,33 +13,6 @@ import { Combobox, MIN_WIDTH } from "./ui/combobox";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 
-// type FilterCriteria<Type extends string, Params extends Parameter[]> = {
-//   type: Type;
-//   parameters?: Params;
-// };
-
-// const equippingCharacterFilterCriteria: FilterCriteria<
-//   "equippingCharacter",
-//   [{ name: "character"; type: "string" }]
-// > = {
-//   type: "equippingCharacter",
-//   parameters: [
-//     {
-//       name: "character",
-//       type: "string",
-//     },
-//   ],
-// } as const;
-
-// type FilterInstance<T extends FilterCriteria<any, any>> = {
-//   type: T["type"];
-// } & {
-//   [K in T["parameters"][number]["name"]]: Extract<
-//     T["parameters"][number],
-//     { name: K }
-//   >["type"];
-// };
-
 // TODO: compare with the localized entry
 
 export type RulesProp = {

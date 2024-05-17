@@ -13,11 +13,21 @@ import {
 
 import { enLocalization } from "./localization/index";
 
+/**
+ * Parse the specified string as a JSON object and returns a strongly typed object.
+ * @param json JSON to parse.
+ * @returns Typed GOOD object.
+ */
 export function getGOOD(json: string) {
   const parsed: GOOD = JSON.parse(json);
   return parsed;
 }
 
+/**
+ * Get the list of characters which have equipped artifacts.
+ * @param good GOOD file to look through.
+ * @returns List of characters which have equipped artifacts.
+ */
 export function getCharactersWithEquippedArtifactsFromGOOD(good: GOOD) {
   const chars = new Set<LocationCharacterKey>();
 

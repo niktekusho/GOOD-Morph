@@ -13,7 +13,7 @@ export type CircularProgressProps = {
 
 /**
  * Component that displays a spinner.
- * @param param0 Props to the component
+ * @param props Props to the component
  * @returns Component that displays a spinner.
  */
 export function CircularProgressIndicator({ twSize }: CircularProgressProps) {

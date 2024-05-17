@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useMorphFlow } from "@/lib/useMorphFlow";
 
-export default function Component() {
+export default function Page() {
   const {
     appState,
     showModal,

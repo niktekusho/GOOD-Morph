@@ -1,16 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { type UseMorphFlow } from "@/lib/useMorphFlow";
 import { Upload } from "lucide-react";
 import { ChangeEventHandler, createRef } from "react";
-import { UploadedFile } from "../app/page";
 
 type InitialPageProps = {
-  setFile: (file?: UploadedFile) => void;
+  onFilePicked: UseMorphFlow["onFilePicked"];
 };
 
 const loadFileInputRef = createRef<HTMLInputElement>();
 
-export function InitialPage({ setFile }: InitialPageProps) {
+export function InitialPage({ onFilePicked }: InitialPageProps) {
   const handleLoadFile = () => {
     loadFileInputRef.current?.click();
   };
@@ -24,19 +24,12 @@ export function InitialPage({ setFile }: InitialPageProps) {
       reader.onerror = (e) => console.error(e);
       reader.onloadend = (e) => {
         const fileContent = e.target!.result! as string;
-        // console.log("file content", fileContent);
-        // TODO: I don't know if this is the way...
-        sessionStorage.setItem("fileName", selectedFile.name);
-        sessionStorage.setItem("fileContent", fileContent);
-        setFile({
-          content: fileContent,
-          name: selectedFile.name,
-        });
+        onFilePicked({ content: fileContent, name: selectedFile.name });
       };
 
       reader.readAsText(selectedFile);
     } else {
-      setFile(undefined);
+      onFilePicked(undefined);
     }
   };
 

@@ -16,8 +16,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  # Permission to read the releases
-  # TODO: this is not supposed to be write, I opened a ticket to GitHub to make sure it's a bug on their end
+  # Permission to read the releases: draft releases are only available when using the write access token (confirmed with GitHub's support)
   contents: write
   # Permission to write to the pages service
   pages: write

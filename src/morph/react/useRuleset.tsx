@@ -20,7 +20,7 @@ export function useRulesets() {
     prev.set(curr.name, index);
     return prev;
   }, new Map<string, number>());
-  console.log("RulesetIndexesByName", rulesetIndexesByName);
+  // console.log("RulesetIndexesByName", rulesetIndexesByName);
 
   // TODO:The default ruleset should be the last used one.
   const [currentRulesetIndex, setCurrentRulesetIndex] = useState(0);
@@ -49,6 +49,8 @@ export function useRulesets() {
       ...newRule,
       id: rulesIdCounter.current++,
     };
+    // console.log(newRuleWithId);
+
     const newRules = [...currentRuleset.rules, newRuleWithId];
     updateCurrentRuleset({
       ...currentRuleset,

@@ -16,7 +16,7 @@ export function useRenderCount(component: string) {
       renderCount: ref.current,
     };
 
-    console.log(info);
+    // console.log(info);
 
     return info;
   }

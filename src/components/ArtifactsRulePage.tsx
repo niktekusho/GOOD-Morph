@@ -6,9 +6,10 @@ import { GOOD } from "@/good/good_spec";
 import { type UseMorphFlow } from "@/lib/useMorphFlow";
 import { useRenderCount } from "@/lib/utils";
 import { useRulesets } from "@/morph/react/useRuleset";
-import { applyRuleset } from "@/morph/ruleset";
+import { applyRuleset, validateRuleset } from "@/morph/ruleset";
 import { Play, Plus } from "lucide-react";
-import { CSSProperties, MouseEventHandler } from "react";
+import { MouseEventHandler } from "react";
+import { CircularProgressIndicator } from "./CircularProgress";
 import { Rules } from "./Rules";
 import {
   AlertDialog,
@@ -27,7 +28,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { CircularProgressIndicator } from "./CircularProgress";
 
 type ArtifactsRulePageProps = {
   file: NonNullable<UseMorphFlow["loadedFile"]>;
@@ -146,7 +146,11 @@ export function ArtifactsRulePage({
             <Button size="sm" variant={"outline"} disabled>
               Save Ruleset
             </Button>
-            <Button size="sm" onClick={handleMorphButton}>
+            <Button
+              size="sm"
+              disabled={validateRuleset(currentRuleset).failed}
+              onClick={handleMorphButton}
+            >
               <Play className="mr-2 size-4"></Play> Morph!
             </Button>
           </div>
@@ -163,8 +167,8 @@ export function ArtifactsRulePage({
                 size="sm"
                 onClick={() =>
                   addRuleToCurrentRuleset({
-                    action: { type: "", parameters: {} },
-                    filter: { type: "", parameters: {} },
+                    action: { type: "equip", parameters: {} },
+                    filter: { type: "equippingCharacter", parameters: {} },
                     name: "",
                   })
                 }

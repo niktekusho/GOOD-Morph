@@ -11,7 +11,7 @@ import {
  * Instance of a Filter
  */
 export type FilterInstance = {
-  type: string;
+  type: FilterDefinitionType;
   [key: string]: unknown;
 };
 

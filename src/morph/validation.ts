@@ -39,3 +39,7 @@ export function isRecord(arg: unknown): arg is Record<string, unknown> {
 export function isNotBlankString(str: string) {
   return str.trim().length > 0;
 }
+
+export function isBlankString(str: string) {
+  return str.trim().length === 0;
+}

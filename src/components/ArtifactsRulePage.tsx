@@ -169,6 +169,8 @@ export function ArtifactsRulePage({
                   </span>
                 </Button>
               </DropdownMenuTrigger>
+              {/* The CSS variable `--radix-dropdown-menu-trigger-width` allows the Dropdown content to have the same width as the Dropdown trigger. */}
+              {/* See more at: https://www.radix-ui.com/primitives/docs/components/dropdown-menu#constrain-the-contentsub-content-size. */}
               <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)]">
                 {[...rulesets.values()].map((ruleset, index) => (
                   <DropdownMenuItem key={index}>

@@ -1,6 +1,20 @@
 import { useEffect, useRef, useState } from "react";
-import { Ruleset } from "../ruleset";
+import { Ruleset, validateRuleset } from "../ruleset";
 import { Rule } from "../rule";
+import { ValidationError, ValidationSuccess } from "../validation";
+
+function computeInitialRuleId(rulesets: Ruleset[]) {
+  return (
+    rulesets
+      .flatMap((ruleset) => ruleset.rules)
+      .map((rule) => rule.id)
+      .sort()
+      .reverse()[0] ?? 0
+  );
+}
+
+const rulesetsLSKey = "morph.rulesets";
+const oldRulesetsLSKey = "morph.oldRulesets";
 
 export function useRulesets() {
   // A default ruleset is present if user has not defined one yet
@@ -8,12 +22,45 @@ export function useRulesets() {
     { name: "Default ruleset", rules: [] },
   ]);
 
-  const maxId =
-    rulesets
-      .flatMap((ruleset) => ruleset.rules)
-      .map((rule) => rule.id)
-      .sort()
-      .reverse()[0] ?? 0;
+  // On load update rulesets based on localStorage.
+  useEffect(() => {
+    const localStorageValue = localStorage.getItem(rulesetsLSKey);
+    if (localStorageValue) {
+      const existingRulesets = JSON.parse(localStorageValue);
+      if (Array.isArray(existingRulesets)) {
+        const rulesetValidationResults = existingRulesets.map((ruleset) =>
+          validateRuleset(ruleset)
+        );
+
+        const validRulesets = rulesetValidationResults
+          .filter(
+            (result): result is ValidationSuccess<Ruleset> => result.valid
+          )
+          .map((result) => result.sanitized);
+        setRulesets(validRulesets);
+
+        // Update also the rulesetId counter based on the current valid rulesets
+        rulesIdCounter.current = computeInitialRuleId(validRulesets);
+
+        rulesetValidationResults
+          .filter((result): result is ValidationError => result.failed)
+          .forEach((error) =>
+            console.warn(
+              "Found the following errors in the persisted rulesets:",
+              error
+            )
+          );
+      } else {
+        console.error(
+          "Existing rulesets are not valid.\nThe app will start anew and move your existing rulesets into morph.oldRulesets."
+        );
+        localStorage.setItem(oldRulesetsLSKey, existingRulesets);
+        localStorage.removeItem(rulesetsLSKey);
+      }
+    }
+  }, []);
+
+  const maxId = computeInitialRuleId(rulesets);
   const rulesIdCounter = useRef(maxId);
 
   const rulesetIndexesByName = rulesets.reduce((prev, curr, index) => {
@@ -86,6 +133,62 @@ export function useRulesets() {
     });
   };
 
+  const saveCurrentRuleset = () => {
+    // load persisted rulesets
+    const localStorageValue = localStorage.getItem(rulesetsLSKey);
+    if (localStorageValue) {
+      // Since rulesets exist, we need to merge.
+      // In case we find any kind of validation errors, we need to stop.
+
+      const existingRulesets = JSON.parse(localStorageValue);
+      if (!Array.isArray(existingRulesets)) {
+        throw new Error(
+          "Found invalid rulesets: persisted rulesets are not a list."
+        );
+      }
+
+      const rulesetValidationResults = existingRulesets.map((ruleset) =>
+        validateRuleset(ruleset)
+      );
+
+      // If at least one ruleset is not valid, throw with the full error.
+      if (rulesetValidationResults.some((result) => result.failed)) {
+        const baseErrorMsg = "Found invalid rulesets:";
+
+        const details = rulesetValidationResults
+          .filter((result): result is ValidationError => result.failed)
+          .flatMap((error) => error.errors)
+          .map((detail) => detail.cause);
+
+        throw new Error([baseErrorMsg, ...details].join("\n"));
+      }
+
+      const sanitizedRulesets = rulesetValidationResults.map(
+        (result) => (result as ValidationSuccess<Ruleset>).sanitized
+      );
+
+      // now we need to find the corresponding index of the current ruleset.
+      const currentRulesetIndex = sanitizedRulesets.findIndex(
+        (ruleset) => ruleset.name === currentRuleset.name
+      );
+
+      const mergedRulesets = [...existingRulesets];
+
+      // found the existing ruleset, we overwrite it
+      if (currentRulesetIndex >= 0) {
+        mergedRulesets[currentRulesetIndex] = currentRuleset;
+      } else {
+        // seems like a new ruleset, we add it
+        mergedRulesets.push(currentRuleset);
+      }
+
+      localStorage.setItem(rulesetsLSKey, JSON.stringify(mergedRulesets));
+    } else {
+      // No previous rulesets found, we can save the current ruleset
+      localStorage.setItem(rulesetsLSKey, JSON.stringify([currentRuleset]));
+    }
+  };
+
   return {
     rulesets,
     currentRuleset,
@@ -94,6 +197,7 @@ export function useRulesets() {
     addRuleToCurrentRuleset,
     updateRuleInCurrentRuleset,
     deleteRuleInCurrentRuleset,
+    saveCurrentRuleset,
   };
 }
 

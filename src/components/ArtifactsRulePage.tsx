@@ -27,6 +27,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { isBlankString } from "@/morph/validation";
+import { useToast } from "./ui/use-toast";
+import { Toaster } from "./ui/toaster";
 
 type ArtifactsRulePageProps = {
   file: NonNullable<UseMorphFlow["loadedFile"]>;
@@ -59,7 +64,11 @@ export function ArtifactsRulePage({
     addRuleToCurrentRuleset,
     updateRuleInCurrentRuleset,
     deleteRuleInCurrentRuleset,
+    updateCurrentRuleset,
+    saveCurrentRuleset,
   } = useRulesets();
+
+  const { toast } = useToast();
 
   // const artifacts = good.artifacts || [];
   const foundCharacters = getCharactersWithEquippedArtifactsFromGOOD(good);
@@ -70,12 +79,7 @@ export function ArtifactsRulePage({
     link.href = morphedGOODFile!.downloadUrl;
     link.setAttribute("download", morphedGOODFile!.name);
     document.body.appendChild(link);
-    link.addEventListener("focus", () => {
-      console.log("temp link focused");
-    });
-    link.addEventListener("blur", () => {
-      console.log("temp link UNfocused");
-    });
+    // Unfortunately it's not possible to know the result of the save dialog shown to the user...
     link.click();
     document.body.removeChild(link);
   };
@@ -103,6 +107,19 @@ export function ArtifactsRulePage({
     onMorphCompleted(url);
   };
 
+  const currentRulesetIsBlank = currentRuleset.name.length === 0;
+  const currentRulesetLabel = currentRulesetIsBlank
+    ? "Current ruleset"
+    : currentRuleset.name;
+
+  const onSaveRulesetHandler: MouseEventHandler = () => {
+    saveCurrentRuleset();
+    toast({
+      title: "Current ruleset saved",
+      description: `"${currentRuleset.name}" was successfully saved.`,
+    });
+  };
+
   return (
     <>
       <AlertDialog open={showModal}>
@@ -123,24 +140,51 @@ export function ArtifactsRulePage({
         )}
       </AlertDialog>
       <div className="w-full flex flex-col">
-        <header className="flex justify-between items-center p-4 pt-2 border-b">
-          <h2 className="font-semibold text-xl">Working on {file.name}</h2>
-          <div className="flex gap-2">
+        <header className="flex justify-between items-center p-4 pt-2 border-b gap-2">
+          <h2 className="font-semibold flex-grow flex-shrink text-xl">
+            Working on {file.name}
+          </h2>
+          <div className="flex flex-shrink-0 flex-grow-0 items-center justify-end gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button size="sm" variant="outline">
-                  {currentRuleset.name}
+                {/* The following code is inspired by: https://stackoverflow.com/a/32833185 */}
+                {/* We want to prevent the button to become too large by adding a max width to it and enable the ellipsis overflow... */}
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="max-w-[25ch] min-w-[10ch]"
+                >
+                  <span
+                    className={`text-ellipsis overflow-hidden ${
+                      currentRulesetIsBlank ? "italic" : ""
+                    }`}
+                  >
+                    {currentRulesetLabel}
+                  </span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)]">
                 {[...rulesets.values()].map((ruleset, index) => (
                   <DropdownMenuItem key={index}>
-                    {ruleset.name}
+                    <div
+                      className={`text-ellipsis overflow-hidden ${
+                        isBlankString(ruleset.name) ? "italic" : ""
+                      }`}
+                    >
+                      {isBlankString(ruleset.name)
+                        ? currentRulesetLabel
+                        : ruleset.name}
+                    </div>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button size="sm" variant={"outline"} disabled>
+            <Button
+              size="sm"
+              variant={"outline"}
+              disabled={validateRuleset(currentRuleset).failed}
+              onClick={onSaveRulesetHandler}
+            >
               Save Ruleset
             </Button>
             <Button
@@ -157,10 +201,28 @@ export function ArtifactsRulePage({
           {/* form */}
           <div className="space-y-4 rounded">
             {/* toolbar */}
-            <div className="flex items-center justify-between ">
-              <span className="font-semibold">{currentRuleset.name}</span>
+            <h2 className="flex items-center justify-between">
+              <Label htmlFor="rulesetName" className="sr-only">
+                Ruleset
+              </Label>
+              <Input
+                className="flex-grow-0 flex-shrink w-1/2 text-ellipsis"
+                id="rulesetName"
+                type="text"
+                value={currentRuleset.name}
+                onChange={(e) => {
+                  const newRulesetName = e.target.value;
+                  const updatedRuleset = {
+                    ...currentRuleset,
+                    name: newRulesetName,
+                  };
+                  updateCurrentRuleset(updatedRuleset);
+                }}
+              />
+
               <Button
                 size="sm"
+                className="flex-shrink-0"
                 onClick={() =>
                   addRuleToCurrentRuleset({
                     action: { type: "equip", parameters: {} },
@@ -171,7 +233,7 @@ export function ArtifactsRulePage({
               >
                 <Plus className="mr-2 size-4"></Plus> Add rule
               </Button>
-            </div>
+            </h2>
             <Rules
               foundCharacters={foundCharacters}
               rules={currentRuleset.rules}
@@ -192,6 +254,7 @@ export function ArtifactsRulePage({
           </div> */}
         </div>
       </div>
+      <Toaster />
     </>
   );
 }

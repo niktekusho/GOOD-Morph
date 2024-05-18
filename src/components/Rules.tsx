@@ -174,8 +174,11 @@ function RuleCard({
             ([paramName, paramType]) => {
               const comboItems =
                 paramType === "characters_in_GOOD"
-                  ? createComboItemsForFoundCharacters(foundCharacters)
+                  ? createComboItemsFromCharacters(foundCharacters)
                   : [];
+
+              const value =
+                existingRule?.filter && existingRule?.filter[paramName];
 
               return (
                 <Combobox
@@ -183,9 +186,7 @@ function RuleCard({
                   emptyResultText="No characters matching."
                   items={comboItems}
                   placeholderText="Select character..."
-                  initialValue={
-                    existingRule?.filter && existingRule?.filter[paramName]
-                  }
+                  initialValue={value}
                   onChange={(pickedCharacter) => {
                     const updatedRule = {
                       ...existingRule,
@@ -232,26 +233,36 @@ function RuleCard({
             }}
           />
           {/* current action params */}
-          {currentActionDef?.parameters?.to ? (
-            <Combobox
-              emptyResultText="No characters matching."
-              items={createComboItemsForFoundCharacters(
-                allLocationCharacterKeys
-              )}
-              placeholderText="Select character..."
-              onChange={(character) => {
-                const updatedRule = {
-                  ...existingRule,
-                  action: {
-                    type: existingRule?.action.type,
-                    to: character,
-                  },
-                } as Rule;
-                updateRule(updatedRule);
-              }}
-            />
-          ) : (
-            <></>
+          {Object.entries(currentActionDef?.parameters || {}).map(
+            ([paramName, paramType]) => {
+              const comboItems =
+                paramType === "all_characters"
+                  ? createComboItemsFromCharacters(allLocationCharacterKeys)
+                  : [];
+
+              const value =
+                existingRule?.action && existingRule?.action[paramName];
+
+              return (
+                <Combobox
+                  key={paramName}
+                  emptyResultText="No characters matching."
+                  items={comboItems}
+                  placeholderText="Select character..."
+                  initialValue={value}
+                  onChange={(pickedCharacter) => {
+                    const updatedRule = {
+                      ...existingRule,
+                      action: {
+                        type: existingRule?.action.type,
+                        characterName: pickedCharacter,
+                      },
+                    } as Rule;
+                    updateRule(updatedRule);
+                  }}
+                />
+              );
+            }
           )}
         </div>
       </fieldset>
@@ -259,16 +270,16 @@ function RuleCard({
   );
 }
 
-function createComboItemsForFoundCharacters(
+function createComboItemsFromCharacters(
   characterKeys: Set<LocationCharacterKey> | typeof allLocationCharacterKeys
 ) {
   const comboItems = [];
 
   for (const foundChar of characterKeys) {
+    const name = characterKeyToName(foundChar);
     comboItems.push({
-      // TODO: provide a localization?
-      label: characterKeyToName(foundChar),
-      value: foundChar,
+      label: name,
+      value: name,
     });
   }
 

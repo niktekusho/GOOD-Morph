@@ -4,7 +4,6 @@ import {
 } from "@/good/good_lib";
 import { GOOD } from "@/good/good_spec";
 import { type UseMorphFlow } from "@/lib/useMorphFlow";
-import { useRenderCount } from "@/lib/utils";
 import { useRulesets } from "@/morph/react/useRuleset";
 import { applyRuleset, validateRuleset } from "@/morph/ruleset";
 import { Play, Plus } from "lucide-react";
@@ -64,8 +63,6 @@ export function ArtifactsRulePage({
 
   // const artifacts = good.artifacts || [];
   const foundCharacters = getCharactersWithEquippedArtifactsFromGOOD(good);
-
-  useRenderCount("ArtifactsRulePage");
 
   const handleDownloadButton: MouseEventHandler = (e) => {
     onFileDownloadInitiated();
@@ -158,8 +155,7 @@ export function ArtifactsRulePage({
         {/* 2 pane layout */}
         <div className="grid gap-8 p-4">
           {/* form */}
-          {/* TODO: bg-orange is only for debugging purposes only */}
-          <div className="bg-orange-100 p-4 space-y-4 rounded">
+          <div className="space-y-4 rounded">
             {/* toolbar */}
             <div className="flex items-center justify-between ">
               <span className="font-semibold">{currentRuleset.name}</span>

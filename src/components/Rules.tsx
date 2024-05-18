@@ -123,7 +123,7 @@ function RuleCard({
       <Label className="flex flex-col justify-center-center gap-2">
         Rule name
         <Input
-          type="ruleName"
+          type="text"
           placeholder="My rule..."
           value={existingRule?.name}
           onChange={(e) => {

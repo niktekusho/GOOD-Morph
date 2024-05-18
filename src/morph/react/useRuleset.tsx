@@ -52,7 +52,7 @@ export function useRulesets() {
           );
       } else {
         console.error(
-          "Existing rulesets are not valid.\nThe app will start anew and move your existing rulesets into morph.oldRulesets."
+          `Existing rulesets are not valid.\nThe app will start anew and move your existing rulesets into ${oldRulesetsLSKey}.`
         );
         localStorage.setItem(oldRulesetsLSKey, existingRulesets);
         localStorage.removeItem(rulesetsLSKey);

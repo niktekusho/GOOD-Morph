@@ -45,7 +45,7 @@ export function useRulesets() {
         rulesetValidationResults
           .filter((result): result is ValidationError => result.failed)
           .forEach((error) =>
-            console.warn(
+            console.error(
               "Found the following errors in the persisted rulesets:",
               error
             )
@@ -138,7 +138,7 @@ export function useRulesets() {
     const localStorageValue = localStorage.getItem(rulesetsLSKey);
     if (localStorageValue) {
       // Since rulesets exist, we need to merge.
-      // In case we find any kind of validation errors, we need to stop.
+      // In case we find any kind of validation errors, we need to stop to prevent spreading chaos.
 
       const existingRulesets = JSON.parse(localStorageValue);
       if (!Array.isArray(existingRulesets)) {
@@ -172,7 +172,7 @@ export function useRulesets() {
         (ruleset) => ruleset.name === currentRuleset.name
       );
 
-      const mergedRulesets = [...existingRulesets];
+      const mergedRulesets = [...sanitizedRulesets];
 
       // found the existing ruleset, we overwrite it
       if (currentRulesetIndex >= 0) {

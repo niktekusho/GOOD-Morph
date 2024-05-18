@@ -25,6 +25,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Input } from "./ui/input";
@@ -60,6 +61,7 @@ export function ArtifactsRulePage({
 
   const {
     rulesets,
+    addRuleset,
     currentRuleset,
     addRuleToCurrentRuleset,
     updateRuleInCurrentRuleset,
@@ -112,12 +114,16 @@ export function ArtifactsRulePage({
     ? "Current ruleset"
     : currentRuleset.name;
 
-  const onSaveRulesetHandler: MouseEventHandler = () => {
+  const onSaveRulesetHandler = () => {
     saveCurrentRuleset();
     toast({
       title: "Current ruleset saved",
       description: `"${currentRuleset.name}" was successfully saved.`,
     });
+  };
+
+  const handleAddRuleset = () => {
+    addRuleset();
   };
 
   return (
@@ -177,6 +183,10 @@ export function ArtifactsRulePage({
                     </div>
                   </DropdownMenuItem>
                 ))}
+                <DropdownMenuSeparator />
+                <DropdownMenuItem key="newRuleset" onClick={handleAddRuleset}>
+                  New ruleset...
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             <Button

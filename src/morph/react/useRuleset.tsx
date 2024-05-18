@@ -189,6 +189,23 @@ export function useRulesets() {
     }
   };
 
+  const addRuleset = () => {
+    // "Copy like behaviour": if 2 files have the same name, adds 1 to the newest one.
+    const newRulesetIndex = rulesets.filter((ruleset) =>
+      ruleset.name.trim().startsWith("New ruleset")
+    ).length;
+
+    const rulesetNameSuffix = newRulesetIndex > 0 ? ` ${newRulesetIndex}` : "";
+    const newRuleset: Ruleset = {
+      name: `New ruleset${rulesetNameSuffix}`,
+      rules: [],
+    };
+
+    rulesets.push(newRuleset);
+
+    setCurrentRulesetIndex(rulesets.length - 1);
+  };
+
   return {
     rulesets,
     currentRuleset,
@@ -198,6 +215,7 @@ export function useRulesets() {
     updateRuleInCurrentRuleset,
     deleteRuleInCurrentRuleset,
     saveCurrentRuleset,
+    addRuleset,
   };
 }
 

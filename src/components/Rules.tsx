@@ -56,8 +56,8 @@ export function Rules({
 
   return (
     <ol className="flex flex-wrap gap-8">
-      {rules.map((rule, index) => (
-        <li key={index} className="min-w-[450px] flex-grow">
+      {rules.map((rule) => (
+        <li key={rule.id} className="min-w-[450px] flex-grow">
           <RuleCard
             foundCharacters={foundCharacters}
             existingRule={rule}

@@ -94,7 +94,7 @@ export function useRulesets() {
   const addRuleToCurrentRuleset = (newRule: Omit<Rule, "id">) => {
     const newRuleWithId = {
       ...newRule,
-      id: rulesIdCounter.current++,
+      id: ++rulesIdCounter.current,
     };
     // console.log(newRuleWithId);
 

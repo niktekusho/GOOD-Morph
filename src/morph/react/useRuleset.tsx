@@ -74,7 +74,7 @@ export function useRulesets() {
 
   const setSelectedRuleset = (rulesetName: string) => {
     const rulesetIndex = rulesetIndexesByName.get(rulesetName);
-    if (rulesetIndex) {
+    if (rulesetIndex != undefined) {
       setCurrentRulesetIndex(rulesetIndex);
     } else {
       throw new Error(`Ruleset with name "${rulesetName}" not found`);
@@ -201,9 +201,11 @@ export function useRulesets() {
       rules: [],
     };
 
-    rulesets.push(newRuleset);
+    const newRulesets = [...rulesets, newRuleset];
 
-    setCurrentRulesetIndex(rulesets.length - 1);
+    setRulesets(newRulesets);
+
+    setCurrentRulesetIndex(newRulesets.length - 1);
   };
 
   return {

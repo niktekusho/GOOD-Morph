@@ -5,7 +5,7 @@ import {
 import { GOOD } from "@/good/good_spec";
 import { type UseMorphFlow } from "@/lib/useMorphFlow";
 import { useRulesets } from "@/morph/react/useRuleset";
-import { applyRuleset, validateRuleset } from "@/morph/ruleset";
+import { Ruleset, applyRuleset, validateRuleset } from "@/morph/ruleset";
 import { Play, Plus } from "lucide-react";
 import { MouseEventHandler } from "react";
 import { CircularProgressIndicator } from "./CircularProgress";
@@ -68,6 +68,7 @@ export function ArtifactsRulePage({
     deleteRuleInCurrentRuleset,
     updateCurrentRuleset,
     saveCurrentRuleset,
+    setSelectedRuleset,
   } = useRulesets();
 
   const { toast } = useToast();
@@ -126,6 +127,10 @@ export function ArtifactsRulePage({
     addRuleset();
   };
 
+  const onRulesetChangeHandler = (pickedRuleset: Ruleset) => {
+    setSelectedRuleset(pickedRuleset.name);
+  };
+
   return (
     <>
       <AlertDialog open={showModal}>
@@ -173,7 +178,10 @@ export function ArtifactsRulePage({
               {/* See more at: https://www.radix-ui.com/primitives/docs/components/dropdown-menu#constrain-the-contentsub-content-size. */}
               <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)]">
                 {[...rulesets.values()].map((ruleset, index) => (
-                  <DropdownMenuItem key={index}>
+                  <DropdownMenuItem
+                    key={index}
+                    onClick={() => onRulesetChangeHandler(ruleset)}
+                  >
                     <div
                       className={`text-ellipsis overflow-hidden ${
                         isBlankString(ruleset.name) ? "italic" : ""

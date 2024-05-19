@@ -102,7 +102,7 @@ function RuleCard({
 
   const validationResult = validateRule(existingRule);
 
-  // console.log(validationResult);
+  console.log("validation result for " + existingRule?.name, validationResult);
 
   return (
     <div
@@ -131,7 +131,7 @@ function RuleCard({
               ...existingRule,
               name: e.target.value,
             } as Rule;
-            console.log("updatedRule", updatedRule);
+            // console.log("updatedRule", updatedRule);
 
             updateRule(updatedRule);
           }}
@@ -255,7 +255,7 @@ function RuleCard({
                       ...existingRule,
                       action: {
                         type: existingRule?.action.type,
-                        characterName: pickedCharacter,
+                        [paramName]: pickedCharacter,
                       },
                     } as Rule;
                     updateRule(updatedRule);

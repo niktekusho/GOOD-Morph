@@ -41,6 +41,8 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
 
+      - name: Run tests
+        run: pnpm run test
       - name: Build with Next.js
         run: pnpm run build
 

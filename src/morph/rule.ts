@@ -1,5 +1,15 @@
-import { ActionInstance, validateActionInstance } from "./actions";
-import { FilterInstance, validateFilterInstance } from "./filters";
+import { type Artifact } from "@/good/good_spec";
+import {
+  ActionDefinitionType,
+  ActionInstance,
+  actionDefinitionsByType,
+  validateActionInstance,
+} from "./actions";
+import {
+  FilterInstance,
+  filterDefinitionsByType,
+  validateFilterInstance,
+} from "./filters";
 import {
   ValidationErrorDetail,
   ValidationResult,
@@ -84,4 +94,24 @@ export function validateRule(rule: unknown): ValidationResult<Rule> {
   }
 
   return createSuccess(sanitizedRule);
+}
+
+export function createRuleFunction(rule: Rule) {
+  const { action, filter } = rule;
+
+  const filterType = filter.type;
+  // TODO fix this cast
+  const filterDef =
+    filterDefinitionsByType[filterType as "equippingCharacter"]!;
+  const predicate = filterDef.predicateFactory(filter);
+
+  const actionType = action.type;
+  // TODO: fix this cast
+  const actionDef = actionDefinitionsByType[actionType as ActionDefinitionType];
+  const mutation = actionDef.mutationFactory(action);
+
+  return (artifact: Artifact) => {
+    if (predicate(artifact)) return mutation(artifact);
+    return artifact;
+  };
 }

@@ -1,6 +1,6 @@
 import { GOOD } from "@/good/good_spec";
 import { assert, test } from "vitest";
-import { Ruleset, applyRuleset, validateRuleset } from "./ruleset";
+import { Ruleset, applyRuleset, applyRulesetNew, validateRuleset } from "./ruleset";
 
 const GOODFile: GOOD = {
   format: "GOOD",
@@ -286,6 +286,140 @@ test("applyRuleset with 2 rules that both match should return expected morphed G
 
   // Act
   const morphedGOOD = applyRuleset(ruleset, GOODFile);
+
+  // Assert
+  const expectedGOODFile: GOOD = {
+    format: "GOOD",
+    source: "test",
+    version: 1,
+    artifacts: [
+      {
+        setKey: "HeartOfDepth",
+        rarity: 5,
+        level: 20,
+        slotKey: "goblet",
+        mainStatKey: "hydro_dmg_",
+        substats: [
+          { key: "hp_", value: 4.7 },
+          { key: "critDMG_", value: 14.8 },
+          { key: "hp", value: 538 },
+          { key: "critRate_", value: 14.4 },
+        ],
+        location: "Xingqiu",
+        lock: true,
+      },
+      {
+        setKey: "EmblemOfSeveredFate",
+        rarity: 5,
+        level: 20,
+        slotKey: "sands",
+        mainStatKey: "hp_",
+        substats: [
+          { key: "enerRech_", value: 16.8 },
+          { key: "atk", value: 16 },
+          { key: "eleMas", value: 42 },
+          { key: "critRate_", value: 8.9 },
+        ],
+        location: "Xingqiu",
+        lock: true,
+      },
+      {
+        setKey: "EmblemOfSeveredFate",
+        rarity: 5,
+        level: 20,
+        slotKey: "circlet",
+        mainStatKey: "critRate_",
+        substats: [
+          { key: "hp_", value: 15.7 },
+          { key: "atk_", value: 10.5 },
+          { key: "def_", value: 5.1 },
+          { key: "critDMG_", value: 18.7 },
+        ],
+        location: "Xingqiu",
+        lock: true,
+      },
+      {
+        setKey: "EmblemOfSeveredFate",
+        rarity: 5,
+        level: 20,
+        slotKey: "plume",
+        mainStatKey: "atk",
+        substats: [
+          { key: "enerRech_", value: 11.7 },
+          { key: "critDMG_", value: 28.8 },
+          { key: "hp_", value: 4.1 },
+          { key: "hp", value: 448 },
+        ],
+        location: "Xingqiu",
+        lock: true,
+      },
+      {
+        setKey: "EmblemOfSeveredFate",
+        rarity: 5,
+        level: 20,
+        slotKey: "flower",
+        mainStatKey: "hp",
+        substats: [
+          { key: "eleMas", value: 37 },
+          { key: "critRate_", value: 3.1 },
+          { key: "enerRech_", value: 21.4 },
+          { key: "critDMG_", value: 7.8 },
+        ],
+        location: "Xingqiu",
+        lock: true,
+      },
+      {
+        setKey: "MarechausseeHunter",
+        rarity: 5,
+        level: 20,
+        slotKey: "flower",
+        mainStatKey: "hp",
+        substats: [
+          { key: "eleMas", value: 37 },
+          { key: "critRate_", value: 3.1 },
+          { key: "enerRech_", value: 21.4 },
+          { key: "critDMG_", value: 7.8 },
+        ],
+        location: "Neuvillette",
+        lock: true,
+      },
+    ],
+  };
+  assert.deepEqual(morphedGOOD, expectedGOODFile);
+});
+
+test("applyRulesetNew with 2 rules that both match should return expected morphed GOOD", async () => {
+  // Arrange
+  const ruleset: Ruleset = {
+    name: "test",
+    rules: [
+      {
+        action: {
+          type: "equip",
+          to: "Xingqiu",
+        },
+        filter: {
+          characterName: "Yelan",
+          type: "equippingCharacter",
+        },
+        id: 1,
+      },
+      {
+        action: {
+          type: "equip",
+          to: "Neuvillette",
+        },
+        filter: {
+          characterName: "Barbara",
+          type: "equippingCharacter",
+        },
+        id: 2,
+      },
+    ],
+  };
+
+  // Act
+  const morphedGOOD = applyRulesetNew(ruleset, GOODFile);
 
   // Assert
   const expectedGOODFile: GOOD = {

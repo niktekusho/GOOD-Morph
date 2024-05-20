@@ -1,5 +1,6 @@
 import { assert, test } from "vitest";
-import { validateRule } from "./rule";
+import { Rule, createRuleFunction, validateRule } from "./rule";
+import { Artifact } from "@/good/good_spec";
 
 test("validateRule with undefined should return expected validation error", () => {
   // Arrange
@@ -174,5 +175,89 @@ test("validateRule with an object with name, action and filter properties should
       filter: { type: "equippingCharacter", characterName: "ayaya" },
       action: { type: "unequip" },
     },
+  });
+});
+
+test("createRuleFunction returns a function that takes in an artifact and returns a mutated artifact if the filter matches the artifact", () => {
+  // Arrange
+  const rule: Rule = {
+    action: {
+      type: "unequip",
+    },
+    filter: {
+      type: "equippingCharacter",
+      characterName: "KamisatoAyaka",
+    },
+    id: 1,
+  };
+
+  const ruleFn = createRuleFunction(rule);
+
+  const matchingArtifact: Artifact = {
+    level: 0,
+    location: "KamisatoAyaka",
+    lock: false,
+    mainStatKey: "critDMG_",
+    rarity: 5,
+    setKey: "BlizzardStrayer",
+    slotKey: "circlet",
+    substats: [],
+  };
+
+  // Act
+  const mutatedArtifact = ruleFn(matchingArtifact);
+
+  // Assert
+  assert.deepEqual(mutatedArtifact, {
+    level: 0,
+    location: "",
+    lock: false,
+    mainStatKey: "critDMG_",
+    rarity: 5,
+    setKey: "BlizzardStrayer",
+    slotKey: "circlet",
+    substats: [],
+  });
+});
+
+test("createRuleFunction returns a function that takes in an artifact and returns the original artifact if the filter does not match the artifact", () => {
+  // Arrange
+  const rule: Rule = {
+    action: {
+      type: "unequip",
+    },
+    filter: {
+      type: "equippingCharacter",
+      characterName: "KamisatoAyaka",
+    },
+    id: 1,
+  };
+
+  const ruleFn = createRuleFunction(rule);
+
+  const matchingArtifact: Artifact = {
+    level: 0,
+    location: "Barbara",
+    lock: false,
+    mainStatKey: "eleMas",
+    rarity: 5,
+    setKey: "FlowerOfParadiseLost",
+    slotKey: "circlet",
+    substats: [],
+  };
+
+  // Act
+  const mutatedArtifact = ruleFn(matchingArtifact);
+
+  // Assert
+  assert.deepEqual(mutatedArtifact, {
+    level: 0,
+    location: "Barbara",
+    lock: false,
+    mainStatKey: "eleMas",
+    rarity: 5,
+    setKey: "FlowerOfParadiseLost",
+    slotKey: "circlet",
+    substats: [],
   });
 });

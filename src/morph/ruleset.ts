@@ -5,7 +5,7 @@ import {
   actionDefinitionsByType,
 } from "./actions";
 import { FilterInstance, filterDefinitionsByType } from "./filters";
-import { Rule, validateRule } from "./rule";
+import { Rule, createRuleFunction, validateRule } from "./rule";
 import {
   ValidationError,
   ValidationErrorDetail,
@@ -21,13 +21,6 @@ export type Ruleset = {
   name: string;
   rules: Rule[];
 };
-
-function composePredicatesInOr<PredicateInput>(
-  predicates: ((predicateInput: PredicateInput) => boolean)[]
-) {
-  return (predicateInput: PredicateInput) =>
-    predicates.some((predicate) => predicate(predicateInput));
-}
 
 function createPredicate(filter: FilterInstance) {
   const filterType = filter.type;
@@ -109,6 +102,13 @@ export function validateRuleset(ruleset: unknown): ValidationResult<Ruleset> {
   });
 }
 
+// Higher-order function to combine multiple functions
+function combineFunctions<T>(functions: ((data: T) => T)[]) {
+  return function (obj: T) {
+    return functions.reduce((acc, fn) => fn(acc), obj);
+  };
+}
+
 export function applyRuleset(ruleset: Ruleset, good: GOOD): GOOD {
   // TODO: Validate ruleset?
 
@@ -120,6 +120,7 @@ export function applyRuleset(ruleset: Ruleset, good: GOOD): GOOD {
   console.time("applyRuleset");
 
   const { rules } = ruleset;
+
   const editedGood = clone(good);
 
   const artifacts = editedGood.artifacts!;
@@ -136,6 +137,44 @@ export function applyRuleset(ruleset: Ruleset, good: GOOD): GOOD {
         artifacts[i] = mutation(ogArtifact);
       }
     }
+  }
+
+  // console.log("editedGood", editedGood);
+
+  console.timeEnd("applyRuleset");
+  const stats = {
+    rules: ruleset.rules.length,
+    goodFile: good.artifacts.length,
+  };
+  console.log("stats", stats);
+  return editedGood;
+}
+
+export function applyRulesetNew(ruleset: Ruleset, good: GOOD): GOOD {
+  // TODO: Validate ruleset?
+
+  // Exit early in case of no artifacts...
+  if (good.artifacts === undefined) {
+    return good;
+  }
+
+  console.time("applyRuleset");
+
+  const { rules } = ruleset;
+
+  const ruleFns = rules.map((rule) => createRuleFunction(rule));
+
+  const combinedFn = combineFunctions(ruleFns);
+
+  const editedGood = clone(good);
+
+  const artifacts = editedGood.artifacts!;
+
+  // artifacts.filter((art) => art.location === "Yelan").forEach(console.log);
+
+  for (let i = 0; i < artifacts.length; i++) {
+    const ogArtifact = artifacts[i];
+    artifacts[i] = combinedFn(ogArtifact);
   }
 
   // console.log("editedGood", editedGood);

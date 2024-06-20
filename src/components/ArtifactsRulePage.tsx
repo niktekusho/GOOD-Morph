@@ -7,7 +7,7 @@ import { type UseMorphFlow } from "@/lib/useMorphFlow";
 import { useRulesets } from "@/morph/react/useRuleset";
 import { Ruleset, applyRuleset, validateRuleset } from "@/morph/ruleset";
 import { Play, Plus } from "lucide-react";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useEffect, useRef } from "react";
 import { CircularProgressIndicator } from "./CircularProgress";
 import { Rules } from "./Rules";
 import {
@@ -33,6 +33,7 @@ import { Label } from "./ui/label";
 import { isBlankString } from "@/morph/validation";
 import { useToast } from "./ui/use-toast";
 import { Toaster } from "./ui/toaster";
+import { ToastAction } from "./ui/toast";
 
 type ArtifactsRulePageProps = {
   file: NonNullable<UseMorphFlow["loadedFile"]>;
@@ -58,6 +59,8 @@ export function ArtifactsRulePage({
   appState,
 }: ArtifactsRulePageProps) {
   const good = getGOOD(file.content);
+
+  const workerRef = useRef<Worker>();
 
   const {
     rulesets,
@@ -130,6 +133,56 @@ export function ArtifactsRulePage({
   const onRulesetChangeHandler = (pickedRuleset: Ruleset) => {
     setSelectedRuleset(pickedRuleset.name);
   };
+
+  useEffect(() => {
+    workerRef.current = new Worker(
+      new URL("./morph-worker.ts", import.meta.url)
+    );
+
+    // workerRef.current.addEventListener('message', (event) => {
+    //   console.log('main', event);
+    // })
+
+    // workerRef.current.addEventListener('messageerror', (errorEvent) => {
+    //   console.error('errorEvent');
+    // })
+
+    workerRef.current.onerror = (errorEvent) => {
+      errorEvent.preventDefault();
+      console.error("Error from worker", errorEvent);
+
+      const toastDesc = (
+        <p>
+          Sorry for the inconvenience!
+          <br />
+          You could help us fix this bug by opening an issue with the button
+          below!
+          <br />
+          Thank you! ♡
+        </p>
+      );
+
+      const toastAction = (
+        <ToastAction altText="Open issue on GitHub" className="">
+          Open issue on GitHub
+        </ToastAction>
+      );
+
+      toast({
+        title: "Bug found!",
+        description: toastDesc,
+        variant: "destructive",
+        action: toastAction,
+        className: "grid gap-4 space-x-0",
+      });
+    };
+
+    workerRef.current.postMessage({ data: "aaa" });
+
+    return () => {
+      workerRef.current?.terminate();
+    };
+  }, []);
 
   return (
     <>

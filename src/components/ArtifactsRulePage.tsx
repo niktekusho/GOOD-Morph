@@ -2,12 +2,12 @@ import {
   getCharactersWithEquippedArtifactsFromGOOD,
   getGOOD,
 } from "@/good/good_lib";
-import { GOOD } from "@/good/good_spec";
 import { type UseMorphFlow } from "@/lib/useMorphFlow";
 import { useRulesets } from "@/morph/react/useRuleset";
-import { Ruleset, applyRuleset, validateRuleset } from "@/morph/ruleset";
+import { Ruleset, validateRuleset } from "@/morph/ruleset";
+import { isBlankString } from "@/morph/validation";
 import { Play, Plus } from "lucide-react";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useEffect, useRef } from "react";
 import { CircularProgressIndicator } from "./CircularProgress";
 import { Rules } from "./Rules";
 import {
@@ -30,9 +30,10 @@ import {
 } from "./ui/dropdown-menu";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { isBlankString } from "@/morph/validation";
-import { useToast } from "./ui/use-toast";
+import { ToastAction } from "./ui/toast";
 import { Toaster } from "./ui/toaster";
+import { useToast } from "./ui/use-toast";
+import { EndMorphEventData, StartMorphEventData } from "./morph-worker";
 
 type ArtifactsRulePageProps = {
   file: NonNullable<UseMorphFlow["loadedFile"]>;
@@ -58,6 +59,8 @@ export function ArtifactsRulePage({
   appState,
 }: ArtifactsRulePageProps) {
   const good = getGOOD(file.content);
+
+  const workerRef = useRef<Worker>();
 
   const {
     rulesets,
@@ -89,24 +92,30 @@ export function ArtifactsRulePage({
 
   const handleMorphButton = async () => {
     onMorphStarted();
+
+    workerRef.current?.postMessage({
+      type: "startMorph",
+      currentRuleset,
+      good,
+    } satisfies StartMorphEventData);
+
     // Minimum amount of progress is 1 second
     const minimumProgressPromise = new Promise<void>((resolve) => {
-      setTimeout(resolve, 1000);
+      setTimeout(resolve, 1_000);
     });
 
-    const newGOODPromise = new Promise<GOOD>((resolve) =>
-      resolve(applyRuleset(currentRuleset, good))
-    );
+    const newGOODPromise = new Promise<string>((resolve) => {
+      workerRef.current!.onmessage = (ev: MessageEvent<EndMorphEventData>) => {
+        resolve(ev.data.blobUrl);
+      };
+    });
 
     const promisesResult = await Promise.all([
       minimumProgressPromise,
       newGOODPromise,
     ]);
 
-    const jsonStr = JSON.stringify(promisesResult[1]);
-    const blob = new Blob([jsonStr], { type: "application/json" });
-    const url = window.URL.createObjectURL(blob);
-
+    const url = promisesResult[1];
     onMorphCompleted(url);
   };
 
@@ -130,6 +139,32 @@ export function ArtifactsRulePage({
   const onRulesetChangeHandler = (pickedRuleset: Ruleset) => {
     setSelectedRuleset(pickedRuleset.name);
   };
+
+  useEffect(() => {
+    workerRef.current = new Worker(
+      new URL("./morph-worker.ts", import.meta.url)
+    );
+
+    // Setup error handling for the web-worker "together" with its init.
+    workerRef.current.onerror = (errorEvent) => {
+      errorEvent.preventDefault();
+      console.error("Error from worker", errorEvent);
+
+      openBugToast(toast, {
+        context: "morph-worker communication",
+        error: {
+          column: errorEvent.colno,
+          fileName: errorEvent.filename,
+          line: errorEvent.lineno,
+          message: errorEvent.message,
+        },
+      });
+    };
+
+    return () => {
+      workerRef.current?.terminate();
+    };
+  }, [toast]);
 
   return (
     <>
@@ -363,4 +398,111 @@ function FileDownloadedAlertDialogContent({
       </AlertDialogFooter>
     </AlertDialogContent>
   );
+}
+
+type Bug = {
+  context: string;
+  error?: Error;
+};
+
+type Error = {
+  message?: string;
+  line?: number;
+  column?: number;
+  fileName?: string;
+};
+
+function openBugToast(toast: ReturnType<typeof useToast>["toast"], bug: Bug) {
+  const toastDesc = (
+    <p>
+      Sorry for the inconvenience!
+      <br />
+      You could help us fix this bug by opening an issue with the button below!
+      <br />
+      Thank you! ♡
+    </p>
+  );
+
+  const userAgent = navigator.userAgent;
+
+  let title;
+
+  if (bug.error?.message) {
+    title = `${bug.error?.message} (${bug.context})`;
+  } else {
+    title = `Bug: ${bug.context}`;
+  }
+
+  const issue = {
+    labels: "bug",
+    title,
+    body: `
+**Hi there! 👋👋👋**
+
+Thank you for taking the time to report a bug.
+Your feedback helps us improve.
+Please fill out the details below, and we'll get to fixing it as soon as we can!
+
+---
+
+## How did it happen?
+
+How can we see the issue happen? Please list the steps:
+
+1. Go to '...'
+2. Click on '...'
+3. Scroll down to '...'
+4. See error
+
+## GOOD file
+
+Could you add the \`.good\` file you used to show the problem?
+This helps us reproduce your problem faster (and thus fix this bug quicker too 😉).
+
+## Screenshots
+
+If you can, could you add some screenshots to show the problem?
+This helps us understand better.
+
+## Technical details
+
+Context: \`${bug.context}\`
+
+User-Agent: \`${userAgent}\`
+
+### Error:
+
+\`\`\`
+${bug.error ? JSON.stringify(bug.error, null, 4) : "No error info."}
+\`\`\`
+
+---
+
+Thank you so much for your help! 🙌
+`,
+  };
+
+  const issueUrl = new URL(
+    "https://github.com/niktekusho/GOOD-Morph/issues/new"
+  );
+
+  for (const [key, val] of Object.entries(issue)) {
+    issueUrl.searchParams.append(key, val);
+  }
+
+  const toastAction = (
+    <ToastAction altText="Open issue on GitHub" className="" asChild>
+      <a href={issueUrl.toString()} target="_blank">
+        Open issue on GitHub
+      </a>
+    </ToastAction>
+  );
+
+  toast({
+    title: "Bug found!",
+    description: toastDesc,
+    variant: "destructive",
+    action: toastAction,
+    className: "grid gap-4 space-x-0",
+  });
 }

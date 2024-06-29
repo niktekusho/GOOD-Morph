@@ -1,10 +1,4 @@
 import { GOOD } from "@/good/good_spec";
-import {
-  ActionDefinitionType,
-  ActionInstance,
-  actionDefinitionsByType,
-} from "./actions";
-import { FilterInstance, filterDefinitionsByType } from "./filters";
 import { Rule, createRuleFunction, validateRule } from "./rule";
 import {
   ValidationError,
@@ -21,21 +15,6 @@ export type Ruleset = {
   name: string;
   rules: Rule[];
 };
-
-function createPredicate(filter: FilterInstance) {
-  const filterType = filter.type;
-  // TODO fix this cast
-  const filterDef =
-    filterDefinitionsByType[filterType as "equippingCharacter"]!;
-  return filterDef.predicateFactory(filter);
-}
-
-function createMutation(action: ActionInstance) {
-  const actionType = action.type;
-  // TODO: fix this cast
-  const actionDef = actionDefinitionsByType[actionType as ActionDefinitionType];
-  return actionDef.mutationFactory(action);
-}
 
 export function validateRuleset(ruleset: unknown): ValidationResult<Ruleset> {
   if (!isRecord(ruleset))

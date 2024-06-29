@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { test } from "vitest";
 import { validateActionInstance } from "../actions";
 import { validateRule } from "../rule";
-import { Ruleset, applyRuleset, applyRulesetNew } from "../ruleset";
+import { Ruleset, applyRuleset } from "../ruleset";
 import { GOOD } from "@/good/good_spec";
 
 test("validate 10.000 action instances", () => {
@@ -66,24 +66,25 @@ test("morph 10.000 artifacts with 100 rules", () => {
 
   const good = JSON.parse(goodFile) as GOOD;
 
-  const oldStart = Date.now();
+  console.time("morph 10.000 artifacts with 100 rules");
+  // const oldStart = Date.now();
   applyRuleset(ruleset, good);
-  const oldEnd = Date.now();
+  console.timeEnd("morph 10.000 artifacts with 100 rules");
+  // const oldEnd = Date.now();
 
-  const newStart = Date.now();
-  applyRulesetNew(ruleset, good);
-  const newEnd = Date.now();
-  
-  const oldTime = oldEnd - oldStart;
-  const newTime = newEnd - newStart;
+  // const newStart = Date.now();
+  // applyRulesetNew(ruleset, good);
+  // const newEnd = Date.now();
 
-  const speedup = (Math.max(newTime, oldTime)) / Math.min(newTime, oldTime);
-  const stats = {
-    oldTime,
-    newTime,
-    fastest: newTime < oldTime ? 'new' : 'old',
-    speedup: `${speedup.toFixed(2)}x`
-  }
-  console.table(stats);
-  
+  // const oldTime = oldEnd - oldStart;
+  // const newTime = newEnd - newStart;
+
+  // const speedup = (Math.max(newTime, oldTime)) / Math.min(newTime, oldTime);
+  // const stats = {
+  //   oldTime,
+  //   newTime,
+  //   fastest: newTime < oldTime ? 'new' : 'old',
+  //   speedup: `${speedup.toFixed(2)}x`
+  // }
+  // console.table(stats);
 });

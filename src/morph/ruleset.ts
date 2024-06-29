@@ -117,49 +117,6 @@ export function applyRuleset(ruleset: Ruleset, good: GOOD): GOOD {
     return good;
   }
 
-  console.time("applyRuleset");
-
-  const { rules } = ruleset;
-
-  const editedGood = clone(good);
-
-  const artifacts = editedGood.artifacts!;
-
-  // artifacts.filter((art) => art.location === "Yelan").forEach(console.log);
-
-  for (let i = 0; i < artifacts.length; i++) {
-    const ogArtifact = artifacts[i];
-    // TODO: naive code...
-    for (const rule of rules) {
-      const predicate = createPredicate(rule.filter);
-      const mutation = createMutation(rule.action);
-      if (predicate(ogArtifact)) {
-        artifacts[i] = mutation(ogArtifact);
-      }
-    }
-  }
-
-  // console.log("editedGood", editedGood);
-
-  console.timeEnd("applyRuleset");
-  const stats = {
-    rules: ruleset.rules.length,
-    goodFile: good.artifacts.length,
-  };
-  console.log("stats", stats);
-  return editedGood;
-}
-
-export function applyRulesetNew(ruleset: Ruleset, good: GOOD): GOOD {
-  // TODO: Validate ruleset?
-
-  // Exit early in case of no artifacts...
-  if (good.artifacts === undefined) {
-    return good;
-  }
-
-  console.time("applyRuleset");
-
   const { rules } = ruleset;
 
   const ruleFns = rules.map((rule) => createRuleFunction(rule));
@@ -179,7 +136,6 @@ export function applyRulesetNew(ruleset: Ruleset, good: GOOD): GOOD {
 
   // console.log("editedGood", editedGood);
 
-  console.timeEnd("applyRuleset");
   const stats = {
     rules: ruleset.rules.length,
     goodFile: good.artifacts.length,

@@ -1,72 +1,20 @@
-"use client";
+import { LoadGOODFileButton } from "./LoadGOODFileButton";
 
-import { InitialPage } from "../components/InitialPage";
-import { ArtifactsRulePage } from "@/components/ArtifactsRulePage";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useMorphFlow } from "@/lib/useMorphFlow";
-
-export default function Page() {
-  const {
-    appState,
-    showModal,
-    loadedFile,
-    morphedGOODFile,
-    onStartNewSession,
-    onFilePicked,
-    onContinueCurrentSession,
-    onFileDownloadInitiated,
-    onMorphCompleted,
-    onMorphStarted,
-  } = useMorphFlow();
-
+export default function HomePage() {
   return (
-    <>
-      <AlertDialog open={appState === "PromptPreviousSession"}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Welcome Back!</AlertDialogTitle>
-            <AlertDialogDescription>
-              It looks like you had a previous session that wasn&apos;t
-              completed.<br></br>Would you like to start a new session or
-              continue where you left off?
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel onClick={onStartNewSession}>
-              Start New Session
-            </AlertDialogCancel>
-            <AlertDialogAction onClick={onContinueCurrentSession}>
-              Continue Previous Session
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-      <main className="min-h-[100dvh] grid p-2">
-        {loadedFile ? (
-          <ArtifactsRulePage
-            file={loadedFile}
-            appState={appState}
-            morphedGOODFile={morphedGOODFile}
-            onContinueCurrentSession={onContinueCurrentSession}
-            onFileDownloadInitiated={onFileDownloadInitiated}
-            onMorphCompleted={onMorphCompleted}
-            onMorphStarted={onMorphStarted}
-            onStartNewSession={onStartNewSession}
-            showModal={showModal}
-          />
-        ) : (
-          <InitialPage onFilePicked={onFilePicked} />
-        )}
-      </main>
-    </>
+    <main className="min-h-[100dvh] grid p-2">
+      <section className="flex flex-col gap-8 px-4 place-self-center">
+        <h1 className="text-3xl font-bold tracking-tighter">
+          Upload your .GOOD file to the browser
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400">
+          Drag and drop (TODO) or select the file to upload.
+          <br />
+          Your data <strong>never</strong> leaves your browser.
+        </p>
+
+        <LoadGOODFileButton />
+      </section>
+    </main>
   );
 }

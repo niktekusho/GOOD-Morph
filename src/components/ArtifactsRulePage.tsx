@@ -501,8 +501,10 @@ Thank you so much for your help! 🙌
   toast({
     title: "Bug found!",
     description: toastDesc,
+    // duration: 1_000_000,
     variant: "destructive",
     action: toastAction,
-    className: "grid gap-4 space-x-0",
+    className:
+      "grid gap-4 items-center justify-stretch p-6 space-x-0 sm:grid-cols-2 md:grid-cols-1",
   });
 }
